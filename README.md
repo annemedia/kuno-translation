@@ -23,13 +23,11 @@ HTML is allowed in translations. Do NOT translate any HTML tags, classes, or URL
 
 ### HOW TO SUBMIT COMPLETED TRANSLATION
 
-
-a) Fork this repo and submit a  new file via pull request For example, translation_de.php... [how to submit a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request?tool=webui) \
-\
-or \
-\
-b) simply paste it here https://paste.sethforprivacy.com/ and share the link with us on X at [https://x.com/annemedia_web](https://x.com/annemedia_web)
-\
-
-
+a) Fork this repo and submit a  new file via pull request For example, translation_de.php... [how to submit a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request?tool=webui) 
+<br/><br/>
+or 
+<br/><br/>
+b) paste it here https://paste.sethforprivacy.com/ and share the link with us on X at [https://x.com/annemedia_web](https://x.com/annemedia_web)\
+<br/>
+<br/>
 #### Thank you for taking the time to help the Monero Community.
