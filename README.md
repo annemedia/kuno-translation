@@ -4,6 +4,8 @@ Since Kuno launched, the Monero community has been nothing short of amazing in t
 
 Would you like to make a difference? We think it would be fantastic if Kuno was accessible in more languages. Right now, the website is only available in English, Esperanto, Spanish and Italian. If you possess the necessary skills to translate the Kuno website into another language, please consider lending your expertise to the translation effort.
 
+Please be aware that translating a website into another language is a delicate job that must account for nuances of language differences. If you use Google Translate or similar, your translation will be rejected.
+
 [kuno.anne.media](https://kuno.anne.media)
 
 ### HOW TO ADD A NEW TRANSLATION
