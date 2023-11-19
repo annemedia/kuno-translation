@@ -360,7 +360,11 @@ function translate_en($string) {
     'error_image_storage_full' => 'Storage full',
     'error_image_missing' => 'Please upload an image',
     'translate_help' => 'It would be fantastic if Kuno was accessible in more languages. Help us with translations at <a href="https://github.com/annemedia/kuno-translation">https://github.com/annemedia/kuno-translation</a>',
-    
+    'wallets_header' => 'Monero: <span class="text3">Wallet Choices</span>',
+    'monero_gui_wallet' => 'An open-source graphical user interface (GUI) wallet developed by the Monero community, completely free to use, suitable for both beginners and advanced users.',
+    'cake_wallet' => 'Securely store, send and exchange your crypto with ease. Privately buy gift cards and pay at the counter with crypto, piece of cake.',
+    'monerujo_wallet' => 'Android Wallet for Monero. With Monerujo, you can seamlessly move back and forth between several wallets. Making a new one is as simple as a few taps.',
+    'feather_wallet' => 'Feather is a free, open-source Monero wallet for Linux, Tails, Windows and macOS. Easy-to-use, small, fast and beginner friendly.'    
   );
   $translation = ($strings[$string]) ? $strings[$string] : $string;
   return $translation;
