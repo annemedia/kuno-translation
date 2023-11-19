@@ -1419,3 +1419,353 @@ function translate_it($string) {
   $translation = ($strings[$string]) ? $strings[$string] : $string;
   return $translation;
 }
+
+  function translate_sv($string) {
+    static $strings = array(
+      'site_name' => 'Kuno',
+      'page_title' => 'Kuno – Insamling med Monero',
+      'page_title_error' => 'Fel | Kuno – Insamling med Monero',
+      'page_title_search' => 'Sök | Kuno – Insamling med Monero',
+      'page_title_fediverse' => 'Fediverse | Kuno – Insamling med Monero',
+      'page_title_reset_password' => 'Återställ lösenord | Kuno – Insamling med Monero',
+      'page_title_edit_fundraiser' => 'Redigera insamling | Kuno – Insamling med Monero',
+      'page_title_new_fundraiser' => 'Ny insamling | Kuno – Insamling med Monero',
+      'pagination' => 'Sida {NUM} av {NUM_PAGES}',
+      'pagination_fundraisers' => 'Visar {START}-{END} av {TOTAL} insamlingar',
+      'pagination_donations' => 'Visar {START}-{END} av {TOTAL} donationer',
+      'pagination_submit' => 'Gå',
+      'nav_manage_fundraiser' => 'Hantera Insamlingar',
+      'nav_search' => 'Sök insamlingar...',
+      'nav_fundraiser_progress' => 'Framsteg för insamling:',
+      'nav_edit_fundraiser' => 'Redigera insamling:',
+      'nav_logout' => 'Logga ut',
+      'footer_description' => 'Insamling med Monero',
+      'footer_contact' => 'Kontakt: support [at] anne.media',
+      'footer_language' => 'Språk:',
+      'footer_light_mode' => 'Ljust läge',
+      'footer_dark_mode' => 'Mörkt läge',
+      'footer_manage_fundraiser' => 'Hantera din insamling:',
+      'footer_new_fundraiser' => 'Ny Insamling',
+      'footer_edit_fundraiser' => 'Redigera Insamling',
+      'footer_reset_password' => 'Återställ Lösenord',
+      'footer_quick_links' => 'Snabblänkar:',
+      'footer_search_fundraisers' => 'Sök Insamlingar',
+      'footer_search_fediverse' => 'Sök Fediverse',
+      'footer_marketplace' => 'Marknad',
+      'footer_rss_feed' => 'RSS Feed',
+      'footer_faq' => 'Vanliga frågor',
+      'email_new_donation_subject' => '[Kuno] Ny {DONATION} XMR donation till #{GUID}',
+      'email_new_donation_body' => 'Din insamling har fått en ny donation!
+          <br><br>Insamling: {TITLE}
+          <br>Donation: {DONATION} XMR
+          <br>Datum: {DATE}
+          <br><br>Totalt insamlade medel: {TOTAL} XMR
+          <br>Totalt stödjare: {SUPPORTERS}
+          <br>Besök din insamling: https://kuno.anne.media/{TYPE}/{GUID}/
+          <br><br>Inaktivera e-postaviseringar här:
+          <br>https://kuno.anne.media/edit-fundraiser/{GUID}/',
+      'email_reset_password_subject' => '[Kuno] Återställ lösenord',
+      'email_reset_password_body' => 'Besök denna länk för att återställa ditt lösenord: {URL} eller ange denna kod: {CODE} (Giltig i 24 timmar)',
+      'homepage_title' => 'Enkel insamling <br> för alla',
+      'homepage_subtitle' => 'Insamling av pengar eller donation till en god sak med Monero',
+      'homepage_point1' => 'Starta en insamling gratis',
+      'homepage_point2' => 'Ta emot Monero (som du kan växla till kontanter)',
+      'homepage_point3' => 'Inga avgifter, fungerar globalt, inget bankkonto krävs',
+      'homepage_button_start_fundraiser' => 'Starta en insamling',
+      'homepage_button_browse_fundraisers' => 'Bläddra bland insamlingar',
+      'homepage_bar' => 'Det rättvisa alternativet till GoFundMe och Kickstarter',
+      'homepage_heading_browse_fundraisers' => 'Bläddra bland {AMOUNT} insamlingar',
+      'homepage_heading_total_raised' => 'Över {AMOUNT} XMR insamlade!',
+      'homepage_top_categories' => 'Toppkategorier',
+      'homepage_recent_donations' => 'Senaste Donationerna',
+      'homepage_all_categories' => 'Alla kategorier',
+      'homepage_launch_in_one_click' => 'Starta din insamling med 1 klick',
+      'homepage_get_started_free' => 'Kom igång gratis',
+      'homepage_info_heading1' => 'Monero är kontanter för internet',
+      'homepage_info_description1' => '<p class="monero-info-p-bold kuno">
+                  Monero är ett snabbt och säkert sätt att skicka och ta emot pengar online.
+                  </p>
+                  <p class="monero-info-p kuno">
+                  Inget bankkonto, ingen ansökan eller legitimation krävs. Ladda helt enkelt ner en plånbok för din telefon eller dator för att skicka och ta emot pengar över hela världen med ett klick.
+                  </p>
+                  <p class="monero-info-p kuno">
+                  Moneros användarvänlighet och tillgänglighet gör det till en idealisk betalningsmetod för onlinebutiker, distansarbete, överföringar, tips, insamlingar och mer.
+                  </p>',
+      'homepage_link_download_mobile' => 'Ladda ner för mobil',
+      'homepage_link_download_desktop' => 'Ladda ner för desktop',
+      'homepage_info_heading2' => 'Ocensurerbara donationer',
+      'homepage_info_description2' => '<p class="monero-info-p-bold kuno">
+                  Med Monero tillhör dina pengar dig.
+                  </p>
+                  <p class="monero-info-p kuno">
+    Monero är mjukvara och förlitar sig inte på tredje parter eller företag. Transaktioner kan inte censureras, medel kan inte frysas och användare kan inte deplattformeras.
+                  </p>
+                  <p class="monero-info-p kuno">
+                  Oavsett om du samlar in medel med Monero eller donerar till en välgörenhet kan du känna dig trygg med att veta att mottagaren får 100% av donationen.
+                  </p>',
+      'homepage_link_official_website' => 'Officiell webbplats',
+      'homepage_link_overview' => 'Översikt',
+      'homepage_link_buy_monero' => 'Köp Monero',
+      'homepage_info_heading3' => 'Använd det var som helst',
+      'homepage_info_description3' => '<p class="monero-info-p-bold kuno">
+                  Växla Monero till kontanter, handla online eller betala räkningar.
+                  </p>
+                  <p class="monero-info-p kuno">
+                  Det är enkelt att växla Monero till fysiska kontanter med <a href="https://localmonero.co">LocalMonero</a>, <a href="https://bisq.network">Bisq</a> eller en <a href="https://coinatmradar.com">Crypto ATM</a> (inget bankkonto krävs).
+                  </p>
+                  <p class="monero-info-p kuno">
+                  Marknadsplatser som <a href="https://moneromarket.io">MoneroMarket</a> och kataloger som <a href="https://monerica.com">Monerica</a> och <a href="https://acceptedhere.io">AcceptedHere</a> hjälper dig att köpa det du behöver med Monero.
+                  </p>
+                  <p class="monero-info-p kuno">
+                  Dessutom erbjuder <a href="https://cakepay.com">CakePay</a> och <a href="https://coincards.com">CoinCards</a> förbetaldakort och presentkort till tusentals företag. Personliga shoppers som <a href="https://proxysto.re">ProxyStore</a>, <a href="https://sovereignstack.tools/rerouter/">Sovereign Stack</a> och <a href="https://shopinbit.com">ShopInBit</a> erbjuder ett bekvämt sätt att betala fakturor med Monero.
+                  </p>
+                  <p class="monero-info-p kuno">
+                  Moneros flexibilitet gör det enkelt att samla in medel för att betala räkningar, starta ditt projekt eller stödja en välgörenhet.
+                  </p>',
+      'homepage_link_exchange_to_cash' => 'Växla till kontanter',
+      'homepage_link_shop_online' => 'Handla online',
+      'homepage_link_marketplace' => 'Marknad',
+      'homepage_use_case_heading1' => 'För välgörenhetsorganisationer',
+      'homepage_use_case_description1' => '<p class="use-case-p-bold kuno">
+                    Ett lokalt katthem behöver donationer till kattmat och veterinärkostnader.
+                  </p>
+                  <p class="use-case-p kuno">
+                    De startar en Kuno-insamling, delar länken i sociala medier och får donationer.
+                  </p>
+                  <p class="use-case-p kuno">
+                    Katthemet använder insamlade Monero för att köpa Petsmart-presentkort med CakePay och tar ut kontanter för att betala veterinärnotan med en Crypto ATM.
+                  </p>
+                  <p class="use-case-p kuno">
+                    Varje donator får en uppdatering med bilder på katterna.
+                  </p>',
+      'homepage_use_case_heading2' => 'För privatpersoner',
+      'homepage_use_case_description2' => '<p class="use-case-p-bold kuno">
+                    Alice behöver samla in pengar till sjukvårdsräkningar.
+                  </p>
+                  <p class="use-case-p kuno">
+                    Hennes dotter hjälper henne att starta en Kuno-insamling och delar den med deras vänkrets.
+                  </p>
+                  <p class="use-case-p kuno">
+                    De samlar tillräckligt med pengar och växlar det till kontanter med LocalMonero.
+                  </p>
+                  <p class="use-case-p kuno">
+                    Alice skriver ett hjärtligt tackbrev till varje donator som en uppskattningens gest.
+                  </p>',
+      'homepage_use_case_heading3' => 'För nystartade företag',
+      'homepage_use_case_description3' => '<p class="use-case-p-bold kuno">
+                    En indieutvecklare vill skapa ett nytt spel.
+                  </p>
+                  <p class="use-case-p kuno">
+                    Han startar en Kuno-insamling och delar den med spelgemenskapen.
+                  </p>
+                  <p class="use-case-p kuno">
+                    Han når målet och använder medlen för att anställa Monero-vänliga konstnärer från MoneroMarket och köpa spelresurser med ett virtuellt CakePay betalkort.
+                  </p>
+                  <p class="use-case-p kuno">
+                    Varje donator får en gratis kopia av spelet.
+                  </p>',
+      'homepage_use_case_heading4' => 'För innehållsskapare',
+      'homepage_use_case_description4' => '<p class="use-case-p-bold kuno">
+                    Ett band laddar upp sina covers och originalmusik på Youtube.
+                  </p>
+                  <p class="use-case-p kuno">
+                    De startar en Kuno-donationssida för att ta emot Monero-donationer.
+                  </p>
+                  <p class="use-case-p kuno">
+                    Fans kan också föreslå låtar eller kommentera under livestreams genom att göra en donation.
+                  </p>
+                  <p class="use-case-p kuno">
+                    Detta erbjuder ett bättre sätt att hållbart monetarisera deras innehåll jämfört med annonser.
+                  </p>',
+      'homepage_use_case_heading5' => 'För dig',
+      'homepage_use_case_description5' => '<p class="use-case-p-bold kuno">
+                    Med Kuno kan alla samla in pengar till sitt projekt, orsak eller start-up.
+                  </p>
+                  <p class="use-case-p kuno">
+                    Allt du behöver är en Monero-plånbok och ett mål.
+                  </p>',
+      'fundraiser_heading_goal' => 'Mål',
+      'fundraiser_heading_raised' => 'Insamlat',
+      'fundraiser_heading_percentage_funded' => 'finansieras',
+      'fundraiser_heading_donations' => 'Donationer',
+      'fundraiser_heading_supporters' => 'Supportrar',
+      'fundraiser_heading_comments' => 'Kommentarer',
+      'fundraiser_heading_support' => 'Stöd',
+      'fundraiser_heading_share' => 'Dela',
+      'fundraiser_heading_about' => 'Om',
+      'fundraiser_heading_photos' => 'Foton',
+      'fundraiser_heading_contact' => 'Kontakt',
+      'fundraiser_heading_date' => 'Publicerad:',
+      'fundraiser_heading_supporters' => 'Supportrar',
+      'fundraiser_heading_new_comment' => 'Skriv en kommentar',
+      'fundraiser_heading_new_fundraiser' => 'Ny Insamling',
+      'fundraiser_heading_edit_fundraiser' => 'Redigera Insamling',
+      'fundraiser_heading_logout' => 'Logga ut',
+      'fundraiser_support_text' => 'Skicka valfritt belopp i Monero till:',
+      'fundraiser_share_text' => 'Kopiera länken för att dela denna insamling med vänner eller på sociala medier:',
+      'fundraiser_open_in_wallet' => 'Öppna i plånbok',
+      'fundraiser_info_point1' => 'Du donerar direkt till mottagarens plånbok',
+      'fundraiser_info_point2' => 'Inga mellanhänder eller avgifter',
+      'fundraiser_info_point3' => 'Donationer synkroniseras var 5:e minut',
+      'fundraiser_full_size_photo' => 'Fullstorlek på foto',
+      'fundraiser_no_donations' => 'Inga donationer ännu',
+      'fundraiser_supporters' => '{AMOUNT} supportrar',
+      'fundraiser_button_support' => 'Stöd',
+      'fundraiser_donate_with_monero' => 'Donera med Monero:',
+      'fundraiser_comment_form_placeholder_txid' => 'TXID',
+      'fundraiser_comment_form_placeholder_tx_key' => 'TX-nyckel (Exempel: 7d7a9370a746d219e5f66aaaec902ead0d1c1783817a10276c9accdacca6f10d)',
+      'fundraiser_comment_form_placeholder_email' => 'E-post (valfritt, för insamlingsbelöningar)',
+      'fundraiser_comment_form_placeholder_comment' => 'Skriv en offentlig kommentar',
+      'fundraiser_comment_form_submit' => 'Kommentera',
+      'search' => 'Sök',
+      'search_heading' => 'Sök insamlingar',
+      'search_text' => 'Sök insamlingar...',
+      'search_sort_by_new' => 'Sortera efter nytt',
+      'search_sort_by_recently_donated' => 'Sortera efter nyligen donerat',
+      'search_sort_by_percentage_funded' => 'Sortera efter fonderingsprocent',
+      'search_sort_by_goal' => 'Sortera efter mål',
+      'search_all_categories' => 'Alla kategorier',
+      'search_no_fundraisers_found' => 'Inga insamlingar hittades',
+      'search_fediverse_heading' => 'Sök i Fediverse',
+      'search_fediverse_text' => 'Sök i Fediverse-insamlingar...',
+      'search_fediverse_no_fundraisers_found' => 'Inga Fediverse-insamlingar hittades',
+      'search_fediverse_peers_list' => 'Lista av federerade instanser:',
+      'login_invite_code_heading' => 'Ny Insamling',
+      'login_invite_code_text' => 'Ange en inbjudningskod för att starta en ny insamling.',
+      'login_invite_code_note' => 'Om du inte har en inbjudningskod, kontakta support.',
+      'login_invite_code_form' => 'Inbjudningskod',
+      'login_invite_code_form_placeholder' => 'Inbjudningskod',
+      'login_invite_code_submit' => 'Fortsätt',
+      'login_fundraiser_form_fundraiser' => 'Insamling',
+      'login_fundraiser_heading' => 'Redigera Insamling',
+      'login_fundraiser_text' => 'Ange insamlingskoden och lösenordet för att redigera din insamling.',
+      'login_fundraiser_note' => 'Koden finns i URL:en:',
+      'login_fundraiser_forgot_password' => 'Glömt lösenord?',
+      'login_fundraiser_form_fundraiser' => 'Insamling',
+      'login_fundraiser_form_fundraiser_placeholder' => 'Insamlingskod (t.ex. ae21)',
+      'login_fundraiser_form_password' => 'Lösenord',
+      'login_fundraiser_form_password_placeholder' => 'Lösenord',
+      'login_fundraiser_form_submit' => 'Redigera Insamling',
+      'edit_fundraiser_heading_fundraiser_details' => 'Insamlingsdetaljer',
+      'edit_fundraiser_fundraiser_details_text' => 'Beskriv din insamling och lägg till foton.',
+      'edit_fundraiser_form_optional' => '(Valfritt)',
+      'edit_fundraiser_form_more_info' => '(Mer information)',
+      'edit_fundraiser_form_title' => 'Titel',
+      'edit_fundraiser_form_title_placeholder' => 'Insamlingsrubrik',
+      'edit_fundraiser_form_photo' => 'Foto',
+      'edit_fundraiser_form_additional_photos' => 'Ytterligare foton',
+      'edit_fundraiser_form_description' => 'Beskrivning',
+      'edit_fundraiser_form_description_placeholder' => 'Beskriv din insamling. Lägg till insamlingsbelöningar, milstolpar eller kontaktuppgifter om det behövs.',
+      'edit_fundraiser_form_tags' => 'Taggar',
+      'edit_fundraiser_form_tags_placeholder' => 'Kategori, taggar, etc.',
+      'edit_fundraiser_form_contact' => 'Kontakt',
+      'edit_fundraiser_form_contact_placeholder' => 'E-post, webbplats, Twitter, Matrix, etc.',
+      'edit_fundraiser_form_visibility' => 'Sätt insamlingen som privat (visas inte i sökresultaten, donatorer behöver den direkta länken)',
+      'edit_fundraiser_heading_goal' => 'Mål',
+      'edit_fundraiser_goal_text' => 'Ställ in ditt mål och Monero-adress.',
+      'edit_fundraiser_get_wallet' => 'Ingen Monero-plånbok? Skaffa en här.',
+      'edit_fundraiser_form_goal' => 'Mål',
+      'edit_fundraiser_form_goal_placeholder' => 'Mål (XMR)',
+      'edit_fundraiser_form_donation_page' => 'Inget mål – Jag vill skapa en donationsida',
+      'edit_fundraiser_form_monero_address' => 'Monero-adress',
+      'edit_fundraiser_form_monero_address_placeholder' => 'Exempel: 44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft3XjrpDtQGv7SqSsaBYBb98uNbr2VBBEt7f2wfn3RVGQBEP3A',
+      'edit_fundraiser_form_view_key' => 'Hemlig vy-nyckel',
+      'edit_fundraiser_form_view_key_placeholder' => 'Exempel: f359631075708155cc3d92a32b75a7d02a5dcf27756707b47a2b31b21c389501',
+      'edit_fundraiser_heading_password' => 'Lösenord',
+      'edit_fundraiser_password_text' => 'Ange ett lösenord för att redigera din insamling senare.',
+      'edit_fundraiser_widthdrawal_warning' => 'Undvik att ta ut delvisa saldon under pågående insamlingar. Monero använder hela saldon för betalningar och lämnar kvar resterande belopp som nya transaktioner. Detta skulle felaktigt beräknas som en donation, och din insamlingsframsteg kommer att vara felaktig. Om du behöver använda medel under resan, ta alltid ut hela saldot och lämna inget "växel".',
+      'edit_fundraiser_form_email' => 'E-post',
+      'edit_fundraiser_form_email_placeholder' => 'E-post (valfritt, för lösenordsåterställningar)',
+      'edit_fundraiser_form_password' => 'Lösenord',
+      'edit_fundraiser_form_new_password_placeholder' => 'Lösenord',
+      'edit_fundraiser_form_edit_password_placeholder' => 'Lösenord (lämna tomt om ingen ändring)',
+      'edit_fundraiser_form_email_notifications' => 'E-posta mig när min insamling får en ny donation',
+      'edit_fundraiser_form_submit_edit' => 'Uppdatera Insamling',
+      'edit_fundraiser_form_submit_new' => 'Starta Insamling',
+      'edit_fundraiser_heading_supporters' => 'Insamlingsupportrar',
+      'edit_fundraiser_supporters_text' => 'Om en supporter har angett sin e-postadress kommer du att se den här (t.ex. för insamlingsbelöningar).',
+      'edit_fundraiser_no_supporters' => 'Inga e-postmeddelanden ännu',
+      'edit_fundraiser_supporters_email' => 'E-post',
+      'edit_fundraiser_supporters_comment' => 'Kommentar',
+      'edit_fundraiser_supporters_amount' => 'Belopp',
+      'edit_fundraiser_supporters_txid' => 'TXID',
+      'edit_fundraiser_supporters_tx_key' => 'TX-nyckel',
+      'edit_fundraiser_supporters_date' => 'Datum',
+      'edit_fundraiser_heading_manage_fundraiser' => 'Hantera Insamling',
+      'edit_fundraiser_fix_view_key' => 'Lägg till en giltig vy-nyckel för att återaktivera din insamling.',
+      'edit_fundraiser_deactivate_fundraiser' => 'Inaktivera Insamling',
+      'edit_fundraiser_reactivate_fundraiser' => 'Återaktivera Insamling',
+      'edit_fundraiser_delete_fundraiser' => 'Radera Dina Data',
+      'reset_password_heading' => 'Återställ Lösenord',
+      'reset_password_description' => 'Ange insamlingskoden och din e-postadress för att återställa ditt lösenord.',
+      'reset_password_note' => '(Om du inte har lagt till en e-postadress, kontakta support.)',
+      'reset_password_form_fundraiser' => 'Insamling',
+      'reset_password_form_fundraiser_placeholder' => 'Insamlingskod (t.ex. ae21)',
+      'reset_password_form_email' => 'E-post',
+      'reset_password_form_email_placeholder' => 'E-post',
+      'reset_password_form_confirmation_code' => 'Bekräftelsekod',
+      'reset_password_form_confirmation_code_placeholder' => 'Bekräftelsekod',
+      'reset_password_form_new_password' => 'Nytt lösenord',
+      'reset_password_form_new_password_placeholder' => 'Nytt lösenord',
+      'reset_password_form_submit' => 'Återställ Lösenord',
+      'success' => 'Framgång',
+      'success_form_submitted' => 'Formulär framgångsrikt skickat',
+      'success_new_fundraiser' => 'Din insamling är aktiv: <a href="https://kuno.anne.media/fundraiser/{GUID}/">Visa din insamling här</a><br>Bokmärk denna länk för att redigera din insamling: <a href="https://kuno.anne.media/edit-fundraiser/{GUID}/">Redigera insamling #{GUID}</a>',
+      'success_new_donation_page' => 'Din donationsida är aktiv: <a href="https://kuno.anne.media/donate/{GUID}/">Visa din donationsida här</a><br>Bokmärk denna länk för att redigera din donationsida: <a href="https://kuno.anne.media/edit-fundraiser/{GUID}/">Redigera donationsida #{GUID}</a>',
+      'success_fundraiser_updated' => '<a href="https://kuno.anne.media/fundraiser/{GUID}/">Din insamling har uppdaterats.</a>',
+      'success_valid_fundraiser_password' => '<a href="https://kuno.anne.media/edit-fundraiser/{GUID}/">Klicka här för att redigera din insamling</a>',
+      'success_donation_page_updated' => '<a href="https://kuno.anne.media/donate/{GUID}/">Din donationsida har uppdaterats.</a>',
+      'success_fundraiser_deactivated' => 'Insamlingen inaktiverad',
+      'success_fundraiser_reactivated' => 'Insamlingen återaktiverad',
+      'success_fundraiser_deleted' => 'Insamlingen raderad',
+      'success_valid_invite_code' => 'Giltig inbjudningskod. Du kan nu starta en insamling.',
+      'success_valid_confirmation_code' => 'Giltig bekräftelsekod',
+      'success_check_email_for_password_reset_code' => 'Kontrollera din e-postadress för en lösenordsåterställningskod',
+      'success_password_reset' => 'Lösenord ändrat, du kan nu <a href="https://kuno.anne.media/edit-fundraiser/{FUNDRAISER}">redigera din insamling</a>',
+      'success_comment_sent' => 'Kommentar skickad!',
+      'success_image_uploaded' => 'Bild uppladdad',
+      'error' => 'Fel',
+      'error_please_refresh' => 'Vänligen uppdatera och försök igen.',
+      'error_form_expired' => 'Formuläret har gått ut, vänligen uppdatera',
+      'error_form_ratelimited' => 'Ratelimiterat, vänta {RATELIMIT} sekunder',
+      'error_session_expired' => 'Sessionen har löpt ut, vänligen logga in igen',
+      'error_page_not_found' => 'Sidan kunde inte hittas',
+      'error_fundraiser_not_found' => 'Insamling hittades inte',
+      'error_email_not_found' => 'Ingen e-postadress är inställd, kontakta support',
+      'error_invalid_email' => 'Vänligen ange en giltig e-postadress',
+      'error_invalid_email_for_notifications' => 'Vänligen ange en giltig e-postadress för att aktivera aviseringar',
+      'error_invalid_confirmation_code' => 'Bekräftelsekoden är ogiltig eller har löpt ut',
+      'error_invalid_monero_address' => 'Ogiltig Monero-adress (Ange din primära adress, som börjar med 4)',
+      'error_invalid_view_key' => 'Ogiltig vyckel (Ange din privata/hemliga vyckel)',
+      'error_invalid_address' => 'Ogiltig Monero-adress (Ange din primära adress, som börjar med 4)',
+      'error_entered_public_view_key' => 'Ogiltig vyckel (Ange din privata/hemliga vyckel, inte offentlig vyckel)',
+      'error_entered_public_spend_key' => 'Ogiltig vyckel (Ange din privata/hemliga vyckel, inte offentlig spenderingsvyckel)',
+      'error_entered_private_spend_key' => 'Ogiltig vyckel (Ange din privata/hemliga vyckel, inte privat spenderingsvyckel)',
+      'error_invalid_private_view_key' => 'Ogiltig vyckel (Ange din privata/hemliga vyckel)',
+      'error_invalid_txid' => 'Ogiltig TXID',
+      'error_invalid_tx_key' => 'Vänligen ange en giltig TX-nyckel (även känd som TX-bevis)',
+      'error_invalid_txid' => 'Vänligen ange en giltig inbjudningskod',
+      'error_incorrect_email' => 'Felaktig e-postadress',
+      'error_incorrect_password' => 'Felaktigt lösenord',
+      'error_monero_address_already_used' => 'Det finns redan en insamlings-/donationssida med denna Monero-adress',
+      'error_missing_fundraiser_code_or_email' => 'Ange din insamlingskod och e-postadress',
+      'error_missing_password_reset_code_or_password' => 'Ange din lösenordsåterställningskod och nytt lösenord',
+      'error_missing_txid_or_tx_key' => 'Ange både TXID och TX-nyckel (även känd som TX-bevis)',
+      'error_missing_password' => 'Ange ditt lösenord',
+      'error_missing_view_key' => 'Ange en giltig privat vyckel',
+      'error_title_too_long' => 'Rubriken måste vara mellan 1-80 tecken',
+      'error_description_too_long' => 'Beskrivningen måste vara kortare än 8000 tecken',
+      'error_tags_too_long' => 'Taggar måste vara kortare än 250 tecken',
+      'error_contact_details_too_long' => 'Kontaktuppgifter måste vara kortare än 250 tecken',
+      'error_goal_must_be_positive' => 'Insamlingsmålet måste vara ett positivt nummer',
+      'error_image_incorrect_file_type' => 'Bilden måste vara en PNG eller JPEG',
+      'error_image_maximum_image_size' => 'Max bildstorlek 2 MB',
+      'error_image_invalid' => 'Ogiltig bild',
+      'error_image_storage_full' => 'Lagring full',
+      'error_image_missing' => 'Ladda upp en bild, vänligen',
+      'translate_help' => 'Det skulle vara fantastiskt om Kuno var tillgänglig på fler språk. Hjälp oss med översättningar på <a href="https://github.com/annemedia/kuno-translation">https://github.com/annemedia/kuno-translation</a>',
+      );
+      $translation = ($strings[$string]) ? $strings[$string] : $string;
+      return $translation;
+  }
+
