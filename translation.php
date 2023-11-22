@@ -2128,4 +2128,356 @@ function translate_it($string) {
     return $translation;
   }
 
+  function translate_sw($string) {
+    static $strings = array(
+      'site_name' => 'Kuno',
+      'page_title' => 'Kuno – Kuchangisha Fedha na Monero',
+      'page_title_error' => 'Kosa | Kuno – Kuchangisha Fedha na Monero',
+      'page_title_search' => 'Tafuta | Kuno – Kuchangisha Fedha na Monero',
+      'page_title_fediverse' => 'Fediverse | Kuno – Kuchangisha Fedha na Monero',
+      'page_title_reset_password' => 'Badilisha Nenosiri | Kuno – Kuchangisha Fedha na Monero',
+      'page_title_edit_fundraiser' => 'Hariri Uchangishaji | Kuno – Kuchangisha Fedha na Monero',
+      'page_title_new_fundraiser' => 'mpya Uchangishaji | Kuno – Kuchangisha Fedha na Monero',
+      'pagination' => 'Ukurasa {NUM} ya {NUM_PAGES}',
+      'pagination_fundraisers' => 'Kuonyesha {START}-{END} ya {TOTAL} Wachangishaji',
+      'pagination_donations' => 'Kuonyesha {START}-{END} ya {TOTAL} michango',
+      'pagination_submit' => 'Enda',
+      'nav_manage_fundraiser' => 'Simamia Wachangishaji',
+      'nav_search' => 'Tafuta Wachangishaji...',
+      'nav_fundraiser_progress' => 'Maendeleo ya Kuchangisha Fedha:',
+      'nav_edit_fundraiser' => 'Hariri Kuchangisha Fedha:',
+      'nav_logout' => 'Toka',
+      'footer_description' => 'Kuchangisha Fedha na Monero',
+      'footer_contact' => 'Wasiliana: msaada [at] anne.media',
+      'footer_language' => 'Lugha:',
+      'footer_light_mode' => 'Mode Mwanga',
+      'footer_dark_mode' => 'Mode Giza',
+      'footer_manage_fundraiser' => 'Simamia kampeni yako ya kuchangisha:',
+      'footer_new_fundraiser' => 'Kampeni Mpya ya Kuchangisha',
+      'footer_edit_fundraiser' => 'Hariri Kampeni ya Kuchangisha',
+      'footer_reset_password' => 'Badilisha Nenosiri',
+      'footer_quick_links' => 'Viungo Haraka:',
+      'footer_search_fundraisers' => 'Tafuta Wachangishaji',
+      'footer_search_fediverse' => 'Tafuta Fediverse',
+      'footer_marketplace' => 'Soko',
+      'footer_rss_feed' => 'RSS Feed',
+      'footer_faq' => 'FAQ',
+      'email_new_donation_subject' => '[Kuno] Mchango Mpya wa {DONATION} XMR kwa #{GUID}',
+      'email_new_donation_body' => 'Kampeni yako ya kukusanya fedha imepokea mchango mpya!,
+           <br><br>Kampeni: {TITLE}
+           <br>Mchango: {DONATION} XMR
+           <br>Tarehe: {DATE}
+           <br><br>Jumla ya michango: {TOTAL} XMR
+           <br>Jumla ya wafadhili: {SUPPORTERS}
+           <br>Tembelea kampeni yako: https://kuno.anne.media/{TYPE}/{GUID}/
+           <br><br>Zima arifa za barua pepe hapa:
+           <br>https://kuno.anne.media/edit-fundraiser/{GUID}/',
+      'email_reset_password_subject' => '[Kuno] Rudisha Nenosiri',
+      'email_reset_password_body' => 'Tembelea kiungo hiki ili kurudisha nenosiri lako: {URL} au ingiza nambari hii: {CODE} (Inaendelea kwa masaa 24)',
+      'homepage_title' => 'Kuchangisha Fedha Rahisi <br> kwa Kila Mtu',
+      'homepage_subtitle' => 'Changisha pesa au toa kwa kusudi jema na Monero',
+      'homepage_point1' => 'Anzisha kampeni ya kukusanya fedha bila malipo',
+      'homepage_point2' => 'Pokea Monero (unayoweza kubadilisha kuwa pesa taslimu)',
+      'homepage_point3' => 'Hakuna ada, inafanya kazi kimataifa, hakuna akaunti ya benki inayohitajika',
+      'homepage_button_start_fundraiser' => 'Anzisha Kampeni ya Kuchangisha Fedha',
+      'homepage_button_browse_fundraisers' => 'Vinjari Kampeni za Kuchangisha Fedha',
+      'homepage_bar' => 'Chaguo haki kwa GoFundMe na Kickstarter',
+      'homepage_heading_browse_fundraisers' => 'Vinjari {AMOUNT} ya Kampeni za Kuchangisha Fedha',
+      'homepage_heading_total_raised' => 'Zaidi ya {AMOUNT} ya XMR Imekusanywa!',
+      'homepage_top_categories' => 'Jamii Bora',
+      'homepage_recent_donations' => 'Michango ya Hivi Karibuni',
+      'homepage_all_categories' => 'Jamii Zote',
+      'homepage_launch_in_one_click' => 'Anzisha kampeni yako kwa Bofya 1',
+      'homepage_get_started_free' => 'Anza Bure',
+      'homepage_info_heading1' => 'Monero ni pesa kwa mtandao',
+      'homepage_info_description1' => '<p class="monero-info-p-bold kuno">
+                   Monero ni njia haraka na salama ya kutuma na kupokea pesa mtandaoni.
+                  </p>
+                  <p class="monero-info-p kuno">
+                   Hakuna akaunti ya benki, maombi au kitambulisho cha serikali kinachohitajika. Pakua tu mkoba kwenye simu yako au kompyuta ili kutuma na kupokea pesa ulimwenguni kwa bofya moja.
+                  </p>
+                  <p class="monero-info-p kuno">
+                  Urahisi na upatikanaji wa Monero hufanya iwe njia bora ya malipo kwa maduka mtandaoni, kazi za kijijini, malipo ya watu wa mbali, tips, kampeni za kuchangisha fedha na zaidi.
+                  </p>',
+      'homepage_link_download_mobile' => 'Pakua kwa Simu',
+      'homepage_link_download_desktop' => 'Pakua kwa Kompyuta',
+      'homepage_info_heading2' => 'Michango isiyoweza kufutwa',
+      'homepage_info_description2' => '<p class="monero-info-p-bold kuno">
+                  Pesa yako ni yako na Monero.
+                  </p>
+                  <p class="monero-info-p kuno">
+        Monero ni programu na haishtakiwi kwa wakala wa tatu au makampuni. Biashara haziwezi kufutwa, pesa hazifungiwi na watumiaji hawawezi kufunguliwa akaunti.
+                  </p>
+                  <p class="monero-info-p kuno">
+                  Iwe unachangisha fedha na Monero au kutoa kwa kusudi jema, unaweza kuwa na amani ya akili kwamba mpokeaji anakabidhiwa 100% ya mchango.
+                  </p>',
+      'homepage_link_official_website' => 'Tovuti Rasmi',
+      'homepage_link_overview' => 'Maelezo',
+      'homepage_link_buy_monero' => 'Nunua Monero',
+      'homepage_info_heading3' => 'Tumia Mahali Popote',
+      'homepage_info_description3' => '<p class="monero-info-p-bold kuno">
+                  Badilisha Monero kuwa pesa taslimu, nunua mtandaoni au lipa bili.
+                  </p>
+                  <p class="monero-info-p kuno">
+                  Ni rahisi kubadilisha Monero kuwa pesa taslimu na  <a href="https://localmonero.co">LocalMonero</a>, <a href="https://bisq.network">Bisq</a> au <a href="https://coinatmradar.com">ATM ya Crypto</a> (hakuna akaunti ya benki inayohitajika).
+                  </p>
+                  <p class="monero-info-p kuno">
+                  Masoko kama <a href="https://moneromarket.io">MoneroMarket</a> na nyimbo kama <a href="https://monerica.com">Monerica</a> na <a href="https://acceptedhere.io">AcceptedHere</a> wanakusaidia kununua unachohitaji na Monero.
+                  </p>
+                  <p class="monero-info-p kuno">
+                  Zaidi ya hayo, <a href="https://cakepay.com">CakePay</a> na <a href="https://coincards.com">CoinCards</a> wanatoa kadi za Visa zilizolipwa na kadi za zawadi kwa maelfu ya biashara. Wauzaji wa kib
+                  </p>
+                  <p class="monero-info-p kuno">
+                  Urahisi wa Monero unafanya iwe rahisi kukusanya fedha kulipa bili, kuanzisha mradi wako au kusaidia shirika la hisani.
+                  </p>',
+                  'homepage_link_exchange_to_cash' => 'Badilisha kuwa pesa taslimu',
+      'homepage_link_shop_online' => 'Nunua mtandaoni',
+      'homepage_link_marketplace' => 'Soko',
+      'homepage_use_case_heading1' => 'Kwa Mashirika ya Kusaidia',
+      'homepage_use_case_description1' => '<p class="use-case-p-bold kuno">
+                    Shelisheli ya paka ya eneo inahitaji michango kwa chakula cha paka na bili za daktari.
+                  </p>
+                  <p class="use-case-p kuno">
+                    Wanaweka Kuno Fundraiser, wanashiriki kiungo kwenye media ya kijamii na kupokea michango.
+                  </p>
+                  <p class="use-case-p kuno">
+                    Shelisheli inatumia Monero iliyokusanywa kununua kadi za zawadi za Petsmart na CakePay na kutoa pesa taslimu kulipa bili ya daktari na ATM ya Crypto.
+                  </p>
+                  <p class="use-case-p kuno">
+                    Kila mtoaji anapokea sasisho na picha za paka.
+                  </p>',
+      'homepage_use_case_heading2' => 'Kwa Watu Binafsi',
+      'homepage_use_case_description2' => '<p class="use-case-p-bold kuno">
+                    Alice anahitaji kukusanya pesa kwa bili za matibabu.
+                  </p>
+                  <p class="use-case-p kuno">
+                    Binti yake anamsaidia kuanzisha Kuno Fundraiser na kushiriki na jamii yao.
+                  </p>
+                  <p class="use-case-p kuno">
+                    Wanakusanya pesa za kutosha na kuzibadilisha kuwa pesa taslimu na LocalMonero.
+                  </p>
+                  <p class="use-case-p kuno">
+                    Alice anaandika barua ya shukrani yenye upendo kwa kila mtoaji kama ishara ya shukrani.
+                  </p>',
+      'homepage_use_case_heading3' => 'Kwa Kampuni Mpya',
+      'homepage_use_case_description3' => '<p class="use-case-p-bold kuno">
+                    Msanii huru anataka kuunda mchezo mpya.
+                  </p>
+                  <p class="use-case-p kuno">
+                    Anaweka Kuno Fundraiser na kushiriki na jamii za michezo.
+                  </p>
+                  <p class="use-case-p kuno">
+                    Anafikia lengo na kutumia fedha kumchukua msanii anayependa Monero kutoka MoneroMarket na kununua mali za mchezo na kadi ya malipo ya CakePay.
+                  </p>
+                  <p class="use-case-p kuno">
+                    Kila mtoaji anapata nakala ya bure ya mchezo.
+                  </p>',
+      'homepage_use_case_heading4' => 'Kwa Wazalishaji wa Yaliyomo',
+      'homepage_use_case_description4' => '<p class="use-case-p-bold kuno">
+                    Kikundi kinapakia nyimbo zao za kufunika na muziki wa asili kwenye Youtube.
+                  </p>
+                  <p class="use-case-p kuno">
+                    Wanaweka Kuno Donation Page kupokea michango ya Monero.
+                  </p>
+                  <p class="use-case-p kuno">
+                    Mashabiki wanaweza pia kupendekeza nyimbo au kutoa maoni wakati wa matangazo ya moja kwa moja kwa kufanya mchango.
+                  </p>
+                  <p class="use-case-p kuno">
+                    Hii inatoa njia bora ya kusimamia mapato yao ya yaliyomo kwa muda mrefu, ikilinganishwa na matangazo.
+                  </p>',
+      'homepage_use_case_heading5' => 'Kwako',
+      'homepage_use_case_description5' => '<p class="use-case-p-bold kuno">
+                    Na Kuno, kila mtu anaweza kukusanya pesa kwa mradi wao, kusudi au kampuni mpya.
+                  </p>
+                  <p class="use-case-p kuno">
+                  Kila unachohitaji ni mkoba wa Monero na lengo.
+                  </p>',
+      'fundraiser_heading_goal' => 'Lengo',
+      'fundraiser_heading_raised' => 'Imepatikana',
+      'fundraiser_heading_percentage_funded' => 'imefadhiliwa',
+      'fundraiser_heading_donations' => 'Michango',
+      'fundraiser_heading_supporters' => 'Wafadhili',
+      'fundraiser_heading_comments' => 'Maoni',
+      'fundraiser_heading_support' => 'Fadhili',
+      'fundraiser_heading_share' => 'Shiriki',
+      'fundraiser_heading_about' => 'Kuhusu',
+      'fundraiser_heading_photos' => 'Picha',
+      'fundraiser_heading_contact' => 'Wasiliana nasi',
+      'fundraiser_heading_date' => 'Imechapishwa:',
+      'fundraiser_heading_new_comment' => 'Andika maoni',
+      'fundraiser_heading_new_fundraiser' => 'Mradi Mpya',
+      'fundraiser_heading_edit_fundraiser' => 'Hariri Mradi',
+      'fundraiser_heading_logout' => 'Toka',
+      'fundraiser_support_text' => 'Tuma kiasi chochote cha Monero kwenda kwa:',
+      'fundraiser_share_text' => 'Nakili kiungo hiki ili kushiriki mradi huu na marafiki au mitandao ya kijamii:',
+      'fundraiser_open_in_wallet' => 'Fungua kwa mkoba',
+      'fundraiser_info_point1' => 'Unachangia moja kwa moja kwenye mkoba wa mpokeaji',
+      'fundraiser_info_point2' => 'Hakuna wakala wa kati au ada',
+      'fundraiser_info_point3' => 'Michango inaambatishwa kila baada ya dakika 5',
+      'fundraiser_full_size_photo' => 'Picha kamili',
+      'fundraiser_no_donations' => 'Hakuna michango bado',
+      'fundraiser_supporters' => '{AMOUNT} wafadhili',
+      'fundraiser_button_support' => 'Fadhili',
+      'fundraiser_donate_with_monero' => 'Toa na Monero:',
+      'fundraiser_comment_form_placeholder_txid' => 'TXID',
+      'fundraiser_comment_form_placeholder_tx_key' => 'Funguo ya TX (Mfano: 7d7a9370a746d219e5f66aaaec902ead0d1c1783817a10276c9accdacca6f10d)',
+      'fundraiser_comment_form_placeholder_email' => 'Barua pepe (hiari, kwa tuzo za mradi)',
+      'fundraiser_comment_form_placeholder_comment' => 'Andika maoni ya umma',
+      'fundraiser_comment_form_submit' => 'Maoni',
+      'search' => 'Tafuta',
+      'search_heading' => 'Tafuta miradi',
+      'search_text' => 'Tafuta miradi...',
+      'search_sort_by_new' => 'Panga kwa mpya',
+      'search_sort_by_recently_donated' => 'Panga kwa michango iliyotolewa hivi karibuni',
+      'search_sort_by_percentage_funded' => 'Panga kwa asilimia iliyofadhiliwa',
+      'search_sort_by_goal' => 'Panga kwa lengo',
+      'search_all_categories' => 'Vikundi vyote',
+      'search_no_fundraisers_found' => 'Hakuna miradi iliyopatikana',
+      'search_fediverse_heading' => 'Tafuta Fediverse',
+      'search_fediverse_text' => 'Tafuta miradi ya Fediverse...',
+      'search_fediverse_no_fundraisers_found' => 'Hakuna miradi ya Fediverse iliyopatikana',
+      'search_fediverse_peers_list' => 'Orodha ya seva za kufedereta:',
+      'login_invite_code_heading' => 'Mradi Mpya',
+      'login_invite_code_text' => 'Ingiza msimbo wa mwaliko ili kuanzisha mradi mpya.',
+      'login_invite_code_note' => 'Ikiwa huna msimbo wa mwaliko, tafadhali wasiliana na msaada.',
+      'login_invite_code_form' => 'Msimbo wa mwaliko',
+      'login_invite_code_form_placeholder' => 'Msimbo wa mwaliko',
+      'login_invite_code_submit' => 'Endelea',
+      'login_fundraiser_form_fundraiser' => 'Mradi',
+      'login_fundraiser_heading' => 'Hariri Mradi',
+      'login_fundraiser_text' => 'Ingiza msimbo wa mradi na nywila yako ya barua pepe kuhariri mradi wako.',
+      'login_fundraiser_note' => 'Msimbo uko kwenye URL:',
+      'login_fundraiser_forgot_password' => 'Umesahau nywila?',
+      'login_fundraiser_form_fundraiser' => 'Mradi',
+      'login_fundraiser_form_fundraiser_placeholder' => 'Msimbo wa mradi (k.m. ae21)',
+      'login_fundraiser_form_password' => 'Nywila',
+      'login_fundraiser_form_password_placeholder' => 'Nywila',
+      'login_fundraiser_form_submit' => 'Hariri Mradi',
+      'edit_fundraiser_heading_fundraiser_details' => 'Maelezo ya Mradi',
+      'edit_fundraiser_fundraiser_details_text' => 'Eleza mradi wako na ongeza picha.',
+      'edit_fundraiser_form_optional' => '(Hiari)',
+      'edit_fundraiser_form_more_info' => '(Maelezo zaidi)',
+      'edit_fundraiser_form_title' => 'Jina',
+      'edit_fundraiser_form_title_placeholder' => 'Jina la Mradi',
+      'edit_fundraiser_form_photo' => 'Picha',
+      'edit_fundraiser_form_additional_photos' => 'Picha Zaidi',
+      'edit_fundraiser_form_description' => 'Maelezo',
+      'edit_fundraiser_form_description_placeholder' => 'Eleza mradi wako. Ongeza tuzo za mradi, hatua muhimu au maelezo ya mawasiliano, ikiwa ni lazima',
+      'edit_fundraiser_form_tags' => 'Lebo',
+      'edit_fundraiser_form_tags_placeholder' => 'Jamii, lebo, nk.',
+      'edit_fundraiser_form_contact' => 'Wasiliana nasi',
+      'edit_fundraiser_form_contact_placeholder' => 'Barua pepe, tovuti, Twitter, Matrix, nk.',
+      'edit_fundraiser_form_visibility' => 'Weka mradi kuwa binafsi (haionyeshwi kwenye matokeo ya utafutaji, wafadhili watahitaji kiungo moja kwa moja)',
+      'edit_fundraiser_heading_goal' => 'Lengo',
+      'edit_fundraiser_goal_text' => 'Wekea lengo lako na anwani ya Monero.',
+      'edit_fundraiser_get_wallet' => 'Huna mkoba wa Monero? Pata hapa.',
+      'edit_fundraiser_form_goal' => 'Lengo',
+      'edit_fundraiser_form_goal_placeholder' => 'Lengo (XMR)',
+      'edit_fundraiser_form_donation_page' => 'Hakuna lengo - Ninataka Kuunda Ukurasa wa Michango',
+      'edit_fundraiser_form_monero_address' => 'Anwani ya Monero',
+      'edit_fundraiser_form_monero_address_placeholder' => 'Mfano: 44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft3XjrpDtQGv7SqSsaBYBb98uNbr2VBBEt7f2wfn3RVGQBEP3A',
+      'edit_fundraiser_form_view_key' => 'Funguo ya Siri ya Kutazama',
+      'edit_fundraiser_form_view_key_placeholder' => 'Mfano: f359631075708155cc3d92a32b75a7d02a5dcf27756707b47a2b31b21c389501',
+      'edit_fundraiser_heading_password' => 'Nywila',
+      'edit_fundraiser_password_text' => 'Weka nywila ili kuhariri mradi wako baadaye.',
+      'edit_fundraiser_widthdrawal_warning' => "Epuka kutoa salio la sehemu wakati wa miradi inayoendelea. Monero hutumia salio kamili kwa malipo, ikiiacha kiasi kilichobaki kama shughuli mpya. Hii itahesabiwa kimakosa kama mchango, na maendeleo ya mradi wako yatakuwa sahihi. Ikiwa unahitaji kutumia pesa unapotembea, daima ondoa salio lako kamili, ukisalia hakuna 'mabadiliko'.",
+      'edit_fundraiser_form_email' => 'Barua pepe',
+      'edit_fundraiser_form_email_placeholder' => 'Barua pepe (hiari, kwa ajili ya kurejesha nywila)',
+      'edit_fundraiser_form_password' => 'Nywila',
+      'edit_fundraiser_form_new_password_placeholder' => 'Nywila',
+      'edit_fundraiser_form_edit_password_placeholder' => 'Nywila (acha tupu ikiwa hakuna mabadiliko)',
+      'edit_fundraiser_form_email_notifications' => 'Nipatie barua pepe ninapopokea mchango mpya kwenye mradi wangu',
+      'edit_fundraiser_form_submit_edit' => 'Sasisha Mradi',
+      'edit_fundraiser_form_submit_new' => 'Anza Mradi',
+      'edit_fundraiser_heading_supporters' => 'Wafadhili wa Mradi',
+      'edit_fundraiser_supporters_text' => 'Ikiwa mfadhili ameingiza anwani yao ya barua pepe, utaiona hapa (kwa mfano, kwa tuzo za mradi).',
+      'edit_fundraiser_no_supporters' => 'Hakuna barua pepe zilizowasilishwa bado',
+      'edit_fundraiser_supporters_email' => 'Barua pepe',
+      'edit_fundraiser_supporters_comment' => 'Maoni',
+      'edit_fundraiser_supporters_amount' => 'Kiasi',
+      'edit_fundraiser_supporters_txid' => 'TXID',
+      'edit_fundraiser_supporters_tx_key' => 'Funguo ya TX',
+      'edit_fundraiser_supporters_date' => 'Tarehe',
+      'edit_fundraiser_heading_manage_fundraiser' => 'Simamia Mradi',
+      'edit_fundraiser_fix_view_key' => 'Tafadhali ongeza funguo halali ya kutazama ili kurejesha upya mradi wako.',
+      'edit_fundraiser_deactivate_fundraiser' => 'Zima Mradi',
+      'edit_fundraiser_reactivate_fundraiser' => 'Washa upya Mradi',
+      'edit_fundraiser_delete_fundraiser' => 'Futa Data Yako',
+      'reset_password_heading' => 'Rejesha Nywila',
+      'reset_password_description' => 'Ingiza msimbo wa mradi na anwani yako ya barua pepe ili kurejesha nywila yako.',
+      'reset_password_note' => '(Ikiwa hukuiweka anwani yako ya barua pepe, tafadhali wasiliana na msaada.)',
+      'reset_password_form_fundraiser' => 'Mradi',
+      'reset_password_form_fundraiser_placeholder' => 'Msimbo wa mradi (k.m. ae21)',
+      'reset_password_form_email' => 'Barua pepe',
+      'reset_password_form_email_placeholder' => 'Barua pepe',
+      'reset_password_form_confirmation_code' => 'Nambari ya Uthibitisho',
+      'reset_password_form_confirmation_code_placeholder' => 'Nambari ya Uthibitisho',
+      'reset_password_form_new_password' => 'Nywila Mpya',
+      'reset_password_form_new_password_placeholder' => 'Nywila Mpya',
+      'reset_password_form_submit' => 'Weka upya Nywila',
+      'success' => 'Mafanikio',
+      'success_form_submitted' => 'Fomu imewasilishwa kwa mafanikio',
+      'success_new_fundraiser' => 'Mradi wako umewezeshwa: <a href="https://kuno.anne.media/fundraiser/{GUID}/">Tazama mradi wako hapa</a><br>Wekea alama kiungo hiki kwa kuhariri mradi wako: <a href="https://kuno.anne.media/edit-fundraiser/{GUID}/">Hariri mradi #{GUID}</a>',
+      'success_new_donation_page' => 'Ukurasa wako wa michango umewezeshwa: <a href="https://kuno.anne.media/donate/{GUID}/">Tazama ukurasa wako wa michango hapa</a><br>Wekea alama kiungo hiki kwa kuhariri ukurasa wako wa michango: <a href="https://kuno.anne.media/edit-fundraiser/{GUID}/">Hariri ukurasa wa michango #{GUID}</a>',
+      'success_fundraiser_updated' => '<a href="https://kuno.anne.media/fundraiser/{GUID}/">Mradi wako umeboreshwa.</a>',
+      'success_valid_fundraiser_password' => '<a href="https://kuno.anne.media/edit-fundraiser/{GUID}/">Bonyeza hapa kuhariri mradi wako</a>',
+      'success_donation_page_updated' => '<a href="https://kuno.anne.media/donate/{GUID}/">Ukurasa wako wa michango umeboreshwa.</a>',
+      'success_fundraiser_deactivated' => 'Mradi umesitishwa',
+      'success_fundraiser_reactivated' => 'Mradi umewezeshwa upya',
+      'success_fundraiser_deleted' => 'Mradi umefutwa',
+      'success_valid_invite_code' => 'Msimbo wa mwaliko ni halali. Sasa unaweza kuanzisha mradi.',
+      'success_valid_confirmation_code' => 'Nambari ya uthibitisho ni halali',
+      'success_check_email_for_password_reset_code' => 'Angalia anwani yako ya barua pepe kwa nambari ya kuweka upya nywila',
+      'success_password_reset' => 'Nywila imebadilishwa, sasa unaweza <a href="https://kuno.anne.media/edit-fundraiser/{FUNDRAISER}">kuhariri mradi wako</a>',
+      'success_comment_sent' => 'Maoni yameshawasilishwa!',
+      'success_image_uploaded' => 'Picha imewekwa',
+      'error' => 'Hitilafu',
+      'error_please_refresh' => 'Tafadhali refresh na jaribu tena.',
+      'error_form_expired' => 'Fomu imeisha muda, tafadhali refresh',
+      'error_form_ratelimited' => 'Ratelimited, tafadhali ngoja {RATELIMIT} sekunde',
+      'error_session_expired' => 'Kikao kimeisha muda, tafadhali ingia tena',
+      'error_page_not_found' => 'Ukurasa haukupatikana',
+      'error_fundraiser_not_found' => 'Mradi haukupatikana',
+      'error_email_not_found' => 'Hakuna anwani ya barua pepe iliyowekwa, tafadhali wasiliana na msaada',
+      'error_invalid_email' => 'Tafadhali ingiza anwani ya barua pepe halali',
+      'error_invalid_email_for_notifications' => 'Tafadhali ingiza anwani ya barua pepe halali ili kuwezesha arifa',
+      'error_invalid_confirmation_code' => 'Nambari ya uthibitisho ni batili au imeisha muda',
+      'error_invalid_monero_address' => 'Anwani ya Monero batili (Tafadhali ingiza anwani yako kuu, ambayo huanza na 4)',
+      'error_invalid_view_key' => 'Funguo ya kutazama batili (Tafadhali ingiza funguo yako ya kutazama ya kibinafsi/siri)',
+      'error_invalid_address' => 'Anwani ya Monero batili (Tafadhali ingiza anwani yako kuu, ambayo huanza na 4)',
+      'error_entered_public_view_key' => 'Funguo ya kutazama batili (Tafadhali ingiza funguo yako ya kutazama ya kibinafsi/siri, sio funguo ya kutazama ya umma)',
+      'error_entered_public_spend_key' => 'Funguo ya kutazama batili (Tafadhali ingiza funguo yako ya kutazama ya kibinafsi/siri, sio funguo ya matumizi ya kibinafsi)',
+      'error_entered_private_spend_key' => 'Funguo ya kutazama batili (Tafadhali ingiza funguo yako ya kutazama ya kibinafsi/siri, sio funguo ya matumizi ya kibinafsi)',
+      'error_invalid_private_view_key' => 'Funguo ya kutazama batili (Tafadhali ingiza funguo yako ya kutazama ya kibinafsi/siri)',
+      'error_invalid_txid' => 'TXID batili',
+      'error_invalid_tx_key' => 'Tafadhali ingiza TX key halali (inayojulikana pia kama ushahidi wa TX)',
+      'error_invalid_txid' => 'Tafadhali ingiza nambari ya mwaliko halali',
+      'error_incorrect_email' => 'Anwani ya barua pepe sio sahihi',
+      'error_incorrect_password' => 'Nywila sio sahihi',
+      'error_monero_address_already_used' => 'Kuna tayari mradi/ukurasa wa michango na anwani hii ya Monero',
+      'error_missing_fundraiser_code_or_email' => 'Tafadhali ingiza nambari ya mradi wako na anwani ya barua pepe',
+      'error_missing_password_reset_code_or_password' => 'Tafadhali ingiza nambari yako ya kuweka upya nywila na nywila mpya',
+      'error_missing_txid_or_tx_key' => 'Tafadhali ingiza both TXID na TX key (inayojulikana pia kama ushahidi wa TX)',
+      'error_missing_password' => 'Tafadhali ingiza nywila yako',
+      'error_missing_view_key' => 'Tafadhali ingiza funguo ya kutazama ya kibinafsi halali',
+      'error_title_too_long' => 'Kichwa lazima kiwe kati ya herufi 1-80',
+      'error_description_too_long' => 'Maelezo lazima yawe mafupi kuliko herufi 8000',
+      'error_tags_too_long' => 'Vichwa lazima viwe mafupi kuliko herufi 250',
+      'error_contact_details_too_long' => 'Maelezo ya mawasiliano lazima yawe mafupi kuliko herufi 250',
+      'error_goal_must_be_positive' => 'Lengo la mradi lazima liwe namba chanya',
+      'error_image_incorrect_file_type' => 'Picha lazima iwe aina ya PNG au JPEG',
+      'error_image_maximum_image_size' => 'Ukubwa wa picha wa juu ni MB 2',
+      'error_image_invalid' => 'Picha batili',
+      'error_image_storage_full' => 'Uhifadhi umefika mwisho',
+      'error_image_missing' => 'Tafadhali pakia picha',
+      'translate_help' => 'Ingekuwa nzuri kama Kuno ingekuwa inapatikana katika lugha zaidi. Tusaidie na tafsiri kwenye <a href="https://github.com/annemedia/kuno-translation">https://github.com/annemedia/kuno-translation</a>',
+      'wallets_header' => 'Monero: <span class="text3">Chaguo la Pochi</span>',
+      'monero_gui_wallet' => 'Pochi ya interface ya mtumiaji (GUI) iliyofunguliwa na jamii ya Monero, bure kabisa kutumia, inafaa kwa wataalamu na waanzilishi.',
+      'cake_wallet' => 'Hifadhi, tuma, na ubadilishe pesa yako ya sarafu kwa urahisi. Nunua kadi za zawadi kwa faragha na lipa kwenye kaunta na pesa za sarafu, kipande cha keki.',
+      'monerujo_wallet' => 'Pochi ya Android kwa Monero. Na Monerujo, unaweza kutembea kwa urahisi kati ya pochi kadhaa. Kufanya mpya ni rahisi kama bomba chache.',
+      'feather_wallet' => 'Feather ni pochi ya Monero huru, yenye chanzo wazi kwa Linux, Tails, Windows, na macOS. Rahisi kutumia, ndogo, haraka, na rafiki kwa mwanzo.'
+    );
+      $translation = ($strings[$string]) ? $strings[$string] : $string;
+      return $translation;
+  }
 
