@@ -1773,3 +1773,359 @@ function translate_it($string) {
       return $translation;
   }
 
+  function translate_pt($string) {
+    static $strings = array(
+      'site_name' => 'Kuno',
+      'page_title' => 'Kuno – Arrecade fundos com Monero',
+      'page_title_error' => 'Erro | Kuno – Arrecade fundos com Monero',
+      'page_title_search' => 'Pesquisar | Kuno – Arrecade fundos com Monero',
+      'page_title_fediverse' => 'Fediverse | Kuno – Arrecade fundos com Monero',
+      'page_title_reset_password' => 'Redefinir senha | Kuno – Arrecade fundos com Monero',
+      'page_title_edit_fundraiser' => 'Editar arrecadação de fundos | Kuno – Arrecade fundos com Monero',
+      'page_title_new_fundraiser' => 'Nova arrecadação de fundos | Kuno – Arrecade fundos com Monero',
+      'pagination' => 'Pagina {NUM} of {NUM_PAGES}',
+      'pagination_fundraisers' => 'Visualizar {START}-{END} de {TOTAL} doações',
+      'pagination_donations' => 'Visualizar {START}-{END} de {TOTAL} doações',
+      'pagination_submit' => 'Vai',
+      'nav_manage_fundraiser' => 'Gerenciar arrecadação de fundos',
+      'nav_search' => 'Encontre arrecadação de fundos...',
+      'nav_fundraiser_progress' => 'Progresso da arrecadação de fundos:',
+      'nav_edit_fundraiser' => 'Editar a arrecadação de fundos:',
+      'nav_logout' => 'Fechar Sessão',
+      'footer_description' => 'Arrecade fundos com Monero',
+      'footer_contact' => 'Contato: suporte [at] anne.media',
+      'footer_language' => 'Linguagem:',
+      'footer_light_mode' => 'Modo luminoso',
+      'footer_dark_mode' => 'Modo escuro',
+      'footer_manage_fundraiser' => 'Gerencie sua arrecadação de fundos:',
+      'footer_new_fundraiser' => 'Nova arrecadação de fundos',
+      'footer_edit_fundraiser' => 'Editar campanha de arrecadação de fundos',
+      'footer_reset_password' => 'Restaurar senha',
+      'footer_quick_links' => 'Links Rápidos:',
+      'footer_search_fundraisers' => 'Pesquisar coleções',
+      'footer_search_fediverse' => 'Pesquise no Fediverse',
+      'footer_marketplace' => 'Mercado',
+      'footer_rss_feed' => 'RSS Feed',
+      'footer_faq' => 'FAQ',
+      'email_new_donation_subject' => '[Kuno] Novo{DONATION} Doação de XMR para #{GUID}',
+      'email_new_donation_body' => 'Sua arrecadação de fundos recebeu uma nova doação!
+           <br><br>Arrecadação de fundos: {TITLE}
+           <br>Doação: {DONATION} XMR
+           <br>Fecha: {DATE}
+           <br><br>Doações totais: {TOTAL} XMR
+           <br>Total de colaboradores: {SUPPORTERS}
+           <br>Visite sua arrecadação de fundos: https://kuno.anne.media/{TYPE}/{GUID}/
+           <br><br>Desative as notificações por e-mail aqui:
+           <br>https://kuno.anne.media/edit-fundraiser/{GUID}/',
+      'email_reset_password_subject' => '[Kuno] Restaurar senha',
+      'email_reset_password_body' => 'Visite este link para redefinir sua senha: {URL} ou digite este código: {CODE} (Valid for 24 hours)',
+      'homepage_title' => 'Arrecadação de fundos fácil <br> para todos',
+      'homepage_subtitle' => 'Arrecade dinheiro ou doe para uma boa causa com Monero',
+      'homepage_point1' => 'Arrecadação de fundos gratuita',
+      'homepage_point2' => 'Receba Monero (que você pode trocar por dinheiro)',
+      'homepage_point3' => 'Sem taxas, funciona em todo o mundo, sem necessidade de conta bancária',
+      'homepage_button_start_fundraiser' => 'Comece uma arrecadação de fundos',
+      'homepage_button_browse_fundraisers' => 'Arrecadação de fundos',
+      'homepage_bar' => 'A alternativa justa ao GoFundMe e Kickstarter',
+      'homepage_heading_browse_fundraisers' => 'Pesquisar {AMOUNT} campanhas de arrecadação de fundos',
+      'homepage_heading_total_raised' => 'Mais {AMOUNT} XMR arrecadados!',
+      'homepage_top_categories' => 'Categorias principais',
+      'homepage_recent_donations' => 'Doações recentes',
+      'homepage_all_categories' => 'Todas as categorias',
+      'homepage_launch_in_one_click' => 'Comece sua arrecadação de fundos com 1 clique',
+      'homepage_get_started_free' => 'Comece gratuitamente',
+      'homepage_info_heading1' => 'Monero é dinheiro para a Internet',
+      'homepage_info_description1' => '<p class="monero-info-p-bold kuno">
+                   Monero é uma maneira rápida e segura de enviar e receber dinheiro online.
+                  </p>
+                  <p class="monero-info-p kuno">
+                   Não é necessária conta bancária ou identificação governamental. Basta baixar uma carteira para o seu telefone ou computador para enviar e receber dinheiro ao redor do mundo com um único clique.
+  
+                  </p>
+                  <p class="monero-info-p kuno">
+                  A simplicidade e acessibilidade do Monero fazem dele um método de pagamento ideal para lojas online, trabalho remoto, remessas, gorjetas, arrecadação de fundos e muito mais.
+                  </p>',
+      'homepage_link_download_mobile' => 'Download para celular',
+      'homepage_link_download_desktop' => 'Download para computador',
+      'homepage_info_heading2' => 'Doações sem censura',
+      'homepage_info_description2' => '<p class="monero-info-p-bold kuno">
+                  Com Monero, seu dinheiro pertence a você.
+                  </p>
+                  <p class="monero-info-p kuno">
+    Monero é um software e não depende de terceiros ou corporações. As transações não podem ser censuradas, os fundos não podem ser congelados e os usuários não podem ser desativados.
+                  </p>
+                  <p class="monero-info-p kuno">
+                  Quer você arrecade fundos com Monero ou doe para uma boa causa, você pode ter certeza de que o beneficiário receberá 100% da doação.
+                  </p>',
+      'homepage_link_official_website' => 'Web oficial',
+      'homepage_link_overview' => 'Resumo',
+      'homepage_link_buy_monero' => 'Comprar Monero',
+      'homepage_info_heading3' => 'Gaste onde você quiser',
+      'homepage_info_description3' => '<p class="monero-info-p-bold kuno">
+                  Troque Monero por dinheiro, compre online ou pague contas.
+                  </p>
+                  <p class="monero-info-p kuno">
+                  É fácil trocar Monero por dinheiro físico com <a href="https://localmonero.co">LocalMonero</a>, <a href="https://bisq.network">Bisq</a> or a <a href="https://coinatmradar.com">Crypto ATM</a> (você não precisa de uma conta bancária).
+                  </p>
+                  <p class="monero-info-p kuno">
+                  Em mercados como <a href="https://moneromarket.io">MoneroMarket</a>e em diretórios como<a href="https://monerica.com">Monerica</a> e <a href="https://acceptedhere.io">AcceptedHere</a> isso o ajudará a comprar o que você precisa com o Monero.
+                  </p>
+                  <p class="monero-info-p kuno">
+                  Além disso, <a href="https://cakepay.com">CakePay</a> e <a href="https://coincards.com">CoinCards</a> oferecem cartões Visa pré-pagos e milhares de cartões-presente .de lojas. Compradores pessoais como <a href="https://proxysto.re">ProxyStore</a>, <a href="https://sovereignstack.tools/rerouter/">Sovereign Stack</a> e <a href ="https://shopinbit.com">ShopInBit</a> oferece uma maneira conveniente de pagar contas com Monero.
+                  </p>
+                  <p class="monero-info-p kuno">
+                  A flexibilidade do Monero facilita a arrecadação de fundos para pagar contas, iniciar um projeto ou apoiar uma instituição de caridade.
+                  </p>',
+      'homepage_link_exchange_to_cash' => 'Troca por dinheiro',
+      'homepage_link_shop_online' => 'Compre online',
+      'homepage_link_marketplace' => 'Mercado',
+      'homepage_use_case_heading1' => 'Para instituições de caridade',
+      'homepage_use_case_description1' => '<p class="use-case-p-bold kuno">
+                    Um abrigo local para gatos precisa de doações para comida de gato e contas do veterinário.
+                  </p>
+                  <p class="use-case-p kuno">
+                    Crie uma campanha de arrecadação de fundos Kuno, compartilhe o link nas redes sociais e receba doações..
+                  </p>
+                  <p class="use-case-p kuno">
+                    O abrigo usa o Monero arrecadado para comprar cartões-presente Petsmart com CakePay e saca dinheiro para pagar a conta do veterinário em um Crypto ATM.
+                  </p>
+                  <p class="use-case-p kuno">
+                   Cada doador recebe uma atualização com fotos dos gatos.
+                  </p>',
+      'homepage_use_case_heading2' => 'Para indivíduos',
+      'homepage_use_case_description2' => '<p class="use-case-p-bold kuno">
+                    Alice precisa arrecadar dinheiro para contas médicas.
+                  </p>
+                  <p class="use-case-p kuno">
+                    Sua filha a ajuda a organizar uma arrecadação de fundos para Kuno e a compartilha com sua comunidade.
+                  </p>
+                  <p class="use-case-p kuno">
+                    Eles coletam dinheiro suficiente e trocam por dinheiro com LocalMonero.
+                  </p>
+                  <p class="use-case-p kuno">
+                   Alice escreve uma carta de agradecimento sincera a cada doador como forma de agradecimento.
+                  </p>',
+      'homepage_use_case_heading3' => 'Para novas empresas',
+      'homepage_use_case_description3' => '<p class="use-case-p-bold kuno">
+                    Um desenvolvedor independente quer criar um novo jogo.
+                  </p>
+                  <p class="use-case-p kuno">
+                    Crie uma arrecadação de fundos Kuno e compartilhe-a com comunidades de jogos.
+                  </p>
+                  <p class="use-case-p kuno">
+                    Alcance a meta e use os fundos para contratar artistas Monero-Friendly do MoneroMarket e comprar ativos no jogo com um cartão de débito virtual CakePay..
+                  </p>
+                  <p class="use-case-p kuno">
+                    Cada doador recebe uma cópia gratuita do jogo.
+                  </p>',
+      'homepage_use_case_heading4' => 'Para criadores de conteúdo',
+      'homepage_use_case_description4' => '<p class="use-case-p-bold kuno">
+                    Um grupo envia seus covers e músicas originais para o YouTube.
+                  </p>
+                  <p class="use-case-p kuno">
+                    Eles criaram uma página de doações em Kuno para receber doações em Monero.
+                  </p>
+                  <p class="use-case-p kuno">
+                    Os fãs também podem sugerir músicas ou fazer comentários durante as transmissões ao vivo fazendo uma doação.
+                  </p>
+                  <p class="use-case-p kuno">
+                    Isso oferece uma maneira melhor de monetizar seu conteúdo de forma sustentável, em comparação com os anúncios.
+                  </p>',
+      'homepage_use_case_heading5' => 'Para você',
+      'homepage_use_case_description5' => '<p class="use-case-p-bold kuno">
+                    Com Kuno, todos podem arrecadar dinheiro para seu projeto, causa ou startup.
+                  </p>
+                  <p class="use-case-p kuno">
+                    Tudo que você precisa é de uma carteira Monero e uma meta.
+                  </p>',
+   'fundraiser_heading_goal' => 'Meta',
+       'fundraiser_heading_raised' => 'Arrecadado',
+       'fundraiser_heading_percentage_funded' => 'Contribuições',
+       'fundraiser_heading_donations' => 'Doações',
+       'fundraiser_heading_supporters' => 'Apoiadores',
+       'fundraiser_heading_comments' => 'Comentários',
+       'fundraiser_heading_support' => 'Apoio',
+       'fundraiser_heading_share' => 'Compartilhar',
+       'fundraiser_heading_about' => 'Sobre',
+       'fundraiser_heading_photos' => 'Fotos',
+       'fundraiser_heading_contact' => 'Contato',
+       'fundraiser_heading_date' => 'Publicado:',
+       'fundraiser_heading_supporters' => 'Apoiadores',
+       'fundraiser_heading_new_comment' => 'Escreva um comentário',
+       'fundraiser_heading_new_fundraiser' => 'Nova arrecadação de fundos',
+       'fundraiser_heading_edit_fundraiser' => 'Editar arrecadação de fundos',
+       'fundraiser_heading_logout' => 'Sair',
+       'fundraiser_support_text' => 'Envie qualquer quantia de Monero para:',
+       'fundraiser_share_text' => 'Copiar o link para compartilhar esta arrecadação de fundos com amigos ou nas redes sociais:',
+       'fundraiser_open_in_wallet' => 'Abrir na carteira',
+       'fundraiser_info_point1' => 'Você doa diretamente para a carteira do beneficiário',
+       'fundraiser_info_point2' => 'Sem intermediários ou comissões',
+       'fundraiser_info_point3' => 'As doações são sincronizadas a cada 5 minutos',
+       'fundraiser_full_size_photo' => 'Foto em tamanho grande',
+       'fundraiser_no_donations' => 'Nenhuma doação ainda',
+       'fundraiser_supporters' => '{AMOUNT} apoiadores',
+       'fundraiser_button_support' => 'Apoio',
+       'fundraiser_donate_with_monero' => 'Doe com Monero:',
+       'fundraiser_comment_form_placeholder_txid' => 'TXID',
+       'fundraiser_comment_form_placeholder_tx_key' => 'TX Key (Example: 7d7a9370a746d219e5f66aaaec902ead0d1c1783817a10276c9accdacca6f10d)',
+       'fundraiser_comment_form_placeholder_email' => 'E-mail (opcional, para recompensas de arrecadação de fundos)',
+       'fundraiser_comment_form_placeholder_comment' => 'Escreva um comentário público',
+       'fundraiser_comment_form_submit' => 'Comentário',
+       'pesquisar' => 'Pesquisar em',
+       'search_heading' => 'Pesquisar arrecadação de fundos',
+       'search_text' => 'Pesquisar arrecadação de fundos..',
+       'search_sort_by_new' => 'Classificar por novo',
+       'search_sort_by_recently_donated' => 'Classificar por doações recentes',
+       'search_sort_by_percentage_funded' => 'Classificar por porcentagem financiada',
+       'search_sort_by_goal' => 'Classificar por objetivo',
+       'search_all_categories' => 'Todas as categorias',
+       'search_no_fundraisers_found' => 'Nenhuma arrecadação de fundos encontrada',
+       'search_fediverse_heading' => 'Pesquisar Fediverse',
+       'search_fediverse_text' => 'Pesquisar arrecadações de fundos Fediverse...',
+       'search_fediverse_no_fundraisers_found' => 'Nenhuma arrecadação de fundos Fediverse encontrada',
+       'search_fediverse_peers_list' => 'Lista de instâncias federadas:',
+       'login_invite_code_heading' => 'Nova arrecadação de fundos',
+       'login_invite_code_text' => 'Digite um código de convite para iniciar uma nova arrecadação de fundos.',
+       'login_invite_code_note' => 'Se você não possui um código de convite, entre em contato com o suporte.',
+       'login_invite_code_form' => 'Código de convite',
+       'login_invite_code_form_placeholder' => 'Código de convite',
+       'login_invite_code_submit' => 'Continuar',
+       'login_fundraiser_form_fundraiser' => 'Arrecadação de fundos',
+       'login_fundraiser_heading' => 'Editar arrecadação de fundos',
+       'login_fundraiser_text' => 'Digite o código e a senha para editar sua arrecadação de fundos.',
+       'login_fundraiser_note' => 'O código está na URL:',
+       'login_fundraiser_forgot_password' => 'Esqueceu sua senha?',
+       'login_fundraiser_form_fundraiser' => 'Arrecadação de fundos',
+       'login_fundraiser_form_fundraiser_placeholder' => 'Código de arrecadação de fundos (por exemplo, ae21)',
+       'login_fundraiser_form_password' => 'Senha',
+       'login_fundraiser_form_password_placeholder' => 'Senha',
+       'login_fundraiser_form_submit' => 'Editar arrecadação de fundos',
+       'edit_fundraiser_heading_fundraiser_details' => 'Detalhes da arrecadação de fundos',
+       'edit_fundraiser_fundraiser_details_text' => 'Descreva sua arrecadação de fundos e adicione fotos.',
+       'edit_fundraiser_form_optional' => '(Opcional)',
+       'edit_fundraiser_form_more_info' => '(Mais informações)',
+       'edit_fundraiser_form_title' => 'Título',
+       'edit_fundraiser_form_title_placeholder' => 'Título da arrecadação de fundos',
+       'edit_fundraiser_form_photo' => 'Fotos',
+       'edit_fundraiser_form_additional_photos' => 'Fotos adicionais',
+       'edit_fundraiser_form_description' => 'Descrição',
+       'edit_fundraiser_form_description_placeholder' => 'Descreva sua arrecadação de fundos. Adicione recompensas, marcos ou detalhes de contato, se necessário.',
+       'edit_fundraiser_form_tags' => 'Tags',
+      'edit_fundraiser_form_tags_placeholder' => 'Categorias, tags, etc.',
+       'edit_fundraiser_form_contact' => 'Contato',
+       'edit_fundraiser_form_contact_placeholder' => 'E-mail, site, Twitter, Matrix, etc.',
+       'edit_fundraiser_form_visibility' => 'Defina a arrecadação de fundos como privada (ela não aparecerá nos resultados da pesquisa, os doadores precisarão do link direto)',
+       'edit_fundraiser_heading_goal' => 'Meta',
+       'edit_fundraiser_goal_text' => 'Defina sua meta e seu endereço Monero.',
+       'edit_fundraiser_get_wallet' => 'Não tem uma carteira Monero? Pegue um aqui.',
+       'edit_fundraiser_form_goal' => 'Meta',
+       'edit_fundraiser_form_goal_placeholder' => 'Meta (XMR)',
+       'edit_fundraiser_form_donation_page' => 'Sem objetivo - quero fazer uma página de doações',
+       'edit_fundraiser_form_monero_address' => 'Endereço Monero',
+       'edit_fundraiser_form_monero_address_placeholder' => 'Exemplo: 44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft3XjrpDtQGv7SqSsaBYBb98uNbr2VBBEt7f2wfn3RVGQBEP3A',
+       'edit_fundraiser_form_view_key' => 'Chave de visualização secreta',
+       'edit_fundraiser_form_view_key_placeholder' => 'Exemplo: f359631075708155cc3d92a32b75a7d02a5dcf27756707b47a2b31b21c389501',
+       'edit_fundraiser_heading_password' => 'Senha',
+       'edit_fundraiser_password_text' => 'Defina uma senha para editar sua campanha mais tarde.',
+       'edit_fundraiser_widthdrawal_warning' => 'Evite sacar saldos parciais durante arrecadações de fundos em andamento. Monero usa saldos totais para pagamentos, deixando os valores restantes como novas transações. Isso seria falsamente calculado como uma doação, e o progresso de seus fundos de arrecadação seria impreciso. Se você precisa utilizar os fundos em movimento, sempre sacar todo o saldo, sem deixar nenhum "troco"',
+       'edit_fundraiser_form_email' => 'E-mail',
+       'edit_fundraiser_form_email_placeholder' => 'E-mail (opcional, para redefinir senha)',
+       'edit_fundraiser_form_password' => 'Senha',
+       'edit_fundraiser_form_new_password_placeholder' => 'Senha',
+       'edit_fundraiser_form_edit_password_placeholder' => 'Senha (deixe em branco se não houver alterações)',
+       'edit_fundraiser_form_email_notifications' => 'Envie-me um e-mail quando minha arrecadação de fundos receber uma nova doação',
+       'edit_fundraiser_form_submit_edit' => 'Atualizar campanha de arrecadação de fundos',
+       'edit_fundraiser_form_submit_new' => 'Iniciar arrecadação de fundos',
+       'edit_fundraiser_heading_supporters' => 'Apoiadores da arrecadação de fundos',
+       'edit_fundraiser_supporters_text' => 'Se um apoiador inseriu seu endereço de e-mail, ele poderá vê-lo aqui (por exemplo, para recompensas de arrecadação de fundos)..',
+       'edit_fundraiser_no_supporters' => 'Nenhum email foi enviado ainda',
+       'edit_fundraiser_supporters_email' => 'E-mail',
+       'edit_fundraiser_supporters_comment' => 'Comentário',
+       'edit_fundraiser_supporters_amount' => 'Valor',
+       'edit_fundraiser_supporters_txid' => 'TXID',
+       'edit_fundraiser_supporters_tx_key' => 'TX Key',
+       'edit_fundraiser_supporters_date' => 'Data',
+       'edit_fundraiser_heading_manage_fundraiser' => 'Gerenciar arrecadação de fundos',
+       'edit_fundraiser_fix_view_key' => 'Adicione uma chave de visualização válida para reativar sua arrecadação de fundos..',
+       'edit_fundraiser_deactivate_fundraiser' => 'Desativar arrecadação de fundos',
+       'edit_fundraiser_reactivate_fundraiser' => 'Reativar arrecadação de fundos',
+       'edit_fundraiser_delete_fundraiser' => 'Excluir seus dados',
+       'reset_password_heading' => 'Redefinir senha',
+       'reset_password_description' => 'Digite o código de arrecadação de fundos e seu endereço de e-mail para redefinir sua senha.',
+       'reset_password_note' => '(Se você não adicionou um endereço de e-mail, entre em contato com o suporte.)',
+       'reset_password_form_fundraiser' => 'Arrecadação de fundos',
+       'reset_password_form_fundraiser_placeholder' => 'Código da arrecadação de fundos (por exemplo, ae21)',
+       'reset_password_form_email' => 'E-mail',
+       'reset_password_form_email_placeholder' => 'E-mail',
+       'reset_password_form_confirmation_code' => 'Código de confirmação',
+       'reset_password_form_confirmation_code_placeholder' => 'Código de confirmação',
+       'reset_password_form_new_password' => 'Nova senha',
+       'reset_password_form_new_password_placeholder' => 'Nova senha',
+       'reset_password_form_submit' => 'Redefinir senha',
+       'success' => 'Sucesso',
+      'success_form_submitted' => 'Formulario enviado correctamente',
+      'success_new_fundraiser' => 'Su recaudación de fondos está activa: <a href="https://kuno.anne.media/fundraiser/{GUID}/">Vea su recaudación de fondos aquí</a><br>Marca este enlace para editar tu recaudación de fondos: <a href="https://kuno.anne.media/edit-fundraiser/{GUID}/">Editar recaudación de fondos #{GUID}</a>',
+      'success_new_donation_page' => 'Su recaudación de fondos está activa: <a href="https://kuno.anne.media/donate/{GUID}/">Vea aquí su página de donativos</a><br>Marque este enlace para editar su página de donación: <a href="https://kuno.anne.media/edit-fundraiser/{GUID}/">Editar la página de donativos #{GUID}</a>',
+      'success_fundraiser_updated' => '<a href="https://kuno.anne.media/fundraiser/{GUID}/">Su recaudación de fondos ha sido actualizada.</a>',
+      'success_valid_fundraiser_password' => '<a href="https://kuno.anne.media/edit-fundraiser/{GUID}/">Haga clic aquí para editar su recaudación de fondos</a>',
+      'success_donation_page_updated' => '<a href="https://kuno.anne.media/donate/{GUID}/">Se ha actualizado su página de donativos.</a>',
+      'success_fundraiser_deactivated' => 'Recaudación de fondos desactivada',
+      'success_fundraiser_reactivated' => 'Reactivación de la recaudación de fondos',
+      'success_fundraiser_deleted' => 'Recaudación de fondos eliminada',
+      'success_valid_invite_code' => 'Código de invitación válido. Ya puede iniciar una recaudación de fondos.',
+      'success_valid_confirmation_code' => 'Código de confirmación válido',
+      'success_check_email_for_password_reset_code' => 'Consulta tu dirección de correo electrónico para obtener un código de restablecimiento de contraseña',
+      'success_password_reset' => 'Contraseña cambiada, ahora puede <a href="https://kuno.anne.media/edit-fundraiser/{FUNDRAISER}">editar su recaudación de fondos</a>',
+      'success_comment_sent' => 'Comentario enviado!',
+      'success_image_uploaded' => 'Imagen cargada',
+      'error' => 'Error',
+      'error_please_refresh' => 'Por favor, actualice e inténtelo de nuevo.',
+      'error_form_expired' => 'Formulario caducado, actualícelo',
+      'error_form_ratelimited' => 'Ratelimitado, por favor espere {RATELIMIT} segundos',
+      'error_session_expired' => 'La sesión ha caducado, vuelva a iniciar sesión',
+      'error_page_not_found' => 'Pagina no encontrada',
+      'error_fundraiser_not_found' => 'Recaudación de fondos no encontrada',
+      'error_email_not_found' => 'No se ha configurado ninguna dirección de correo electrónico, póngase en contacto con el servicio de asistencia',
+      'error_invalid_email' => 'Introduzca una dirección de correo electrónico válida',
+      'error_invalid_email_for_notifications' => 'Introduzca una dirección de correo electrónico válida para activar las notificaciones.',
+      'error_invalid_confirmation_code' => 'El código de confirmación no es válido o ha caducado',
+      'error_invalid_monero_address' => 'Dirección de Monero no válida (Por favor, introduzca su dirección principal, que empieza por 4)',
+      'error_invalid_view_key' => 'Clave de visualización no válida (introduzca su clave de visualización privada/secreta)',
+      'error_invalid_address' => 'Dirección de Monero no válida (Por favor, introduzca su dirección principal, que empieza por 4)',
+      'error_entered_public_view_key' => 'Clave de vista no válida (introduzca su clave de vista privada/secreta, no la pública)',
+      'error_entered_public_spend_key' => 'Clave de vista no válida (introduzca su clave de vista privada/secreta, no la pública)',
+      'error_entered_private_spend_key' => 'Clave de vista no válida (introduzca su clave de vista privada/secreta, no la clave de gasto privada)',
+      'error_invalid_private_view_key' => 'Clave de visualización no válida (introduzca su clave de visualización privada/secreta))',
+      'error_invalid_txid' => 'Invalida TXID',
+      'error_invalid_tx_key' => 'Por favor, introduzca una clave TX válida (también conocida como prueba TX)',
+      'error_invalid_txid' => 'Introduzca un código de invitación válido',
+      'error_incorrect_email' => 'Dirección de correo electrónico incorrecta',
+      'error_incorrect_password' => 'Contraseña incorrecta',
+      'error_monero_address_already_used' => 'Ya existe una página de recaudación de fondos/donaciones con esta dirección de Monero',
+      'error_missing_fundraiser_code_or_email' => 'Introduzca su código de recaudación de fondos y su dirección de correo electrónico',
+      'error_missing_password_reset_code_or_password' => 'Introduzca el código de restablecimiento de contraseña y la nueva contraseña',
+      'error_missing_txid_or_tx_key' => 'Por favor, introduzca tanto el TXID y la clave TX (también conocida como prueba TX)',
+      'error_missing_password' => 'Introduzca su contraseña',
+      'error_missing_view_key' => 'Por favor, introduzca una clave de vista privada válida',
+      'error_title_too_long' => 'El título debe tener entre 1 y 80 caracteres',
+      'error_description_too_long' => 'La descripción debe tener menos de 8000 caracteres',
+      'error_tags_too_long' => 'Las etiquetas deben tener menos de 250 caracteres',
+      'error_contact_details_too_long' => 'Los datos de contacto deben tener menos de 250 caracteres',
+      'error_goal_must_be_positive' => 'El objetivo de recaudación de fondos debe ser una cifra positiva',
+      'error_image_incorrect_file_type' => 'La imagen debe ser PNG o JPEG',
+      'error_image_maximum_image_size' => 'Tamaño máximo de imagen 2 MB',
+      'error_image_invalid' => 'Imagen inválida',
+      'error_image_storage_full' => 'Almacenamiento lleno',
+      'error_image_missing' => 'Suba una imagen',
+      'translate_help' => 'Seria fantástico se o Kuno estivesse acessível em mais idiomas. Ajude-nos com traduções em <a href="https://github.com/annemedia/kuno-translation">https://github.com/annemedia/kuno-translation</a>',
+      'wallets_header' => 'Monero: <span class="text3">Wallet Choices</span>',
+      'monero_gui_wallet' => 'Un monedero de interfaz gráfica de usuario (GUI) de código abierto desarrollado por la comunidad Monero, de uso totalmente gratuito, adecuado tanto para principiantes como para usuarios avanzados.',
+      'cake_wallet' => 'Almacene, envíe e intercambie sus criptomonedas de forma segura y sencilla. Compre en privado tarjetas regalo y pague en ventanilla con cripto, es pan comido.',
+      'monerujo_wallet' => 'Monedero Android para Monero. Con Monerujo, puedes ir y venir sin problemas entre varios monederos. Hacer una nueva es tan simple como unos pocos toques.',
+      'feather_wallet' => 'Feather es un monedero Monero gratuito y de código abierto para Linux, Tails, Windows y macOS. Fácil de usar, pequeño, rápido y amigable para principiantes.',
+    );
+    $translation = ($strings[$string]) ? $strings[$string] : $string;
+    return $translation;
+  }
+
+
