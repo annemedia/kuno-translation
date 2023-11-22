@@ -2,7 +2,7 @@
 
 Since Kuno launched, the Monero community has been nothing short of amazing in their support of various community projects focused on raising Monero awareness. They've also been incredibly generous in supporting charity projects and assisting with immediate personal medical care needs, as well as helping with the purchase of technical devices or equipment. As of today, on the 19th of November 2023, Kuno has helped to raise over 112 XMR, and it has made a significant impact on many people's lives.
 
-Would you like to make a difference? We think it would be fantastic if Kuno was accessible in more languages. Right now, the website is only available in English, Esperanto, Italian, Portuguese, Spanish, Swahili, and Swedish. If you possess the necessary skills to translate the Kuno website into another language, please consider lending your expertise to the translation effort.
+Would you like to make a difference? We think it would be fantastic if Kuno was accessible in more languages. Right now, the website is available in English, Esperanto, Italian, Portuguese, Spanish, Swahili, and Swedish. If you possess the necessary skills to translate the Kuno website into another language, please consider lending your expertise to the translation effort.
 
 Please be aware that translating a website into another language is a delicate task that requires consideration of language nuances. Using Google Translate or similar tools will likely result in a subpar translation that will not be accepted.
 
