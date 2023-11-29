@@ -94,7 +94,7 @@ function translate_en($string) {
                 With Monero, your money belongs to you.
                 </p>
                 <p class="monero-info-p kuno">
-  Monero is software and doesn’t rely on third parties or corporations. Transactions can’t be censored, funds can’t be frozen and users can’t be deplatformed.
+                Monero is peer-to-peer software and doesn’t rely on third parties or corporations. Transactions can’t be censored, funds can’t be frozen and users can’t be deplatformed.
                 </p>
                 <p class="monero-info-p kuno">
                 Whether you raise funds with Monero or donate to a good cause, you can have peace of mind that the recipient receives 100% of the donation.
