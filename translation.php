@@ -2481,3 +2481,357 @@ function translate_it($string) {
       return $translation;
   }
 
+function translate_sl($string) {
+  static $strings = array(
+    'site_name' => 'Kuno',
+    'page_title' => 'Kuno – Zbiranje sredstev z Monerom',
+    'page_title_error' => 'Napaka | Kuno – Zbiranje sredstev z Monerom',
+    'page_title_search' => 'Iskanje | Kuno – Zbiranje sredstev z Monerom',
+    'page_title_fediverse' => 'Fediverza | Kuno – Zbiranje sredstev z Monerom',
+    'page_title_reset_password' => 'Ponastavi geslo | Kuno – Zbiranje sredstev z Monerom',
+    'page_title_edit_fundraiser' => 'Uredi akcijo zbiranja sredstev | Kuno – Zbiranje sredstev z Monerom',
+    'page_title_new_fundraiser' => 'Nova akcija zbiranja sredstev | Kuno – Zbiranje sredstev z Monerom',
+    'pagination' => 'Stran {NUM} od {NUM_PAGES}',
+    'pagination_fundraisers' => 'Prikaz {START}-{END} od {TOTAL} akcij zbiranja sredstev',
+    'pagination_donations' => 'Prikaz {START}-{END} od {TOTAL} donacij',
+    'pagination_submit' => 'Pojdi',
+    'nav_manage_fundraiser' => 'Upravljaj akcijo zbiranja sredstev',
+    'nav_search' => 'Išči akcije zbiranja sredstev...',
+    'nav_fundraiser_progress' => 'Napredek akcije zbiranja sredstev:',
+    'nav_edit_fundraiser' => 'Uredi akcijo zbiranja sredstev:',
+    'nav_logout' => 'Odjava',
+    'footer_description' => 'Zbiranje sredstev z Monerom',
+    'footer_contact' => 'Kontakt: support [at] anne.media',
+    'footer_language' => 'Jezik:',
+    'footer_light_mode' => 'Svetli način',
+    'footer_dark_mode' => 'Temni način',
+    'footer_manage_fundraiser' => 'Upravljajte svoje akcije zbiranja sredstev:',
+    'footer_new_fundraiser' => 'Nova akcija zbiranja sredstev',
+    'footer_edit_fundraiser' => 'Uredi akcijo zbiranja sredstev',
+    'footer_reset_password' => 'Ponastavi geslo',
+    'footer_quick_links' => 'Hitre povezave:',
+    'footer_search_fundraisers' => 'Išči akcije zbiranja sredstev',
+    'footer_search_fediverse' => 'Išči fediverzo',
+    'footer_marketplace' => 'Tržnica',
+    'footer_rss_feed' => 'RSS krma',
+    'footer_faq' => 'Pogosta vprašanja',
+    'email_new_donation_subject' => '[Kuno] Nova {DONATION} XMR donacija za #{GUID}',
+    'email_new_donation_body' => 'Vaša akcija zbiranja sredtev je prejela novo donacijo!
+         <br><br>Akcija zbiranja sredstev: {TITLE}
+         <br>Donacija: {DONATION} XMR
+         <br>Datum: {DATE}
+         <br><br>Skupno donacij: {TOTAL} XMR
+         <br>Skupni podporniki: {SUPPORTERS}
+         <br>Obišči svojo akcijo zbiranja sredstev: https://kuno.anne.media/{TYPE}/{GUID}/
+         <br><br>Izključite e-poštna sporočila tukaj:
+         <br>https://kuno.anne.media/edit-fundraiser/{GUID}/',
+    'email_reset_password_subject' => '[Kuno] Ponastavi geslo',
+    'email_reset_password_body' => 'Obiščite to povezavo, da ponastavite svoje geslo: {URL} ali vnesite to kodo: {CODE} (Veljavno za 24 ur)',
+    'homepage_title' => 'Lahko zbiranje sredstev <br> za vse',
+    'homepage_subtitle' => 'Zberite denar ali donirajte za dober namen z Monerom',
+    'homepage_point1' => 'Začnite brezplačno zbiranje sredstev',
+    'homepage_point2' => 'Prejmite Monero (ki ga lahko zamenjate za gotovino)',
+    'homepage_point3' => 'Brez provizij, deluje globalno, bančni račun ni potreben',
+    'homepage_button_start_fundraiser' => 'Začni akcijo zbiranja sredstev',
+    'homepage_button_browse_fundraisers' => 'Brskaj akcije zbiranja sredstev',
+    'homepage_bar' => 'Poštena alternativa GoFundMe in Kickstarterju',
+    'homepage_heading_browse_fundraisers' => 'Brkanje {AMOUNT} akcij zbiranja denarja',
+    'homepage_heading_total_raised' => 'Več kot {AMOUNT} XMR zbranega!',
+    'homepage_top_categories' => 'Najvišje kategorije',
+    'homepage_recent_donations' => 'Nedavne donacije',
+    'homepage_all_categories' => 'Vse kategorije',
+    'homepage_launch_in_one_click' => 'Začnite zbirati sredstva z 1 klikom',
+    'homepage_get_started_free' => 'Začnite brezplačno',
+    'homepage_info_heading1' => 'Monero je gotovina za splet',
+    'homepage_info_description1' => '<p class="monero-info-p-bold kuno">
+                 Monero je hiter in varen način za pošiljanje in prejemanje denarja na spletu.
+                </p>
+                <p class="monero-info-p kuno">
+                 Bančni račun, prijava ali uradna izkaznica niso potrebni. Preprosto prenesite denarnico za svoj telefon ali računalnik in z enim klikom pošiljajte in prejemajte denar po vsem svetu.
+                </p>
+                <p class="monero-info-p kuno">
+                Zaradi preprostosti in dostopnosti Monera je idealno plačilno sredstvo za spletne trgovine, delo na daljavo, nakazila, nasvete, zbiranje sredstev in več.
+                </p>',
+    'homepage_link_download_mobile' => 'Prenos za mobilni telefon',
+    'homepage_link_download_desktop' => 'Prenos za namizje',
+    'homepage_info_heading2' => 'Necenzurirane donacije',
+    'homepage_info_description2' => '<p class="monero-info-p-bold kuno">
+                Z Monerom vaš denar pripada vam.
+                </p>
+                <p class="monero-info-p kuno">
+                Monero je programska oprema enakovrednih in se ne zanaša na tretje osebe ali korporacije. Transakcij ni mogoče cenzurirati, sredstev ni mogoče zamrzniti in uporabnikov ni mogoče deformirati.
+                </p>
+                <p class="monero-info-p kuno">
+                Ne glede na to, ali zbirate sredstva z Monerom ali donirate za dober namen, ste lahko mirni, da prejemnik prejme 100 % donacije.
+                </p>',
+    'homepage_link_official_website' => 'Uradna spletna stran',
+    'homepage_link_overview' => 'Pregled',
+    'homepage_link_buy_monero' => 'Kupi Monero',
+    'homepage_info_heading3' => 'Porabite ga kjerkoli',
+    'homepage_info_description3' => '<p class="monero-info-p-bold kuno">
+                Zamenjajte Monero v gotovino, nakupujte prek spleta ali plačujte račune.
+                </p>
+                <p class="monero-info-p kuno">
+                Monero je preprosto zamenjati za fizično gotovino z <a href="https://localmonero.co">LocalMonero</a>, <a href="https://bisq.network">Bisq</a> ali <a href="https://coinatmradar.com">kripto bankomatom</a> (bančni račun ni potreben).
+                </p>
+                <p class="monero-info-p kuno">
+                Tržnice, kot je <a href="https://moneromarket.io">MoneroMarket</a>, in imeniki, kot sta <a href="https://monerica.com">Monerica</a> in <a href="https ://acceptedhere.io">AcceptedHere</a>, vam pomaga kupiti, kar potrebujete, z Monerom.
+                </p>
+                <p class="monero-info-p kuno">
+                Poleg tega <a href="https://cakepay.com">CakePay</a> in <a href="https://coincards.com">CoinCards</a> ponujata predplačniške kartice Visa in darilne kartice za tisoče podjetij. Osebni nakupovalci, kot so <a href="https://proxysto.re">ProxyStore</a>, <a href="https://sovereignstack.tools/rerouter/">Sovereign Stack</a> in <a href ="https://shopinbit.com">ShopInBit</a> ponuja priročen način plačevanja računov z Monerom.
+                </p>
+                <p class="monero-info-p kuno">
+                Prilagodljivost Monera olajša zbiranje sredstev za plačilo računov, zagon vašega projekta ali podporo dobrodelnosti.
+                </p>',
+    'homepage_link_exchange_to_cash' => 'Zamenjaj za gotovino',
+    'homepage_link_shop_online' => 'Spletno nakupovanje',
+    'homepage_link_marketplace' => 'Tržnica',
+    'homepage_use_case_heading1' => 'Za dobrodelne namene',
+    'homepage_use_case_description1' => '<p class="use-case-p-bold kuno">
+                  Lokalno zavetišče za mačke potrebuje donacije za mačjo hrano in veterinarske račune.
+                </p>
+                <p class="use-case-p kuno">
+                  Nastavijo Kuno akcijo zbiranja sredstev, delijo povezavo v družabnih medijih in prejemajo donacije.
+                  They setup a Kuno Fundraiser, share the link in social media and receive donations.
+                </p>
+                <p class="use-case-p kuno">
+                  Zavetišče uporablja zbrani Monero za nakup darilnih kartic Petsmart s CakePay in dvigne gotovino za plačilo veterinarskega računa na kripto bankomatu.
+                </p>
+                <p class="use-case-p kuno">
+                  Vsak donator prejme posodobitev s fotografijami mačk.
+                </p>',
+    'homepage_use_case_heading2' => 'Za posameznike',
+    'homepage_use_case_description2' => '<p class="use-case-p-bold kuno">
+                  Alica mora zbrati denar za zdravstvene račune.
+                </p>
+                <p class="use-case-p kuno">
+                  Njena hči ji pomaga vzpostaviti Kuno akcijo zbiranja sredstev in ga deli z njihovo skupnostjo.
+                </p>
+                <p class="use-case-p kuno">
+                  Zberejo dovolj denarja in ga zamenjajo za gotovino z LocalMonero.
+                </p>
+                <p class="use-case-p kuno">
+                  Alica v znak hvaležnosti za vsakega donatorja napiše iskreno zahvalno pismo.
+                </p>',
+    'homepage_use_case_heading3' => 'Za zagonska podjetja',
+    'homepage_use_case_description3' => '<p class="use-case-p-bold kuno">
+                  Neodvisni razvijalec želi ustvariti novo igro.
+                </p>
+                <p class="use-case-p kuno">
+                  Ustanovi Kuno akcijo zbiranja denarja in ga deli z igralniškimi skupnostmi.
+                </p>
+                <p class="use-case-p kuno">
+                  Doseže cilj in uporabi sredstva za najem Moneru prijaznih umetnikov iz MoneroMarket in nakup sredstev igre z virtualno debetno kartico CakePay.
+                </p>
+                <p class="use-case-p kuno">
+                  Vsak donator dobi brezplačno kopijo igre.
+                </p>',
+    'homepage_use_case_heading4' => 'Za ustvarjalce vsebin',
+    'homepage_use_case_description4' => '<p class="use-case-p-bold kuno">
+                  Skupina naloži svoje priredbe in izvirno glasbo na Youtube.
+                </p>
+                <p class="use-case-p kuno">
+                  Za prejemanje donacij Monera so vzpostavili Kuno donacijsko stran.
+                </p>
+                <p class="use-case-p kuno">
+                  Oboževalci lahko z donacijo tudi predlagajo pesmi ali komentirajo med prenosi v živo.
+                </p>
+                <p class="use-case-p kuno">
+                  To ponuja boljši način za trajnostno monetizacijo njihove vsebine v primerjavi z oglasi.
+                </p>',
+    'homepage_use_case_heading5' => 'Zate',
+    'homepage_use_case_description5' => '<p class="use-case-p-bold kuno">
+                  S Kunom lahko vsak zbere denar za svoj projekt, namen ali zagon.
+                </p>
+                <p class="use-case-p kuno">
+                  Vse, kar potrebujete, je Monero denarnica in cilj.
+                </p>',
+    'fundraiser_heading_goal' => 'Cilj',
+    'fundraiser_heading_raised' => 'Zbrano',
+    'fundraiser_heading_percentage_funded' => 'financirano',
+    'fundraiser_heading_donations' => 'Donacije',
+    'fundraiser_heading_supporters' => 'Podporniki',
+    'fundraiser_heading_comments' => 'Komentarji',
+    'fundraiser_heading_support' => 'Podpora',
+    'fundraiser_heading_share' => 'Deli',
+    'fundraiser_heading_about' => 'O nas',
+    'fundraiser_heading_photos' => 'Slike',
+    'fundraiser_heading_contact' => 'Kontakt',
+    'fundraiser_heading_date' => 'Objavljeno:',
+    'fundraiser_heading_supporters' => 'Podporniki',
+    'fundraiser_heading_new_comment' => 'Napiši komentar',
+    'fundraiser_heading_new_fundraiser' => 'Nova akcija zbiranja sredstev',
+    'fundraiser_heading_edit_fundraiser' => 'Uredi akcijo zbiranja sredstev',
+    'fundraiser_heading_logout' => 'Odjava',
+    'fundraiser_support_text' => 'Pošlji kakeršnokoli količino Monera na:',
+    'fundraiser_share_text' => 'Kopirajte povezavo, da to zbiranje sredstev delite s prijatelji ali družbenimi mediji:',
+    'fundraiser_open_in_wallet' => 'Odpri v denarnici',
+    'fundraiser_info_point1' => 'Donirate neposredno v denarnico prejemnika',
+    'fundraiser_info_point2' => 'Brez posrednikov ali provizij',
+    'fundraiser_info_point3' => 'Donacije se sinhronizirajo vsakih 5 minut',
+    'fundraiser_full_size_photo' => 'Fotografija v polni velikosti',
+    'fundraiser_no_donations' => 'Ni še nobenih donacij',
+    'fundraiser_supporters' => '{AMOUNT} podpornikov',
+    'fundraiser_button_support' => 'Podpora',
+    'fundraiser_donate_with_monero' => 'Doniraj z Monerom:',
+    'fundraiser_comment_form_placeholder_txid' => 'TXID',
+    'fundraiser_comment_form_placeholder_tx_key' => 'TX ključ (Primer: 7d7a9370a746d219e5f66aaaec902ead0d1c1783817a10276c9accdacca6f10d)',
+    'fundraiser_comment_form_placeholder_email' => 'E-pošta (izbirno, za nagrade pri zbiranju sredstev)',
+    'fundraiser_comment_form_placeholder_comment' => 'Napiši javni komentar',
+    'fundraiser_comment_form_submit' => 'Komentiraj',
+    'search' => 'Išči',
+    'search_heading' => 'Išči akcije zbiranja sredstev',
+    'search_text' => 'Išči akcije zbiranja sredstev...',
+    'search_sort_by_new' => 'Razvrsti po novem',
+    'search_sort_by_recently_donated' => 'Razvrsti po nedavno darovanem',
+    'search_sort_by_percentage_funded' => 'Razvrsti po deležu financiranja',
+    'search_sort_by_goal' => 'Razvrsti po cilju',
+    'search_all_categories' => 'Vse kategorije',
+    'search_no_fundraisers_found' => 'Akcije zbiranja sredstev ni bilo mogoče najti',
+    'search_fediverse_heading' => 'Išči fediverzo',
+    'search_fediverse_text' => 'Išči fediverzo akcij zbiranja sredstev...',
+    'search_fediverse_no_fundraisers_found' => 'Akcije zbiranja sredstev fediverze ni bilo mogoče najti',
+    'search_fediverse_peers_list' => 'Seznam zveznih primerkov:',
+    'login_invite_code_heading' => 'Nova akcija zbiranja sredstev',
+    'login_invite_code_text' => 'Vnesite kodo povabila, da začnete novo akcijo zbiranje sredstev.',
+    'login_invite_code_note' => 'Če nimate kode povabila, se obrnite na podporo.',
+    'login_invite_code_form' => 'Koda povabila',
+    'login_invite_code_form_placeholder' => 'Koda povabila',
+    'login_invite_code_submit' => 'Nadaljuj',
+    'login_fundraiser_form_fundraiser' => 'Akcija zbiranja denarja',
+    'login_fundraiser_heading' => 'Uredi akcijo zbiranja denarja',
+    'login_fundraiser_text' => 'Vnesite kodo zbiranja sredstev in geslo za urejanje zbiranja sredstev.',
+    'login_fundraiser_note' => 'Koda je v URL-ju:',
+    'login_fundraiser_forgot_password' => 'Pozabljeno geslo?',
+    'login_fundraiser_form_fundraiser' => 'Akcija zbiranja denarja',
+    'login_fundraiser_form_fundraiser_placeholder' => 'Koda akcije zbiranja denarja (npr. ae21)',
+    'login_fundraiser_form_password' => 'Geslo',
+    'login_fundraiser_form_password_placeholder' => 'Geslo',
+    'login_fundraiser_form_submit' => 'Uredi akcijo zbiranja denarja',
+    'edit_fundraiser_heading_fundraiser_details' => 'Podrobnosti akcije zbiranja denarja',
+    'edit_fundraiser_fundraiser_details_text' => 'Opišite akcijo zbiranja sredstev in dodajte fotografije.',
+    'edit_fundraiser_form_optional' => '(Izbirno)',
+    'edit_fundraiser_form_more_info' => '(Več informacij)',
+    'edit_fundraiser_form_title' => 'Naslov',
+    'edit_fundraiser_form_title_placeholder' => 'Naslov akcije zbiranja sredstev',
+    'edit_fundraiser_form_photo' => 'Slika',
+    'edit_fundraiser_form_additional_photos' => 'Dodatne slike',
+    'edit_fundraiser_form_description' => 'Opis',
+    'edit_fundraiser_form_description_placeholder' => 'Opišite svojo akcijo zbiranja sredstev. Po potrebi dodajte nagrade za zbiranje sredstev, mejnike ali kontaktne podatke.',
+    'edit_fundraiser_form_tags' => 'Oznake',
+    'edit_fundraiser_form_tags_placeholder' => 'Kategorije, oznake, ipd.',
+    'edit_fundraiser_form_contact' => 'Kontakt',
+    'edit_fundraiser_form_contact_placeholder' => 'E-pošta, spletna stran, Twitter, Matrix, etc.',
+    'edit_fundraiser_form_visibility' => 'Set fundraiser to private (not displayed in search results, donors will need the direct link)',
+    'edit_fundraiser_heading_goal' => 'Cilj',
+    'edit_fundraiser_goal_text' => 'Določite svoj cilj in Monero naslov',
+    'edit_fundraiser_get_wallet' => 'Nimate Monero denarnice? Dobite eno tukaj.',
+    'edit_fundraiser_form_goal' => 'Cilj',
+    'edit_fundraiser_form_goal_placeholder' => 'Cilj (XMR)',
+    'edit_fundraiser_form_donation_page' => 'Ni cilja – želim narediti stran za donacije',
+    'edit_fundraiser_form_monero_address' => 'Monero naslov',
+    'edit_fundraiser_form_monero_address_placeholder' => 'Primer: 44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft3XjrpDtQGv7SqSsaBYBb98uNbr2VBBEt7f2wfn3RVGQBEP3A',
+    'edit_fundraiser_form_view_key' => 'Skrivni ključ za ogled',
+    'edit_fundraiser_form_view_key_placeholder' => 'Primer: f359631075708155cc3d92a32b75a7d02a5dcf27756707b47a2b31b21c389501',
+    'edit_fundraiser_heading_password' => 'Geslo',
+    'edit_fundraiser_password_text' => 'Nastavite geslo za poznejše urejanje akcije zbiranja sredstev.',
+    'edit_fundraiser_widthdrawal_warning' => "Izogibajte se dvigovanju delnih sredstev med zbiranjem sredstev. Monero za plačila uporablja polna stanja, preostale zneske pa pusti kot nove transakcije. To bi bilo napačno izračunano kot donacija in vaš napredek pri zbiranju sredstev bo netočen. Če morate sredstva porabiti na poti, vedno dvignite celotno stanje, ne da bi pri tem pustili "drobiž".",
+    'edit_fundraiser_form_email' => 'E-pošta',
+    'edit_fundraiser_form_email_placeholder' => 'E-pošta (izbirno, za ponastavljanje gesla)',
+    'edit_fundraiser_form_password' => 'Geslo',
+    'edit_fundraiser_form_new_password_placeholder' => 'Geslo',
+    'edit_fundraiser_form_edit_password_placeholder' => 'Geslo (pustite prazno, če ni sprememb)',
+    'edit_fundraiser_form_email_notifications' => 'Ko moja akcija zbiranja sredstev prejme novo donacijo, mi pošljite e-pošto',
+    'edit_fundraiser_form_submit_edit' => 'Posodobite akcije zbiranja sredstev',
+    'edit_fundraiser_form_submit_new' => 'Začni akcijo zbiranja sredstev',
+    'edit_fundraiser_heading_supporters' => 'podporniki akcije zbiranja sredstev',
+    'edit_fundraiser_supporters_text' => 'Če je podpornik vnesel svoj e-poštni naslov, ga boste videli tukaj (npr. za nagrade za zbiranje sredstev).',
+    'edit_fundraiser_no_supporters' => 'E-poštnih sporočil še ni',
+    'edit_fundraiser_supporters_email' => 'E-pošta',
+    'edit_fundraiser_supporters_comment' => 'Komentar',
+    'edit_fundraiser_supporters_amount' => 'Količina',
+    'edit_fundraiser_supporters_txid' => 'TXID',
+    'edit_fundraiser_supporters_tx_key' => 'TX ključ',
+    'edit_fundraiser_supporters_date' => 'Datum',
+    'edit_fundraiser_heading_manage_fundraiser' => 'Upravljaj akcije zbiranja denarja',
+    'edit_fundraiser_fix_view_key' => 'Dodajte veljaven ključ za ogled, da znova aktivirate akcijo zbiranja sredstev.',
+    'edit_fundraiser_deactivate_fundraiser' => 'Deaktiviraj akcijo zbiranja sredstev',
+    'edit_fundraiser_reactivate_fundraiser' => 'Reaktiviraj akcijo zbiranja sredstev',
+    'edit_fundraiser_delete_fundraiser' => 'Izbrišite svoje podatke',
+    'reset_password_heading' => 'Ponastavi geslo',
+    'reset_password_description' => 'Vnesite kodo akcije zbiranja sredstev in svoj e-poštni naslov, da ponastavite geslo.',
+    'reset_password_note' => '(Če niste dodali e-poštnega naslova, se obrnite na podporo.)',
+    'reset_password_form_fundraiser' => 'Akcija zbiranja sredstev',
+    'reset_password_form_fundraiser_placeholder' => 'Koda akcije zbiranja sredstev (npr. ae21)',
+    'reset_password_form_email' => 'E-pošta',
+    'reset_password_form_email_placeholder' => 'E-pošta',
+    'reset_password_form_confirmation_code' => 'Potrditvena koda',
+    'reset_password_form_confirmation_code_placeholder' => 'Potrditvena koda',
+    'reset_password_form_new_password' => 'Novo geslo',
+    'reset_password_form_new_password_placeholder' => 'Novo geslo',
+    'reset_password_form_submit' => 'Ponastavi geslo',
+    'success' => 'Uspešno',
+    'success_form_submitted' => 'Obrazec uspešno oddan',
+    'success_new_fundraiser' => 'Vaša akcija zbiranja sredstev je aktivna: <a href="https://kuno.anne.media/fundraiser/{GUID}/">Oglejte si akcijo zbiranja sredstev tukaj</a><br>Dodajte to povezavo med zaznamke, če želite urediti akcijo zbiranja sredstev: <a href ="https://kuno.anne.media/edit-fundraiser/{GUID}/">Urejanje akcije zbiranja sredstev #{GUID}</a>',
+    'success_new_donation_page' => 'Vaša stran za donacije je aktivna: <a href="https://kuno.anne.media/donate/{GUID}/">Oglejte si svojo stran za donacije tukaj</a><br>Dodajte to povezavo med zaznamke, če želite urediti stran za donacije: <a href="https://kuno.anne.media/edit-fundraiser/{GUID}/">Urejanje strani za donacije #{GUID}</a>',
+    'success_fundraiser_updated' => '<a href="https://kuno.anne.media/fundraiser/{GUID}/">Vaše akcija zbiranja sredstev je posodobljena.</a>',
+    'success_valid_fundraiser_password' => '<a href="https://kuno.anne.media/edit-fundraiser/{GUID}/">Kliknite tukaj, če želite urediti akcijo zbiranja sredstev</a>',
+    'success_donation_page_updated' => '<a href="https://kuno.anne.media/donate/{GUID}/">Your donation page has been updated.</a>',
+    'success_fundraiser_deactivated' => 'Akcija zbiranja sredstev deaktivirana',
+    'success_fundraiser_reactivated' => 'Akcija zbiranja sredstev reaktivirana',
+    'success_fundraiser_deleted' => 'Akcija zbiranja sredstev izbrisana',
+    'success_valid_invite_code' => 'Veljavna koda povabila. Zdaj lahko začnete z zbiranjem sredstev.',
+    'success_valid_confirmation_code' => 'Veljavna potrditvena koda',
+    'success_check_email_for_password_reset_code' => 'Preverite svoj e-pošto za kodo za ponastavitev gesla',
+    'success_password_reset' => 'Geslo spremenjeno, zdaj lahko <a href="https://kuno.anne.media/edit-fundraiser/{FUNDRAISER}">urejate akcijo zbiranja sredstev</a>',
+    'success_comment_sent' => 'Komentar poslan!',
+    'success_image_uploaded' => 'Slika je naložena',
+    'error' => 'Napaka',
+    'error_please_refresh' => 'Prosimo, osvežite in poskusite znova.',
+    'error_form_expired' => 'Obrazec je potekel, prosimo osvežite',
+    'error_form_ratelimited' => 'Stopnja omejena, počakajte {RATELIMIT} sekund',
+    'error_session_expired' => 'Seja je potekla, prosimo ponovno se prijavite',
+    'error_page_not_found' => 'Stran ni najdena',
+    'error_fundraiser_not_found' => 'Akcija zbiranja sredstev ni bilo mogoče najti',
+    'error_email_not_found' => 'E-poštni naslov ni nastavljen, obrnite se na podporo',
+    'error_invalid_email' => 'Vnesite veljaven elektronski naslov',
+    'error_invalid_email_for_notifications' => 'Vnesite veljaven e-poštni naslov, da omogočite obvestila',
+    'error_invalid_confirmation_code' => 'Potrditvena koda je neveljavna ali potekla',
+    'error_invalid_monero_address' => 'Neveljaven Monero naslov (prosimo, vnesite svoj primarni naslov, ki se začne s 4)',
+    'error_invalid_view_key' => 'Neveljaven ključ za ogled (prosimo, vnesite svoj zasebni/skrivni ključ za ogled)',
+    'error_invalid_address' => 'Neveljaven Monero naslov (prosimo, vnesite svoj primarni naslov, ki se začne s 4)',
+    'error_entered_public_view_key' => 'Neveljaven ključ za ogleda (prosimo, vnesite svoj zasebni/skrivni ključ za ogled, ne javnega ključa za ogled)',
+    'error_entered_public_spend_key' => 'Neveljaven ključ za ogled (prosimo, vnesite svoj zasebni/skrivni ključ za ogled, ne javnega ključa za porabo)',
+    'error_entered_private_spend_key' => 'Neveljaven ključ za ogled (prosimo, vnesite svoj zasebni/skrivni ključ za ogled, ne zasebnega ključa za porabo)',
+    'error_invalid_private_view_key' => 'Neveljaven ključ za ogled (prosimo, vnesite svoj zasebni/skrivni ključ za ogled)',
+    'error_invalid_txid' => 'Neveljaven TXID',
+    'error_invalid_tx_key' => 'Vnesite veljaven TX ključ (znan tudi kot TX dokazilo)',
+    'error_invalid_txid' => 'Vnesite veljavno kodo povabila',
+    'error_incorrect_email' => 'Napačen e-poštni naslov',
+    'error_incorrect_password' => 'Napačno geslo',
+    'error_monero_address_already_used' => 'Stran za zbiranje sredstev/donacije s tem Monero naslovom že obstaja',
+    'error_missing_fundraiser_code_or_email' => 'Prosimo, vnesite svojo kodo akcije zbiranja sredstev in e-poštni naslov',
+    'error_missing_password_reset_code_or_password' => 'Vnesite kodo za ponastavitev gesla in novo geslo',
+    'error_missing_txid_or_tx_key' => 'Vnesite TXID in TX ključ (znan tudi kot TX dokazilo)',
+    'error_missing_password' => 'Prosimo, vnesite svoje geslo',
+    'error_missing_view_key' => 'Prosimo, vnesite veljaven zasebni ključ za ogleda',
+    'error_title_too_long' => 'Naslov mora vsebovati od 1 do 80 znakov',
+    'error_description_too_long' => 'Opis mora biti krajši od 8000 znakov',
+    'error_tags_too_long' => 'Oznake morajo biti krajše od 250 znakov',
+    'error_contact_details_too_long' => 'Kontaktni podatki morajo biti krajši od 250 znakov',
+    'error_goal_must_be_positive' => 'Cilj akcije zbiranja sredstev mora biti pozitivno število',
+    'error_image_incorrect_file_type' => 'Slika mora biti PNG ali JPEG',
+    'error_image_maximum_image_size' => 'Največja velikost slike je 2 MB',
+    'error_image_invalid' => 'Neveljavna slika',
+    'error_image_storage_full' => 'Polna shramba',
+    'error_image_missing' => 'Prosimo, naložite sliko',
+    'translate_help' => 'Bilo bi fantastično, če bi bil Kuno dostopen v več jezikih. Pomagajte nam s prevodi na <a href="https://github.com/annemedia/kuno-translation">https://github.com/annemedia/kuno-translation</a>',
+    'wallets_header' => 'Monero: <span class="text3">Možnosti denarnice</span>',
+    'monero_gui_wallet' => 'Odprtokodna denarnica z grafičnim uporabniškim vmesnikom (GUI), ki jo je razvila Monero skupnost, popolnoma brezplačna za uporabo, primerna tako za začetnike kot za napredne uporabnike.',
+    'cake_wallet' => 'Varno shranjujte, pošiljajte in izmenjujte svoje kriptovalute. Zasebno kupite darilne kartice in plačajte na okencu s kriptovalutami, z lahkoto.',
+    'monerujo_wallet' => 'Android denarnica za Monero. Z Monerujo se lahko brez težav premikate naprej in nazaj med več denarnicami. Izdelava nove je preprosta kot nekaj dotikov.',
+    'feather_wallet' => 'Feather je brezplačna odprtokodna Monero denarnica za Linux, Tails, Windows in macOS. Enostavena za uporabo, majhna, hitra in začetnikom prijazna.'
+  );
+  $translation = ($strings[$string]) ? $strings[$string] : $string;
+  return $translation;
+}
