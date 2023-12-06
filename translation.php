@@ -2516,7 +2516,7 @@ function translate_sl($string) {
     'footer_rss_feed' => 'RSS krma',
     'footer_faq' => 'Pogosta vprašanja',
     'email_new_donation_subject' => '[Kuno] Nova {DONATION} XMR donacija za #{GUID}',
-    'email_new_donation_body' => 'Vaša akcija zbiranja sredtev je prejela novo donacijo!
+    'email_new_donation_body' => 'Vaša akcija zbiranja sredstev je prejela novo donacijo!
          <br><br>Akcija zbiranja sredstev: {TITLE}
          <br>Donacija: {DONATION} XMR
          <br>Datum: {DATE}
@@ -2592,7 +2592,6 @@ function translate_sl($string) {
                 </p>
                 <p class="use-case-p kuno">
                   Nastavijo Kuno akcijo zbiranja sredstev, delijo povezavo v družabnih medijih in prejemajo donacije.
-                  They setup a Kuno Fundraiser, share the link in social media and receive donations.
                 </p>
                 <p class="use-case-p kuno">
                   Zavetišče uporablja zbrani Monero za nakup darilnih kartic Petsmart s CakePay in dvigne gotovino za plačilo veterinarskega računa na kripto bankomatu.
@@ -2605,10 +2604,10 @@ function translate_sl($string) {
                   Alica mora zbrati denar za zdravstvene račune.
                 </p>
                 <p class="use-case-p kuno">
-                  Njena hči ji pomaga vzpostaviti Kuno akcijo zbiranja sredstev in ga deli z njihovo skupnostjo.
+                  Njena hči ji pomaga vzpostaviti Kuno akcijo zbiranja sredstev in jo deli z njihovo skupnostjo.
                 </p>
                 <p class="use-case-p kuno">
-                  Zberejo dovolj denarja in ga zamenjajo za gotovino z LocalMonero.
+                  Zbereta dovolj denarja in ga zamenjata za gotovino z LocalMonero.
                 </p>
                 <p class="use-case-p kuno">
                   Alica v znak hvaležnosti za vsakega donatorja napiše iskreno zahvalno pismo.
@@ -2621,7 +2620,7 @@ function translate_sl($string) {
                   Ustanovi Kuno akcijo zbiranja denarja in ga deli z igralniškimi skupnostmi.
                 </p>
                 <p class="use-case-p kuno">
-                  Doseže cilj in uporabi sredstva za najem Moneru prijaznih umetnikov iz MoneroMarket in nakup sredstev igre z virtualno debetno kartico CakePay.
+                  Doseže cilj in uporabi sredstva za najem Moneru prijaznih umetnikov iz MoneroMarketa in nakup sredstev igre z virtualno debetno kartico CakePay.
                 </p>
                 <p class="use-case-p kuno">
                   Vsak donator dobi brezplačno kopijo igre.
@@ -2722,7 +2721,7 @@ function translate_sl($string) {
     'edit_fundraiser_form_tags_placeholder' => 'Kategorije, oznake, ipd.',
     'edit_fundraiser_form_contact' => 'Kontakt',
     'edit_fundraiser_form_contact_placeholder' => 'E-pošta, spletna stran, Twitter, Matrix, etc.',
-    'edit_fundraiser_form_visibility' => 'Set fundraiser to private (not displayed in search results, donors will need the direct link)',
+    'edit_fundraiser_form_visibility' => 'Nastavite akcijo zbiranja sredstev na zasebno (ni prikazana v rezultatih iskanja, donatorji bodo potrebovali neposredno povezavo)',
     'edit_fundraiser_heading_goal' => 'Cilj',
     'edit_fundraiser_goal_text' => 'Določite svoj cilj in Monero naslov',
     'edit_fundraiser_get_wallet' => 'Nimate Monero denarnice? Dobite eno tukaj.',
@@ -2735,7 +2734,7 @@ function translate_sl($string) {
     'edit_fundraiser_form_view_key_placeholder' => 'Primer: f359631075708155cc3d92a32b75a7d02a5dcf27756707b47a2b31b21c389501',
     'edit_fundraiser_heading_password' => 'Geslo',
     'edit_fundraiser_password_text' => 'Nastavite geslo za poznejše urejanje akcije zbiranja sredstev.',
-    'edit_fundraiser_widthdrawal_warning' => "Izogibajte se dvigovanju delnih sredstev med zbiranjem sredstev. Monero za plačila uporablja polna stanja, preostale zneske pa pusti kot nove transakcije. To bi bilo napačno izračunano kot donacija in vaš napredek pri zbiranju sredstev bo netočen. Če morate sredstva porabiti na poti, vedno dvignite celotno stanje, ne da bi pri tem pustili "drobiž".",
+    'edit_fundraiser_widthdrawal_warning' => "Izogibajte se dvigovanju delnih sredstev med zbiranjem sredstev. Monero za plačila uporablja polna stanja, preostale zneske pa pusti kot nove transakcije. To bi bilo napačno izračunano kot donacija in vaš napredek pri zbiranju sredstev bo netočen. Če morate sredstva porabiti sproti, vedno dvignite celotno stanje, ne da bi pri tem pustili "drobiž".",
     'edit_fundraiser_form_email' => 'E-pošta',
     'edit_fundraiser_form_email_placeholder' => 'E-pošta (izbirno, za ponastavljanje gesla)',
     'edit_fundraiser_form_password' => 'Geslo',
@@ -2805,14 +2804,14 @@ function translate_sl($string) {
     'error_entered_private_spend_key' => 'Neveljaven ključ za ogled (prosimo, vnesite svoj zasebni/skrivni ključ za ogled, ne zasebnega ključa za porabo)',
     'error_invalid_private_view_key' => 'Neveljaven ključ za ogled (prosimo, vnesite svoj zasebni/skrivni ključ za ogled)',
     'error_invalid_txid' => 'Neveljaven TXID',
-    'error_invalid_tx_key' => 'Vnesite veljaven TX ključ (znan tudi kot TX dokazilo)',
+    'error_invalid_tx_key' => 'Vnesite veljaven TX ključ (znan tudi kot TX dokaz)',
     'error_invalid_txid' => 'Vnesite veljavno kodo povabila',
     'error_incorrect_email' => 'Napačen e-poštni naslov',
     'error_incorrect_password' => 'Napačno geslo',
     'error_monero_address_already_used' => 'Stran za zbiranje sredstev/donacije s tem Monero naslovom že obstaja',
     'error_missing_fundraiser_code_or_email' => 'Prosimo, vnesite svojo kodo akcije zbiranja sredstev in e-poštni naslov',
     'error_missing_password_reset_code_or_password' => 'Vnesite kodo za ponastavitev gesla in novo geslo',
-    'error_missing_txid_or_tx_key' => 'Vnesite TXID in TX ključ (znan tudi kot TX dokazilo)',
+    'error_missing_txid_or_tx_key' => 'Vnesite TXID in TX ključ (znan tudi kot TX dokaz)',
     'error_missing_password' => 'Prosimo, vnesite svoje geslo',
     'error_missing_view_key' => 'Prosimo, vnesite veljaven zasebni ključ za ogleda',
     'error_title_too_long' => 'Naslov mora vsebovati od 1 do 80 znakov',
