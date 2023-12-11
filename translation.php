@@ -2481,3 +2481,357 @@ function translate_it($string) {
       return $translation;
   }
 
+  function translate_ar($string) {
+    static $strings = array(
+      'site_name' => 'Kuno',
+      'page_title' => 'Kuno التمويل بواسطة Monero',
+      'page_title_error' => 'خطأ | Kuno –التمويل Monero',
+      'page_title_search' => 'بحث | Kuno – التمويل بواسطة Monero',
+      'page_title_fediverse' => 'فيديفيرس | كونو – التمويل بواسطة الـ Monero',
+      'page_title_reset_password' => 'إعادة تعيين كلمة المرور | Kuno – التمويل بواسطة Monero',
+      'page_title_edit_fundraiser' => 'تحرير الحملة التمويلية | Kuno – التمويل بواسطة Monero',
+      'page_title_new_fundraiser' => 'حملة تمويلية جديدة | Kuno – التمويل بواسطة Monero',
+      'pagination' => 'الصفحة {NUM} من {NUM_PAGES}',
+      'pagination_fundraisers' => 'عرض {START}-{END} من {TOTAL} حملة تمويلية',
+      'pagination_donations' => 'عرض {START}-{END} من {TOTAL} تبرع',
+      'pagination_submit' => 'اذهب',
+      'nav_manage_fundraiser' => 'إدارة الحملات التمويلية',
+      'nav_search' => 'البحث عن حملات تمويل...',
+      'nav_fundraiser_progress' => 'تقدم الحملة التمويلية:',
+      'nav_edit_fundraiser' => 'تحرير الحملة التمويلية:',
+      'nav_logout' => 'تسجيل الخروج',
+      'footer_description' => 'التمويل بواسطة الـ Monero',
+      'footer_contact' => 'الاتصال: support [at] anne.media',
+      'footer_language' => 'اللغة:',
+      'footer_light_mode' => 'وضع النهار',
+      'footer_dark_mode' => 'وضع الليل',
+      'footer_manage_fundraiser' => 'إدارة حملتك التمويلية:',
+      'footer_new_fundraiser' => 'حملة تمويلية جديدة',
+      'footer_edit_fundraiser' => 'تحرير الحملة التمويلية',
+      'footer_reset_password' => 'إعادة تعيين كلمة المرور',
+      'footer_quick_links' => 'روابط سريعة:',
+      'footer_search_fundraisers' => 'البحث في الحملات التمويلية',
+      'footer_search_fediverse' => 'البحث في فيديفيرس',
+      'footer_marketplace' => 'السوق',
+      'footer_rss_feed' => 'تغذية RSS',
+      'footer_faq' => 'الأسئلة الشائعة',
+      'email_new_donation_subject' => '[كونو] تبرع جديد بـ {DONATION} XMR إلى #{GUID}',
+      'email_new_donation_body' => 'تلقت حملتك تبرعًا جديدًا!
+           <br><br>الحملة التمويلية: {TITLE}
+           <br>التبرع: {DONATION} XMR
+           <br>التاريخ: {DATE}
+           <br><br>إجمالي التبرعات: {TOTAL} XMR
+           <br>إجمالي الداعمين: {SUPPORTERS}
+           <br>قم بزيارة حملتك التمويلية: https://kuno.anne.media/{TYPE}/{GUID}/
+           <br><br>إلغاء إشعارات البريد الإلكتروني هنا:
+           <br>https://kuno.anne.media/edit-fundraiser/{GUID}/',
+          'email_reset_password_subject' => '[كونو] إعادة تعيين كلمة المرور',
+          'email_reset_password_body' => 'قم بزيارة هذا الرابط لإعادة تعيين كلمة المرور: {URL} أو أدخل هذا الرمز: {CODE} (صالح لمدة 24 ساعة)',
+          'homepage_title' => 'جمع التبرعات بسهولة <br> للجميع',
+          'homepage_subtitle' => 'جمع الأموال أو التبرع لقضية جيدة باستخدام Monero',
+          'homepage_point1' => 'ابدأ حملة تمويل مجانية',
+          'homepage_point2' => 'استلم Monero (الذي يمكنك تحويله إلى نقد)',
+          'homepage_point3' => 'لا توجد رسوم، تعمل على مستوى عالمي، ولا حاجة لحساب بنكي',
+          'homepage_button_start_fundraiser' => 'ابدأ حملة تمويل',
+          'homepage_button_browse_fundraisers' => 'تصفح الحملات التمويلية',
+          'homepage_bar' => 'البديل العادل لـ GoFundMe و Kickstarter',
+          'homepage_heading_browse_fundraisers' => 'تصفح {AMOUNT} حملة تمويلية',
+          'homepage_heading_total_raised' => 'تم جمع أكثر من {AMOUNT} XMR!',
+          'homepage_top_categories' => 'أفضل الفئات',
+          'homepage_recent_donations' => 'التبرعات الأخيرة',
+          'homepage_all_categories' => 'جميع الفئات',
+          'homepage_launch_in_one_click' => 'إطلاق حملتك التمويلية بنقرة واحدة',
+          'homepage_get_started_free' => 'ابدأ مجانًا',
+          'homepage_info_heading1' => 'Monero هو نقود الإنترنت',
+          'homepage_info_description1' => '<p class="monero-info-p-bold kuno">
+            Monero هو وسيلة سريعة وآمنة لإرسال واستلام الأموال عبر الإنترنت.
+            </p>
+            <p class="monero-info-p kuno">
+            لا يتطلب الأمر حسابًا بنكيًا أو تطبيقًا أو هوية حكومية. قم ببساطة بتنزيل محفظة على هاتفك أو جهاز الكمبيوتر الخاص بك لإرسال واستلام الأموال في جميع أنحاء العالم بنقرة واحدة.
+            </p>
+            <p class="monero-info-p kuno">
+            بسبب بساطة Monero وإمكانية الوصول إليه، فإنه يعتبر وسيلة مثالية للدفع للمتاجر عبر الإنترنت والعمل عن بُعد وتحويل الأموال والنصائح وحملات التمويل والمزيد.
+            </p>',
+          'homepage_link_download_mobile' => 'تنزيل للهاتف المحمول',
+          'homepage_link_download_desktop' => 'تنزيل لسطح المكتب',
+          'homepage_info_heading2' => 'تبرعات غير قابلة للرقابة',
+          'homepage_info_description2' => '<p class="monero-info-p-bold kuno">
+              مع Monero، المال الخاص بك ينتمي إليك.
+              </p>
+              <p class="monero-info-p kuno">
+              Monero هو برنامج نظير إلى نظير ولا يعتمد على طرف ثالث أو شركات. لا يمكن رقابة المعاملات، ولا يمكن تجميد الأموال، ولا يمكن إلغاء تسجيل المستخدمين.
+              </p>
+              <p class="monero-info-p kuno">
+              سواء كنت تجمع أموالًا باستخدام Monero أو تتبرع لقضية جيدة، يمكنك أن تطمئن إلى أن الشخص المستفيد يتلقى 100٪ من التبرع.
+              </p>',
+          'homepage_link_official_website' => 'الموقع الرسمي',
+          'homepage_link_overview' => 'نظرة عامة',
+          'homepage_link_buy_monero' => 'شراء Monero',
+          'homepage_info_heading3' => 'انفقها في أي مكان',
+          'homepage_info_description3' => '<p class="monero-info-p-bold kuno">
+                استبدل Monero بالنقد، تسوق عبر الإنترنت أو pادفع الفواتير.
+                </p>
+                <p class="monero-info-p kuno">
+                من السهل استبدال Monero بالنقد الفعلي باستخدام <a href="https://localmonero.co">LocalMonero</a>، <a href="https://bisq.network">Bisq</a> أو <a href="https://coinatmradar.com">Crypto ATM</a> (دون الحاجة إلى حساب بنكي).
+                </p>
+                <p class="monero-info-p kuno">
+                الأسواق مثل <a href="https://moneromarket.io">MoneroMarket</a> والدلائل مثل <a href="https://monerica.com">Monerica</a> و <a href="https://acceptedhere.io">AcceptedHere</a> تساعدك في شراء ما تحتاجه باستخدام Monero.
+                </p>
+                <p class="monero-info-p kuno">
+                بالإضافة إلى ذلك، تقدم <a href="https://cakepay.com">CakePay</a> و <a href="https://coincards.com">CoinCards</a> بطاقات Visa مدفوعة مسبقًا وبطاقات هدايا لآلاف الشركات. يقدم المتسوقون الشخصيون مثل <a href="https://proxysto.re">ProxyStore</a>، <a href="https://sovereignstack.tools/rerouter/">Sovereign Stack</a> و <a href="https://shopinbit.com">ShopInBit</a> وسيلة مريحة لدفع الفواتير باستخدام Monero.
+                </p>
+                <p class="monero-info-p kuno">
+                مرونة Monero تجعل من السهل جمع الأموال لدفع الفواتير، إطلاق مشروعك أو دعم جمعية خيرية.
+                </p>',
+          'homepage_link_exchange_to_cash' => 'تبديل إلى نقد',
+          'homepage_link_shop_online' => 'تسوق عبر الإنترنت',
+          'homepage_link_marketplace' => 'سوق',
+          'homepage_use_case_heading1' => 'للجمعيات الخيرية',
+          'homepage_use_case_description1' => '<p class="use-case-p-bold kuno">
+                مأوى القطط المحلي يحتاج إلى تبرعات لطعام القطط وفواتير الطبيب البيطري.
+              </p>
+              <p class="use-case-p kuno">
+                أنشئوا حملة تمويل Kuno، شاركوا الرابط على وسائل التواصل الاجتماعي واستلموا التبرعات.
+              </p>
+              <p class="use-case-p kuno">
+                يستخدم المأوى Monero الذي تم جمعه لشراء بطاقات هدايا Petsmart بواسطة CakePay ويسحب النقد لدفع فاتورة الطبيب البيطري باستخدام Crypto ATM.
+              </p>
+              <p class="use-case-p kuno">
+                يتلقى كل متبرع تحديثًا مع صور للقطط.
+              </p>',
+          'homepage_use_case_heading2' => 'للأفراد',
+          'homepage_use_case_description2' => '<p class="use-case-p-bold kuno">
+                    أليس تحتاج إلى جمع الأموال لفواتير الطب الطبي.
+                  </p>
+                  <p class="use-case-p kuno">
+                    تساعدها ابنتها في إعداد حملة تمويل Kuno وتشاركها مع مجتمعها.
+                  </p>
+                  <p class="use-case-p kuno">
+                    يجمعون ما يكفي من الأموال ويبدلونها بالنقد مع LocalMonero.
+                  </p>
+                  <p class="use-case-p kuno">
+                    تكتب أليس رسالة شكر مؤثرة لكل متبرع كرمز للامتنان.
+                  </p>',
+          'homepage_use_case_heading3' => 'للشركات الناشئة',
+          'homepage_use_case_description3' => '<p class="use-case-p-bold kuno">
+                    مطور مستقل يرغب في إنشاء لعبة جديدة.
+                  </p>
+                  <p class="use-case-p kuno">
+                    يقوم بإعداد حملة تمويل Kuno ويشاركها مع مجتمعات الألعاب.
+                  </p>
+                  <p class="use-case-p kuno">
+                    يصل إلى الهدف ويستخدم الأموال لتوظيف فنانين موافقين على Monero من MoneroMarket وشراء أصول اللعبة ببطاقة ديبيت افتراضية من CakePay.
+                  </p>
+                  <p class="use-case-p kuno">
+                    يحصل كل متبرع على نسخة مجانية من اللعبة.
+                  </p>',
+          'homepage_use_case_heading4' => 'لمنشئي المحتوى',
+          'homepage_use_case_description4' => '<p class="use-case-p-bold kuno">
+                تقوم فرقة بتحميل مقتطفاتها وموسيقاها الأصلية على YouTube.
+              </p>
+              <p class="use-case-p kuno">
+                يقومون بإعداد صفحة تبرع Kuno لاستقبال تبرعات Monero.
+              </p>
+              <p class="use-case-p kuno">
+                يمكن للمعجبين أيضًا اقتراح أغاني أو التعليق أثناء البث المباشر عن طريق إجراء تبرع.
+              </p>
+              <p class="use-case-p kuno">
+                يقدم ذلك وسيلة أفضل لتحقيق دخل مستدام لمحتواهم، بالمقارنة مع الإعلانات.
+              </p>',
+          'homepage_use_case_heading5' => 'بالنسبة لك',
+          'homepage_use_case_description5' => '<p class="use-case-p-bold kuno">
+                    مع Kuno، يمكن للجميع جمع الأموال لمشروعهم أو قضيتهم أو شركتهم الناشئة.
+                  </p>
+                  <p class="use-case-p kuno">
+                    كل ما تحتاجه هو محفظة Monero وهدف.
+                  </p>',
+        'fundraiser_heading_goal' => 'الهدف',
+        'fundraiser_heading_raised' => 'تم جمعها',
+        'fundraiser_heading_percentage_funded' => 'تم تمويلها',
+        'fundraiser_heading_donations' => 'التبرعات',
+        'fundraiser_heading_supporters' => 'الداعمون',
+        'fundraiser_heading_comments' => 'التعليقات',
+        'fundraiser_heading_support' => 'الدعم',
+        'fundraiser_heading_share' => 'مشاركة',
+        'fundraiser_heading_about' => 'نبذة عن',
+        'fundraiser_heading_photos' => 'الصور',
+        'fundraiser_heading_contact' => 'الاتصال',
+        'fundraiser_heading_date' => 'نشرت في:',
+        'fundraiser_heading_supporters' => 'الداعمون',
+        'fundraiser_heading_new_comment' => 'كتابة تعليق',
+        'fundraiser_heading_new_fundraiser' => 'حملة تمويل جديدة',
+        'fundraiser_heading_edit_fundraiser' => 'تحرير الحملة',
+        'fundraiser_heading_logout' => 'تسجيل الخروج',
+        'fundraiser_support_text' => 'أرسل أي مبلغ من Monero إلى:',
+        'fundraiser_share_text' => 'انسخ الرابط لمشاركة هذه الحملة مع الأصدقاء أو وسائل التواصل الاجتماعي:',
+        'fundraiser_open_in_wallet' => 'افتح في المحفظة',
+        'fundraiser_info_point1' => 'تتبرع مباشرة إلى محفظة المستلم',
+        'fundraiser_info_point2' => 'لا وسطاء أو رسوم',
+        'fundraiser_info_point3' => 'تتم مزامنة التبرعات كل 5 دقائق',
+        'fundraiser_full_size_photo' => 'صورة بحجم كامل',
+        'fundraiser_no_donations' => 'لا توجد تبرعات حتى الآن',
+        'fundraiser_supporters' => '{AMOUNT} داعمين',
+        'fundraiser_button_support' => 'دعم',
+        'fundraiser_donate_with_monero' => 'تبرع بـ Monero:',
+        'fundraiser_comment_form_placeholder_txid' => 'رقم المعاملة (TXID)',
+        'fundraiser_comment_form_placeholder_tx_key' => 'مفتاح المعاملة (مثال: 7d7a9370a746d219e5f66aaaec902ead0d1c1783817a10276c9accdacca6f10d)',
+        'fundraiser_comment_form_placeholder_email' => 'البريد الإلكتروني (اختياري، لمكافآت الحملة)',
+        'fundraiser_comment_form_placeholder_comment' => 'أكتب تعليقًا عامًا',
+        'fundraiser_comment_form_submit' => 'تعليق',
+        'search' => 'بحث',
+        'search_heading' => 'البحث في الحملات التمويلية',
+        'search_text' => 'البحث في الحملات التمويلية...',
+        'search_sort_by_new' => 'الترتيب حسب الحداثة',
+        'search_sort_by_recently_donated' => 'الترتيب حسب التبرع الأخير',
+        'search_sort_by_percentage_funded' => 'الترتيب حسب النسبة المئوية للتمويل',
+        'search_sort_by_goal' => 'الترتيب حسب الهدف',
+        'search_all_categories' => 'جميع الفئات',
+        'search_no_fundraisers_found' => 'لم يتم العثور على حملات تمويلية',
+        'search_fediverse_heading' => 'البحث في الفيديفيرس',
+        'search_fediverse_text' => 'البحث في حملات التمويل في الفيديفيرس...',
+        'search_fediverse_no_fundraisers_found' => 'لم يتم العثور على حملات تمويلية في الفيديفيرس',
+        'search_fediverse_peers_list' => 'قائمة بالمثيلات الموزعة:',
+        'login_invite_code_heading' => 'حملة تمويل جديدة',
+        'login_invite_code_text' => 'أدخل رمز الدعوة لبدء حملة تمويل جديدة.',
+        'login_invite_code_note' => 'إذا لم يكن لديك رمز دعوة، يرجى الاتصال بالدعم.',
+        'login_invite_code_form' => 'رمز الدعوة',
+        'login_invite_code_form_placeholder' => 'رمز الدعوة',
+        'login_invite_code_submit' => 'متابعة',
+        'login_fundraiser_form_fundraiser' => 'حملة تمويل',
+        'login_fundraiser_heading' => 'تحرير الحملة',
+        'login_fundraiser_text' => 'أدخل رمز الحملة وكلمة المرور لتحرير حملتك.',
+        'login_fundraiser_note' => 'الرمز في عنوان URL:',
+        'login_fundraiser_forgot_password' => 'نسيت كلمة المرور؟',
+        'login_fundraiser_form_fundraiser' => 'حملة تمويل',
+        'login_fundraiser_form_fundraiser_placeholder' => 'رمز الحملة (مثال: ae21)',
+        'login_fundraiser_form_password' => 'كلمة المرور',
+        'login_fundraiser_form_password_placeholder' => 'كلمة المرور',
+        'login_fundraiser_form_submit' => 'تحرير الحملة',
+        'edit_fundraiser_heading_fundraiser_details' => 'تفاصيل الحملة التمويلية',
+        'edit_fundraiser_fundraiser_details_text' => 'صف حملتك التمويلية وأضف الصور.',
+        'edit_fundraiser_form_optional' => '(اختياري)',
+        'edit_fundraiser_form_more_info' => '(مزيد من المعلومات)',
+        'edit_fundraiser_form_title' => 'العنوان',
+        'edit_fundraiser_form_title_placeholder' => 'عنوان الحملة التمويلية',
+        'edit_fundraiser_form_photo' => 'الصورة',
+        'edit_fundraiser_form_additional_photos' => 'صور إضافية',
+        'edit_fundraiser_form_description' => 'الوصف',
+        'edit_fundraiser_form_description_placeholder' => 'صف حملتك التمويلية. أضف مكافآت الحملة والمراحل أو تفاصيل الاتصال إذا كان ذلك ضروريًا.',
+        'edit_fundraiser_form_tags' => 'الوسوم',
+        'edit_fundraiser_form_tags_placeholder' => 'الفئة، الوسوم، إلخ.',
+        'edit_fundraiser_form_contact' => 'جهة الاتصال',
+        'edit_fundraiser_form_contact_placeholder' => 'البريد الإلكتروني، الموقع، تويتر، ماتريكس، إلخ.',
+        'edit_fundraiser_form_visibility' => 'تعيين الحملة كخاصة (غير معروضة في نتائج البحث، سيحتاج المتبرعون إلى الرابط المباشر)',
+        'edit_fundraiser_heading_goal' => 'الهدف',
+        'edit_fundraiser_goal_text' => 'قم بتعيين هدفك وعنوان Monero.',
+        'edit_fundraiser_get_wallet' => 'لا توجد محفظة Monero؟ احصل على واحدة هنا.',
+        'edit_fundraiser_form_goal' => 'الهدف',
+        'edit_fundraiser_form_goal_placeholder' => 'الهدف (XMR)',
+        'edit_fundraiser_form_donation_page' => 'لا يوجد هدف - أريد إنشاء صفحة تبرع',
+        'edit_fundraiser_form_monero_address' => 'عنوان Monero',
+        'edit_fundraiser_form_monero_address_placeholder' => 'مثال: 44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft3XjrpDtQGv7SqSsaBYBb98uNbr2VBBEt7f2wfn3RVGQBEP3A',
+        'edit_fundraiser_form_view_key' => 'مفتاح الرؤية السري',
+        'edit_fundraiser_form_view_key_placeholder' => 'مثال: f359631075708155cc3d92a32b75a7d02a5dcf27756707b47a2b31b21c389501',
+        'edit_fundraiser_heading_password' => 'كلمة المرور',
+        'edit_fundraiser_password_text' => 'قم بتعيين كلمة مرور لتحرير حملتك التمويلية لاحقًا.',
+        'edit_fundraiser_widthdrawal_warning' => "تجنب سحب الأرصدة الجزئية أثناء الحملات التمويلية الجارية. تستخدم Monero الأرصدة الكاملة للمدفوعات، مما يترك المبالغ المتبقية كمعاملات جديدة. سيتم حساب ذلك بشكل خاطئ كتبرع، وستكون تقدم حملتك التمويلية غير دقيقة. إذا كنت بحاجة إلى استخدام الأموال أثناء التنقل، فانسحب دائمًا بالكامل، واترك أي 'تغيير'.",
+        'edit_fundraiser_form_email' => 'البريد الإلكتروني',
+        'edit_fundraiser_form_email_placeholder' => 'البريد الإلكتروني (اختياري، لإعادة تعيين كلمة المرور)',
+        'edit_fundraiser_form_password' => 'كلمة المرور',
+        'edit_fundraiser_form_new_password_placeholder' => 'كلمة المرور',
+        'edit_fundraiser_form_edit_password_placeholder' => 'كلمة المرور (اتركها فارغة إذا لم تكن هناك تغييرات)',
+        'edit_fundraiser_form_email_notifications' => 'أرسل لي بريدًا إلكترونيًا عندما تتلقى حملتي تبرعًا جديدًا',
+        'edit_fundraiser_form_submit_edit' => 'تحديث الحملة التمويلية',
+        'edit_fundraiser_form_submit_new' => 'بدء حملة تمويلية',
+        'edit_fundraiser_heading_supporters' => 'داعمو الحملة التمويلية',
+        'edit_fundraiser_supporters_text' => 'إذا قام داعم بإدخال عنوان بريده الإلكتروني، ستظهر هنا (على سبيل المثال، لمكافآت الحملة).',
+        'edit_fundraiser_no_supporters' => 'لا يوجد تقديمات بريد إلكتروني حتى الآن',
+        'edit_fundraiser_supporters_email' => 'البريد الإلكتروني',
+        'edit_fundraiser_supporters_comment' => 'التعليق',
+        'edit_fundraiser_supporters_amount' => 'المبلغ',
+        'edit_fundraiser_supporters_txid' => 'معرف الصفقة (TXID)',
+        'edit_fundraiser_supporters_tx_key' => 'مفتاح الصفقة (TX Key)',
+        'edit_fundraiser_supporters_date' => 'التاريخ',
+        'edit_fundraiser_heading_manage_fundraiser' => 'إدارة الحملة التمويلية',
+        'edit_fundraiser_fix_view_key' => 'الرجاء إضافة مفتاح رؤية صالح لإعادة تنشيط حملتك التمويلية.',
+        'edit_fundraiser_deactivate_fundraiser' => 'إلغاء تنشيط الحملة التمويلية',
+        'edit_fundraiser_reactivate_fundraiser' => 'إعادة تنشيط الحملة التمويلية',
+        'edit_fundraiser_delete_fundraiser' => 'حذف البيانات الخاصة بك',
+        'reset_password_heading' => 'إعادة تعيين كلمة المرور',
+        'reset_password_description' => 'أدخل رمز الحملة التمويلية وعنوان بريدك الإلكتروني لإعادة تعيين كلمة المرور الخاصة بك.',
+        'reset_password_note' => '(إذا لم تقم بإضافة عنوان بريد إلكتروني، يرجى الاتصال بالدعم.)',
+        'reset_password_form_fundraiser' => 'رمز الحملة التمويلية',
+        'reset_password_form_fundraiser_placeholder' => 'رمز الحملة التمويلية (على سبيل المثال ae21)',
+        'reset_password_form_email' => 'البريد الإلكتروني',
+        'reset_password_form_email_placeholder' => 'البريد الإلكتروني',
+        'reset_password_form_confirmation_code' => 'رمز التأكيد',
+        'reset_password_form_confirmation_code_placeholder' => 'رمز التأكيد',
+        'reset_password_form_new_password' => 'كلمة مرور جديدة',
+        'reset_password_form_new_password_placeholder' => 'كلمة مرور جديدة',
+        'reset_password_form_submit' => 'إعادة تعيين كلمة المرور',
+        'success' => 'نجاح',
+        'success_form_submitted' => 'تم تقديم النموذج بنجاح',
+        'success_new_fundraiser' => 'حملتك التمويلية نشطة: <a href="https://kuno.anne.media/fundraiser/{GUID}/">شاهد حملتك التمويلية هنا</a><br>علامة هذا الرابط لتحرير حملتك التمويلية: <a href="https://kuno.anne.media/edit-fundraiser/{GUID}/">تحرير حملة التمويلية #{GUID}</a>',
+        'success_new_donation_page' => 'صفحة التبرع الخاصة بك نشطة: <a href="https://kuno.anne.media/donate/{GUID}/">شاهد صفحة التبرع الخاصة بك هنا</a><br>علامة هذا الرابط لتحرير صفحة التبرع الخاصة بك: <a href="https://kuno.anne.media/edit-fundraiser/{GUID}/">تحرير صفحة التبرع #{GUID}</a>',
+        'success_fundraiser_updated' => '<a href="https://kuno.anne.media/fundraiser/{GUID}/">تم تحديث حملتك التمويلية.</a>',
+        'success_valid_fundraiser_password' => '<a href="https://kuno.anne.media/edit-fundraiser/{GUID}/">انقر هنا لتحرير حملتك التمويلية</a>',
+        'success_donation_page_updated' => '<a href="https://kuno.anne.media/donate/{GUID}/">تم تحديث صفحة التبرع الخاصة بك.</a>',
+        'success_fundraiser_deactivated' => 'تم إلغاء تنشيط الحملة التمويلية',
+        'success_fundraiser_reactivated' => 'تم إعادة تنشيط الحملة التمويلية',
+        'success_fundraiser_deleted' => 'تم حذف الحملة التمويلية',
+        'success_valid_invite_code' => 'رمز دعوة صالح. يمكنك الآن بدء حملة تمويلية.',
+        'success_valid_confirmation_code' => 'رمز تأكيد صالح',
+        'success_check_email_for_password_reset_code' => 'تحقق من عنوان بريدك الإلكتروني للحصول على رمز إعادة تعيين كلمة المرور',
+        'success_password_reset' => 'تم تغيير كلمة المرور، يمكنك الآن <a href="https://kuno.anne.media/edit-fundraiser/{FUNDRAISER}">تحرير حملتك التمويلية</a>',
+        'success_comment_sent' => 'تم إرسال التعليق بنجاح!',
+        'success_image_uploaded' => 'تم رفع الصورة',
+        'error' => 'خطأ',
+        'error_please_refresh' => 'الرجاء إعادة تحميل الصفحة والمحاولة مرة أخرى.',
+        'error_form_expired' => 'انتهت صلاحية النموذج، يرجى إعادة التحديث',
+        'error_form_ratelimited' => 'تم تقييد السرعة، يرجى الانتظار {RATELIMIT} ثانية',
+        'error_session_expired' => 'انتهت صلاحية الجلسة، يرجى تسجيل الدخول مرة أخرى',
+        'error_page_not_found' => 'الصفحة غير موجودة',
+        'error_fundraiser_not_found' => 'لم يتم العثور على الحملة التمويلية',
+        'error_email_not_found' => 'لم يتم تعيين عنوان البريد الإلكتروني، يرجى الاتصال بالدعم',
+        'error_invalid_email' => 'الرجاء إدخال عنوان بريد إلكتروني صالح',
+        'error_invalid_email_for_notifications' => 'الرجاء إدخال عنوان بريد إلكتروني صالح لتمكين الإشعارات',
+        'error_invalid_confirmation_code' => 'رمز التأكيد غير صالح أو منتهي الصلاحية',
+        'error_invalid_monero_address' => 'عنوان Monero غير صالح (الرجاء إدخال عنوانك الرئيسي، الذي يبدأ برقم 4)',
+        'error_invalid_view_key' => 'مفتاح الرؤية غير صالح (الرجاء إدخال مفتاح الرؤية الخاص/السري)',
+        'error_invalid_address' => 'عنوان Monero غير صالح (الرجاء إدخال عنوانك الرئيسي، الذي يبدأ برقم 4)',
+        'error_entered_public_view_key' => 'مفتاح الرؤية غير صالح (الرجاء إدخال مفتاح الرؤية الخاص/السري، وليس مفتاح الرؤية العام)',
+        'error_entered_public_spend_key' => 'مفتاح الرؤية غير صالح (الرجاء إدخال مفتاح الرؤية الخاص/السري، وليس مفتاح الإنفاق العام)',
+        'error_entered_private_spend_key' => 'مفتاح الرؤية غير صالح (الرجاء إدخال مفتاح الرؤية الخاص/السري، وليس مفتاح الإنفاق الخاص)',
+        'error_invalid_private_view_key' => 'مفتاح الرؤية غير صالح (الرجاء إدخال مفتاح الرؤية الخاص/السري)',
+        'error_invalid_txid' => 'معرف الصفقة (TXID) غير صالح',
+        'error_invalid_tx_key' => 'الرجاء إدخال مفتاح صفقة صالح (المعروف أيضًا باسم دليل صفقة TX)',
+        'error_invalid_txid' => 'الرجاء إدخال رمز دعوة صالح',
+        'error_incorrect_email' => 'عنوان البريد الإلكتروني غير صحيح',
+        'error_incorrect_password' => 'كلمة المرور غير صحيحة',
+        'error_monero_address_already_used' => 'يوجد بالفعل حملة تمويلية/صفحة تبرع بهذا العنوان Monero',
+        'error_missing_fundraiser_code_or_email' => 'الرجاء إدخال رمز الحملة التمويلية وعنوان البريد الإلكتروني',
+        'error_missing_password_reset_code_or_password' => 'الرجاء إدخال رمز إعادة تعيين كلمة المرور وكلمة المرور الجديدة',
+        'error_missing_txid_or_tx_key' => 'الرجاء إدخال كل من معرف الصفقة (TXID) ومفتاح الصفقة (المعروف أيضًا باسم دليل صفقة TX)',
+        'error_missing_password' => 'الرجاء إدخال كلمة المرور الخاصة بك',
+        'error_missing_view_key' => 'الرجاء إدخال مفتاح رؤية خاص صالح',
+        'error_title_too_long' => 'يجب أن يكون العنوان بين 1 و 80 حرفًا',
+        'error_description_too_long' => 'يجب أن يكون الوصف أقل من 8000 حرف',
+        'error_tags_too_long' => 'يجب أن تكون الوسوم أقل من 250 حرفًا',
+        'error_contact_details_too_long' => 'يجب أن تكون تفاصيل الاتصال أقل من 250 حرفًا',
+        'error_goal_must_be_positive' => 'يجب أن يكون هدف الحملة التمويلية رقمًا إيجابيًا',
+        'error_image_incorrect_file_type' => 'يجب أن يكون نوع الصورة PNG أو JPEG',
+        'error_image_maximum_image_size' => 'الحد الأقصى لحجم الصورة هو 2 ميجابايت',
+        'error_image_invalid' => 'صورة غير صالحة',
+        'error_image_storage_full' => 'التخزين ممتلئ',
+        'error_image_missing' => 'الرجاء تحميل صورة',
+        'translate_help' => 'سيكون رائعًا إذا كان بإمكاننا الوصول إلى Kuno بلغات أكثر. ساعدنا في الترجمات على <a href="https://github.com/annemedia/kuno-translation">https://github.com/annemedia/kuno-translation</a>',
+        'wallets_header' => 'Monero: <span class="text3">خيارات المحافظ</span>',
+        'monero_gui_wallet' => 'واجهة مستخدم رسومية (GUI) لمحفظة Monero مفتوحة المصدر تم تطويرها من قبل مجتمع Monero، مجانية تمامًا للاستخدام، مناسبة لكل من المبتدئين والمتقدمين.',
+        'cake_wallet' => 'قم بتخزين عملتك الرقمية بشكل آمن وإرسالها وتبادلها بسهولة. اشترِ بطاقات هدايا بشكل خاص وادفع في العداد باستخدام العملات الرقمية، قطعة كعكة.',
+        'monerujo_wallet' => 'محفظة Monero لنظام Android. مع Monerujo، يمكنك التنقل بسلاسة بين عدة محافظ. إنشاء واحدة جديدة بسيطة كبضع النقرات.',
+        'feather_wallet' => 'Feather هي محفظة Monero مجانية ومفتوحة المصدر لأنظمة Linux وTails وWindows وmacOS. سهلة الاستخدام وصغيرة وسريعة وصديقة للمبتدئين.'
+    );
+    $translation = ($strings[$string]) ? $strings[$string] : $string;
+    return $translation;
+  }
+
