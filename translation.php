@@ -2881,8 +2881,8 @@ function translate_de($string) {
          <br>https://kuno.anne.media/edit-fundraiser/{GUID}/',
     'email_reset_password_subject' => '[Kuno] Passwort zurücksetzen',
     'email_reset_password_body' => 'Besuchen Sie diesen Link, um Ihr Passwort zurückzusetzen: {URL} oder geben Sie diesen Code ein: {CODE} (Gültig für 24 Stunden)',
-    'homepage_title' => 'Einfache Spendenaktion<br>für jedermann',
-    'homepage_subtitle' => 'Sammeln Sie Geld oder spenden Sie für einen guten Zweck mit Monero',
+    'homepage_title' => 'Kuno macht<br>Spenden leicht',
+    'homepage_subtitle' => 'Sammle Geld oder spende für einen guten Zweck mit Monero',
     'homepage_point1' => 'Starte kostenlos eine Spendenaktion',
     'homepage_point2' => 'Erhalte Monero (kann in Bargeld umgetauscht werden)',
     'homepage_point3' => 'Keine Gebühren, funktioniert weltweit, kein Bankkonto erforderlich',
@@ -2894,14 +2894,14 @@ function translate_de($string) {
     'homepage_top_categories' => 'Top-Kategorien',
     'homepage_recent_donations' => 'Neuste Spenden',
     'homepage_all_categories' => 'Alle Kategorien',
-    'homepage_launch_in_one_click' => 'Starten Sie Ihre Spendenaktion mit einem Klick',
+    'homepage_launch_in_one_click' => 'Starten Sie Ihre Spendenaktion mit einem 1-Klick',
     'homepage_get_started_free' => 'Jetzt kostenlos starten',
     'homepage_info_heading1' => 'Monero ist Bargeld für das Internet',
     'homepage_info_description1' => '<p class="monero-info-p-bold kuno">
                  Monero ist ein schneller und sicherer Weg, um online Geld zu empfangen und zu versenden.
                 </p>
                 <p class="monero-info-p kuno">
-                 Ein Bankkonto oder ein Ausweis sind nicht erforderlich. Laden Sie einfach eine Wallet für Ihr Smartphone oder Ihren Computer herunter, um mit einem Klick weltweit Geld empfangen und versenden zu können.
+                 Ein Bankkonto oder ein Ausweis sind nicht erforderlich. Laden Sie einfach eine Wallet für Ihr Smartphone oder Ihren Computer herunter, um mit einem 1-Klick weltweit Geld empfangen und versenden zu können.
                 </p>
                 <p class="monero-info-p kuno">
                 Die Einfachheit und Zugänglichkeit von Monero macht es zu einer idealen Zahlungsmethode für Online-Shops, Spendenaktionen, Überweisungen, Trinkgelder und mehr.
@@ -2916,7 +2916,7 @@ function translate_de($string) {
                 Monero ist eine Peer-to-Peer-Software und ist nicht von Dritten oder Unternehmen abhängig. Gelder können nicht eingefroren werden und Benutzer können nicht ausgeschlossen werden.
                 </p>
                 <p class="monero-info-p kuno">
-                Egal, ob Sie mit Monero Geld sammeln oder für einen guten Zweck spenden wollen, Sie können sich sicher sein, dass der Empfänger 100% der Spende erhält.
+                Egal, ob Sie mit Monero Geld sammeln oder für einen guten Zweck spenden wollen, Sie können sich sicher sein, dass der Empfänger 100% der Spende erhalten wird.
                 </p>',
     'homepage_link_official_website' => 'Offizielle Webseite',
     'homepage_link_overview' => 'Übersicht',
@@ -2929,7 +2929,7 @@ function translate_de($string) {
                 Es ist einfach, Monero über <a href="https://localmonero.co">LocalMonero</a>, <a href="https://bisq.network">Bisq</a> oder mit einem <a href="https://coinatmradar.com">Krypto-Geldautomaten</a> in physisches Bargeld zu tauschen (kein Bankkonto erforderlich).
                 </p>
                 <p class="monero-info-p kuno">
-                Marktplätze wie <a href="https://moneromarket.io">MoneroMarket</a> und Verzeichnisse wie <a href="https://monerica.com">Monerica</a> und <a href="https://acceptedhere.io">AcceptedHere</a> helfen Ihnen, mit Monero einzukaufen, was Sie brauchen.
+                Marktplätze wie <a href="https://moneromarket.io">MoneroMarket</a> und Verzeichnisse wie <a href="https://monerica.com">Monerica</a> und <a href="https://acceptedhere.io">AcceptedHere</a> helfen Ihnen, mit Monero einzukaufen.
                 </p>
                 <p class="monero-info-p kuno">
                 Darüber hinaus bieten <a href="https://cakepay.com">CakePay</a> und <a href="https://coincards.com">CoinCards</a> Prepaid-Visa-Karten und Geschenkkarten für Tausende von Unternehmen an. Persönliche Einkäufer wie <a href="https://proxysto.re">ProxyStore</a>, <a href="https://sovereignstack.tools/rerouter/">Sovereign Stack</a> und <a href="https://shopinbit.com">ShopInBit</a> bieten eine bequeme Möglichkeit, Rechnungen mit Monero zu bezahlen.
@@ -3023,7 +3023,7 @@ function translate_de($string) {
     'fundraiser_info_point2' => 'Keine Zwischenhändler oder Gebühren',
     'fundraiser_info_point3' => 'Spenden werden alle 5 Minuten synchronisiert',
     'fundraiser_full_size_photo' => 'Bild in Originalgröße',
-    'fundraiser_no_donations' => 'Noch keine Spenden erhalten',
+    'fundraiser_no_donations' => 'Noch keine Spende erhalten',
     'fundraiser_supporters' => '{AMOUNT} Unterstützer',
     'fundraiser_button_support' => 'Unterstützen',
     'fundraiser_donate_with_monero' => 'Mit Monero spenden:',
@@ -3057,7 +3057,7 @@ function translate_de($string) {
     'login_fundraiser_note' => 'Der Code befindet sich in der URL:',
     'login_fundraiser_forgot_password' => 'Passwort vergessen?',
     'login_fundraiser_form_fundraiser' => 'Spendenaktion',
-    'login_fundraiser_form_fundraiser_placeholder' => 'Spendenaktion-Code (z. B. ae21)',
+    'login_fundraiser_form_fundraiser_placeholder' => 'Spendenaktion-Code (z.B. ae21)',
     'login_fundraiser_form_password' => 'Passwort',
     'login_fundraiser_form_password_placeholder' => 'Passwort',
     'login_fundraiser_form_submit' => 'Spendenaktion bearbeiten',
@@ -3098,7 +3098,7 @@ function translate_de($string) {
     'edit_fundraiser_form_submit_edit' => 'Aktualisierung der Spendenaktion',
     'edit_fundraiser_form_submit_new' => 'Spendenaktion starten',
     'edit_fundraiser_heading_supporters' => 'Unterstützer der Spendenaktion',
-    'edit_fundraiser_supporters_text' => 'Wenn ein Unterstützer seine E-Mail-Adresse angegeben hat, wird sie hier angezeigt (z. B. für Belohnungen bei Spendenaktionen).',
+    'edit_fundraiser_supporters_text' => 'Wenn ein Unterstützer seine E-Mail-Adresse angegeben hat, wird sie hier angezeigt (z.B. für Belohnungen bei Spendenaktionen).',
     'edit_fundraiser_no_supporters' => 'Noch keine E-Mail-Einreichungen',
     'edit_fundraiser_supporters_email' => 'Email',
     'edit_fundraiser_supporters_comment' => 'Kommentar',
@@ -3115,7 +3115,7 @@ function translate_de($string) {
     'reset_password_description' => 'Geben Sie den Spendenaktion-Code und Ihre E-Mail-Adresse ein, um Ihr Passwort zurückzusetzen.',
     'reset_password_note' => '(Wenn Sie keine E-Mail-Adresse angegeben haben, wenden Sie sich bitte an den Support.)',
     'reset_password_form_fundraiser' => 'Spendenaktion',
-    'reset_password_form_fundraiser_placeholder' => 'Spendenaktion-Code (z. B. ae21)',
+    'reset_password_form_fundraiser_placeholder' => 'Spendenaktion-Code (z.B. ae21)',
     'reset_password_form_email' => 'Email',
     'reset_password_form_email_placeholder' => 'Email',
     'reset_password_form_confirmation_code' => 'Bestätigungscode',
