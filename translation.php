@@ -2948,7 +2948,7 @@ function translate_de($string) {
                   Sie richten eine Kuno-Spendenaktion ein, teilen den Link in den sozialen Medien und erhalten Spenden.
                 </p>
                 <p class="use-case-p kuno">
-                  Das Tierheim verwendet die gesammelten Monero, um die Dinge mit Geschenkkarten von CakePay zu kaufen und die Tierarztrechnung kann über einen Krypto-Geldautomaten mit Bargeld beglichen werden.
+                  Das Tierheim verwendet die gesammelten Monero, um die Dinge mit Geschenkkarten von CakePay zu kaufen, und die Tierarztrechnung kann mithilfe eines Krypto-Geldautomaten mit Bargeld beglichen werden.
                 </p>
                 <p class="use-case-p kuno">
                   Jeder Spender erhält ein Update mit Fotos der Katzen.
@@ -2961,7 +2961,7 @@ function translate_de($string) {
                   Ihre Tochter hilft ihr bei der Organisation einer Kuno-Spendenaktion und teilt diese mit ihrer Gemeinde.
                 </p>
                 <p class="use-case-p kuno">
-                  Sie sammeln genug Geld und tauschen es mit LocalMonero in Bargeld um.
+                  Sie sammeln genug Geld und tauschen es mithilfe von LocalMonero in Bargeld um.
                 </p>
                 <p class="use-case-p kuno">
                   Alice schreibt für jeden Spender einen herzlichen Dankesbrief als Zeichen der Wertschätzung.
