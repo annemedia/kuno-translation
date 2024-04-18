@@ -2913,7 +2913,7 @@ function translate_de($string) {
                 Mit Monero gehört das Geld Ihnen.
                 </p>
                 <p class="monero-info-p kuno">
-                Monero ist eine Peer-to-Peer-Software und ist nicht von Dritten oder Unternehmen abhängig. Gelder können nicht eingefroren werden und Benutzer können nicht ausgeschlossen werden.
+                Monero ist eine Peer-to-Peer-Software und ist nicht von Dritten oder Unternehmen abhängig. Gelder werden nicht eingefroren und Benutzer können nicht ausgeschlossen werden.
                 </p>
                 <p class="monero-info-p kuno">
                 Egal, ob Sie mit Monero Geld sammeln oder für einen guten Zweck spenden wollen, Sie können sich sicher sein, dass der Empfänger 100% der Spende erhalten wird.
