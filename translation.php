@@ -2848,7 +2848,7 @@ function translate_de($string) {
     'pagination' => 'Seite {NUM} von {NUM_PAGES}',
     'pagination_fundraisers' => 'Ansicht {START}-{END} von {TOTAL} Spendenaktionen',
     'pagination_donations' => 'Ansicht {START}-{END} von {TOTAL} Spenden',
-    'pagination_submit' => 'Weiter',
+    'pagination_submit' => 'Anzeigen',
     'nav_manage_fundraiser' => 'Spendenaktion verwalten',
     'nav_search' => 'Suche nach Spendenaktion...',
     'nav_fundraiser_progress' => 'Fortschritt der Spendenaktion:',
