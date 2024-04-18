@@ -3095,7 +3095,7 @@ function translate_de($string) {
     'edit_fundraiser_form_new_password_placeholder' => 'Passwort',
     'edit_fundraiser_form_edit_password_placeholder' => 'Passwort (leer lassen, falls keine Änderung)',
     'edit_fundraiser_form_email_notifications' => 'Per E-Mail benachrichtigen, wenn eine neue Spende für meine Spendenaktion eingeht',
-    'edit_fundraiser_form_submit_edit' => 'Aktualisierung der Spendenaktion',
+    'edit_fundraiser_form_submit_edit' => 'Spendenaktion aktualisieren',
     'edit_fundraiser_form_submit_new' => 'Spendenaktion starten',
     'edit_fundraiser_heading_supporters' => 'Unterstützer der Spendenaktion',
     'edit_fundraiser_supporters_text' => 'Wenn ein Unterstützer seine E-Mail-Adresse angegeben hat, wird sie hier angezeigt (z.B. für Belohnungen bei Spendenaktionen).',
