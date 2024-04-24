@@ -3188,3 +3188,346 @@ function translate_de($string) {
   $translation = ($strings[$string]) ? $strings[$string] : $string;
   return $translation;
 }
+
+function translate_pl($string) {
+  static $strings = array(
+    'site_name' =>                              'Kuno',
+    'page_title' =>                             'Kuno – Zbiórka pieniędzy z Monero',
+    'page_title_error' =>                       'Błąd| Kuno – Zbiórka pieniędzy z Monero',
+    'page_title_search' =>                      'Szukaj | Kuno – Zbiórka pieniędzy z Monero',
+    'page_title_fediverse' =>                   'Fediverse | Kuno – Zbiórka pieniędzy z Monero',
+    'page_title_reset_password' =>              'Zresetuj hasło | Kuno – Zbiórka pieniędzy z Monero',
+    'page_title_edit_fundraiser' =>             'Edytuj zbiórkę | Kuno – Zbiórka pieniędzy z Monero',
+    'page_title_new_fundraiser' =>              'Utwórz zbiórka | Kuno – Zbiórka pieniędzy z Monero',
+    'pagination' =>                             'Strona {NUM} z {NUM_PAGES}',
+    'pagination_fundraisers' =>                 'Wyświetlono {START}-{END} ze {TOTAL} zbiórek',
+    'pagination_donations' =>                   'Wyświetlono {START}-{END} z {TOTAL} datków',
+    'pagination_submit' =>                      'Pokaż',
+    'nav_manage_fundraiser' =>                  'Zarządzaj zbiórką',
+    'nav_search' =>                             'Szukaj zbiórek...',
+    'nav_fundraiser_progress' =>                'Postęp zbiórki:',
+    'nav_edit_fundraiser' =>                    'Edytuj zbiórkę:',
+    'nav_logout' =>                             'Wyloguj się',
+    'footer_description' =>                     'Zbiórka pieniędzy z Monero',
+    'footer_contact' =>                         'Kontakt: support [at] anne.media',
+    'footer_language' =>                        'Język:',
+    'footer_light_mode' =>                      'Tryb jasny',
+    'footer_dark_mode' =>                       'Tryb ciemny',
+    'footer_manage_fundraiser' =>               'Zarządzaj swoją zbiórką:',
+    'footer_new_fundraiser' =>                  'Utwórz zbiórkę',
+    'footer_edit_fundraiser' =>                 'Edytuj zbiórkę',
+    'footer_reset_password' =>                  'Zresetuj hasło',
+    'footer_quick_links' =>                     'Szybkie linki:',
+    'footer_search_fundraisers' =>              'Szukaj zbiórek',
+    'footer_search_fediverse' =>                'Szukaj Fediverse',
+    'footer_marketplace' =>                     'Handel',
+    'footer_rss_feed' =>                        'RSS Feed',
+    'footer_faq' =>                             '(FAQ) Najczęściej zadawane pytania',
+    'email_new_donation_subject' =>             '[Kuno] Nowy {DONATION} XMR datek dla #{GUID}',
+    'email_new_donation_body' =>                'Twoja zbiórka otrzymała nowy datek!
+         <br><br>Zbiórka: {TITLE}
+         <br>Datek: {DONATION} XMR
+         <br>Data: {DATE}
+         <br><br>Suma datków: {TOTAL} XMR
+         <br>Wspierający: {SUPPORTERS}
+         <br>Odwiedź swoją zbiórkę: https://kuno.anne.media/{TYPE}/{GUID}/
+         <br><br>Dezaktywuj powiadomienia na e-mailu:
+         <br>https://kuno.anne.media/edit-fundraiser/{GUID}/',
+    'email_reset_password_subject' =>           '[Kuno] Zresetuj hasło',
+    'email_reset_password_body' =>              'Odźwiedź link by zresetować hasło: {URL} lub wpisz kod: {CODE} (Ważny 24 godziny)',
+    'homepage_title' =>                         'Prosta zbiórka <br> dla każdego',
+    'homepage_subtitle' =>                      'Zbierz lub przekaż datek na szczytny cel za pomocą Monero',
+    'homepage_point1' =>                        'Zacznij zbierać za darmo',
+    'homepage_point2' =>                        'Otrzymuj Monero (które możesz wymienić na gotówkę)',
+    'homepage_point3' =>                        'Żadnych opłat, na całym świecie, bez konta bankowego',
+    'homepage_button_start_fundraiser' =>       'Utwórz zbiórkę',
+    'homepage_button_browse_fundraisers' =>     'Przeglądaj zbiórki',
+                                                // I add 3 most popular crowdfunding websites in Poland
+    'homepage_bar' =>                           'Atrakcyjna alternatywa dla stron: zrzutka.pl, siepomaga.pl, pomagam.pl, GoFundMe, Kickstarter',
+    'homepage_heading_browse_fundraisers' =>    'Przeglądaj {AMOUNT} zbiórek',
+    'homepage_heading_total_raised' =>          'Zebrano ponad {AMOUNT} XMR!',
+    'homepage_top_categories' =>                'Główne kategorie',
+    'homepage_recent_donations' =>              'Najnowsze datki',
+    'homepage_all_categories' =>                'Wszystkie kategorie',
+    'homepage_launch_in_one_click' =>           'Odpal zbiórkę jednym kliknięciem',
+    'homepage_get_started_free' =>              'Zacznij za darmo',
+    'homepage_info_heading1' =>                 'Monero to internetowa gotówka',
+    'homepage_info_description1' => '<p class="monero-info-p-bold kuno">
+                Monero - szybki i bezpieczny sposób przesyłania gotówki.
+                </p>
+                <p class="monero-info-p kuno">
+                Bez konta bankowego, aplikacji czy dowodu. Pobierz portfel na swój telefon lub komputer i jednym kliknięciem przesyłaj pieniądze na całym świecie.
+                </p>
+                <p class="monero-info-p kuno">
+                Dostępność i prostota obsługi, czyni Monero idealnym narzędziem płatniczym dla sklepów internetowych, światowych przekazów finansowych, napiwków, zbiórek i tym podobnych.
+                </p>',
+    'homepage_link_download_mobile' =>          'Pobierz na smartphone',
+    'homepage_link_download_desktop' =>         'Pobierz na komputer',
+    'homepage_info_heading2' =>                 'Niecenzurowalne datki',
+    'homepage_info_description2' => '<p class="monero-info-p-bold kuno">
+                Dzięki Monero, Twoje pieniądze należą tylko do Ciebie.
+                </p>
+                <p class="monero-info-p kuno">
+                Monero to oprogramowanie typu peer-to-peer, jest niezależne od podmiotów trzecich. Niemożliwe jest: cenzurowanie transakcji, zamrażanie środków, usuwanie użytkowników.
+                </p>
+                <p class="monero-info-p kuno">
+                Nieważne, czy zbierasz, czy wysyłasz datki na szczytne cele, zawsze masz pewność, że odbiorca otrzyma 100% Twojej darowizny.
+                </p>',
+    'homepage_link_official_website' =>         'Oficjalna strona',
+    'homepage_link_overview' =>                 'Przegląd',
+    'homepage_link_buy_monero' =>               'Kup Monero',
+    'homepage_info_heading3' =>                 'Wydawaj gdziekolwiek zechcesz',
+    'homepage_info_description3' => '<p class="monero-info-p-bold kuno">
+                Wymień Monero na gotówkę, rób zakupy online lub płać rachunki.
+                </p>
+                <p class="monero-info-p kuno">
+                Łatwa wymiana Monero na gotówkę z <a href="https://localmonero.co">LocalMonero</a>, <a href="https://bisq.network">Bisq</a> lub <a href="https://coinatmradar.com">Crypto ATM</a> (Konto bankowe nie jest Ci potrzebne).
+                </p>
+                <p class="monero-info-p kuno">
+                Rynki takie jak <a href="https://moneromarket.io">MoneroMarket</a> oraz katalogi jak <a href="https://monerica.com">Monerica</a> i <a href="https://acceptedhere.io">AcceptedHere</a> pomagają Ci kupić to, czego potrzebujesz przy użyciu Monero.
+                </p>
+                <p class="monero-info-p kuno">
+                Dodatkowo, <a href="https://cakepay.com">CakePay</a> oraz <a href="https://coincards.com">CoinCards</a> oferują przedpłacone karty Visa oraz karty podarunkowe do tysięcy firm. A strony takie jak <a href="https://proxysto.re">ProxyStore</a>, <a href="https://sovereignstack.tools/rerouter/">Sovereign Stack</a> oraz <a href="https://shopinbit.com">ShopInBit</a> oferują wygodny sposób opłacania faktur przy użyciu Monero.                </p>
+                <p class="monero-info-p kuno">
+                Monero jest elastyczną i wszechstronną walutą - pozyskiwanie środków na opłacenie rachunków, rozpoczęcie projektów lub wsparcie działań charytatywnych.                </p>',
+    'homepage_link_exchange_to_cash' =>           'Exchange to cash',
+    'homepage_link_shop_online' =>                'Zakupy online',
+    'homepage_link_marketplace' =>                'Targi',
+    'homepage_use_case_heading1' =>               'Dla organizacji charytatywnych',
+    'homepage_use_case_description1' => '<p class="use-case-p-bold kuno">
+    Lokalne schronisko dla kotów potrzebuje wsparcia na karmę i rachunki weterynaryjne.                </p>
+                <p class="use-case-p kuno">
+                Założyli zbiórkę na Kuno, udostępnili link w mediach społecznościowych i już otrzymują datki.                </p>
+                <p class="use-case-p kuno">
+                Schronisko wykorzystuje zebrane Monero do zakupu kart podarunkowych Petsmart za pomocą CakePay i wypłaca gotówkę, aby opłacić rachunek za weterynarza za pomocą crypto-bankomatu.                </p>
+                <p class="use-case-p kuno">
+                Darczyńcy otrzymują aktualizacje ze zdjęciami kotów.                </p>',
+    'homepage_use_case_heading2' => 'Dla osób prywatnych',
+    'homepage_use_case_description2' => '<p class="use-case-p-bold kuno">
+                Alice zbiera pieniądze na pokrycie rachunków medycznych.                </p>
+                <p class="use-case-p kuno">
+                Córka pomaga jej założyć zbiórkę na Kuno i udostępnia ją społeczności.                </p>
+                <p class="use-case-p kuno">
+                Udaje im się zebrać wystarczającą ilość Monero więc zamieniają je na gotówkę za pośrednictwem LocalMonero.                </p>
+                <p class="use-case-p kuno">
+                Alice wysyła listy z podziękowaniami do każdego darczyńcy.                </p>',
+    'homepage_use_case_heading3' => 'Dla początkujących firm',
+    'homepage_use_case_description3' => '<p class="use-case-p-bold kuno">
+                Niezależny twórca chce stworzyć nową grę.
+                </p>
+                <p class="use-case-p kuno">
+                Tworzy zbiórkę na Kuno i udostępnia ją społeczności graczy.                </p>
+                <p class="use-case-p kuno">
+                Osiąga cel i wykorzystuje fundusze, aby zatrudnić artystów z MoneroMarket i kupuje zasoby do gry za pomocą wirtualnej karty debetowej CakePay.                </p>
+                <p class="use-case-p kuno">
+                Każdy darczyńca otrzymuje bezpłatną kopię gry.
+                </p>',
+    'homepage_use_case_heading4' => 'Dla twórców treści internetowych',
+    'homepage_use_case_description4' => '<p class="use-case-p-bold kuno">
+                Zespół przesyła swoje oryginalne utwory na YouTube.
+                </p>
+                <p class="use-case-p kuno">
+                Tworzą zbiórkę na Kuno, aby otrzymywać datki.
+                </p>
+                <p class="use-case-p kuno">
+                Fani przekazują datki, sugerują utwory i komentują podczas transmisji na żywo.
+                </p>
+                <p class="use-case-p kuno">
+                Takie przedsięwzięcie zapewnia lepszy sposób na zrównoważone zarabianie w porównaniu z reklamami.
+                </p>',
+    'homepage_use_case_heading5' => 'Dla Ciebie',
+    'homepage_use_case_description5' => '<p class="use-case-p-bold kuno">
+                Dzięki Kuno każdy może zebrać pieniądze na swój cel, projekt lub początkującą firme.
+                </p>
+                <p class="use-case-p kuno">
+                Wszystko czego potrzebujesz to portfel Monero i cel.
+                </p>',
+    'fundraiser_heading_goal' =>                         'Cel',
+    'fundraiser_heading_raised' =>                       'Zebrano',
+    'fundraiser_heading_percentage_funded' =>            'ufundowano',
+    'fundraiser_heading_donations' =>                    'Datki',
+    'fundraiser_heading_supporters' =>                   'Darczyńców',
+    'fundraiser_heading_comments' =>                     'Komentarze',
+    'fundraiser_heading_support' =>                      'Wspieraj',
+    'fundraiser_heading_share' =>                        'Udostępnij',
+    'fundraiser_heading_about' =>                        'Opis',
+    'fundraiser_heading_photos' =>                       'Zdjęcia',
+    'fundraiser_heading_contact' =>                      'Kontakt',
+    'fundraiser_heading_date' =>                         'Opublikowano:',
+    'fundraiser_heading_supporters' =>                   'Darczyńcy',
+    'fundraiser_heading_new_comment' =>                  'Napisz komentarz',
+    'fundraiser_heading_new_fundraiser' =>               'Nowa zbiórka',
+    'fundraiser_heading_edit_fundraiser' =>              'Edytuj zbiórkę',
+    'fundraiser_heading_logout' =>                       'Wyloguj się',
+    'fundraiser_support_text' =>                         'Wyślij dowolną ilość Monero na adres:',
+    'fundraiser_share_text' =>                           'Kopiuj link i podziel się zbiórką na mediach społecznościowych lub z przyjaciółmi:',
+    'fundraiser_open_in_wallet' =>                       'Otwórz w portfelu',
+    'fundraiser_info_point1' =>                          'Przekazujesz darowiznę bezpośrednio do portfela odbiorcy',
+    'fundraiser_info_point2' =>                          'Żadnych pośredników i opłat',
+    'fundraiser_info_point3' =>                          'Datki są synchronizowane co 5 minut',
+    'fundraiser_full_size_photo' =>                      'Otwórz zdjęcie w pełnym rozmiarze',
+    'fundraiser_no_donations' =>                         'Brak darowizn',
+    'fundraiser_supporters' =>                           '{AMOUNT} darczyńców',
+    'fundraiser_button_support' =>                       'Wspieraj',
+    'fundraiser_donate_with_monero' =>                   'Przekaż darowiznę za pomocą Monero:',
+    'fundraiser_comment_form_placeholder_txid' =>        'ID transakcji',
+    'fundraiser_comment_form_placeholder_tx_key' =>      'Klucz transakcji (Przykładowo: 7d7a9370a746d219e5f66aaaec902ead0d1c1783817a10276c9accdacca6f10d)',
+    'fundraiser_comment_form_placeholder_email' =>       'E-mail (opcjonalnie, w przypadku nagród ze zbiórki pieniędzy)',
+    'fundraiser_comment_form_placeholder_comment' =>     'Napisz komentarz',
+    'fundraiser_comment_form_submit' =>                  'Zatwierdź',
+    'search' =>                                          'Szukaj',
+    'search_heading' =>                                  'Szukaj zbiórek',
+    'search_text' =>                                     'Szukaj zbiórek...',
+    'search_sort_by_new' =>                              'Sortuj według najnowszych',
+    'search_sort_by_recently_donated' =>                 'Sortuj według ostatnich wpłat',
+    'search_sort_by_percentage_funded' =>                'Sortuj według procentu osiągnięcia celu',
+    'search_sort_by_goal' =>                             'Sortuj według kwoty docelowej',
+    'search_all_categories' =>                           'Wszystkie kategorie',
+    'search_no_fundraisers_found' =>                     'Nie znaleziono żadnych zbiórek',
+    'search_fediverse_heading' =>                        'Szukaj Fediverse',
+    'search_fediverse_text' =>                           'Szukaj zbiórek Fediverse...',
+    'search_fediverse_no_fundraisers_found' =>           'Nie znaleziono żadnych zbiórek Fediverse',
+    'search_fediverse_peers_list' =>                     'Lista stowarzyszonych instancji:',
+    'login_invite_code_heading' =>                       'Nowa zbiórka',
+    'login_invite_code_text' =>                          'Wprowadź kod zaproszenia, aby rozpocząć nową zbiórkę.',
+    'login_invite_code_note' =>                          'Jeśli nie masz kodu zaproszenia, skontaktuj się z działem obsługi.',
+    'login_invite_code_form' =>                          'Kod zaproszenia',
+    'login_invite_code_form_placeholder' =>              'Kod zaproszenia',
+    'login_invite_code_submit' =>                        'Kontynuuj',
+    'login_fundraiser_form_fundraiser' =>                'Zbiórka',
+    'login_fundraiser_heading' =>                        'Edytuj zbiórkę',
+    'login_fundraiser_text' =>                           'Wprowadź kod zbiórki i hasło, aby edytować zbiórkę.',
+    'login_fundraiser_note' =>                           'Kod zbiórki znajduję się w URL:',
+    'login_fundraiser_forgot_password' =>                'Nie pamiętasz hasła?',
+    'login_fundraiser_form_fundraiser' =>                'Zbiórka',
+    'login_fundraiser_form_fundraiser_placeholder' =>    'Kod zbiórki (np. ae21)',
+    'login_fundraiser_form_password' =>                  'Hasło',
+    'login_fundraiser_form_password_placeholder' =>      'Hasło',
+    'login_fundraiser_form_submit' =>                    'Edytuj zbiórkę',
+    'edit_fundraiser_heading_fundraiser_details' =>      'Szczegóły zbiórki',
+    'edit_fundraiser_fundraiser_details_text' =>         'Opisz zbiórkę i dodaj zdjęcia',
+    'edit_fundraiser_form_optional' =>                   '(Opcjonalnie)',
+    'edit_fundraiser_form_more_info' =>                  '(Więcej informacji)',
+    'edit_fundraiser_form_title' =>                      'Tytuł',
+    'edit_fundraiser_form_title_placeholder' =>          'Tytuł zbiórki',
+    'edit_fundraiser_form_photo' =>                      'Zdjęcie',
+    'edit_fundraiser_form_additional_photos' =>          'Dodatkowe zdjęcia',
+    'edit_fundraiser_form_description' =>                'Opis',
+    'edit_fundraiser_form_description_placeholder' =>    'Opisz swoją zbiórkę. Jeśli chcesz, dodaj nagrody w ramach zbiórki, kamienie milowe lub dane kontaktowe.',
+    'edit_fundraiser_form_tags' =>                       'Tagi',
+    'edit_fundraiser_form_tags_placeholder' =>           'Kategoria, tagi, etc.',
+    'edit_fundraiser_form_contact' =>                    'Kontakt',
+    'edit_fundraiser_form_contact_placeholder' =>        'E-mail, strona internetowa, Twitter, Matrix, etc.',
+    'edit_fundraiser_form_visibility' =>                 'Załóż prywatną zbiórkę (nie wyświetli się w wynikach wyszukiwania, darczyńcy muszą mieć bezpośredni link)',
+    'edit_fundraiser_heading_goal' =>                    'Cel',
+    'edit_fundraiser_goal_text' =>                       'Ustaw kwotę i adres portfela Monero.', 
+    'edit_fundraiser_get_wallet' =>                      'Nie masz portfela? Zrób sobie portfel tutaj.',
+    'edit_fundraiser_form_goal' =>                       'Cel',
+    'edit_fundraiser_form_goal_placeholder' =>           'Cel (XMR)',
+    'edit_fundraiser_form_donation_page' =>              'Brak kwoty docelowej – Chcę utworzyć stronę na darowizny', 
+    'edit_fundraiser_form_monero_address' =>             'Monero adres',
+    'edit_fundraiser_form_monero_address_placeholder' => 'Przykładowo: 44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft3XjrpDtQGv7SqSsaBYBb98uNbr2VBBEt7f2wfn3RVGQBEP3A',
+    'edit_fundraiser_form_view_key' =>                   'Prywatny klucz wglądu',
+    'edit_fundraiser_form_view_key_placeholder' =>       'Przykładowo: f359631075708155cc3d92a32b75a7d02a5dcf27756707b47a2b31b21c389501',
+    'edit_fundraiser_heading_password' =>                'Hasło',
+    'edit_fundraiser_password_text' =>                   'Ustaw hasło, aby móc później edytować zbiórkę.', 
+    'edit_fundraiser_widthdrawal_warning' =>             "Nie wysyłaj częściowego salda podczas trwania zbiórki! Monero wykorzystuje pełne saldo do płatności, oznacza to, że wysyłając Monero, oprogramowanie wysyła środki do wybranego przez Ciebie adresu, a RESZTĘ salda wysyła do siebie. Ta RESZTA zostałaby fałszywie obliczona jako darowizna, a postęp Twojej zbiórki będzie zawyżony o RESZTĘ. Jeśli musisz wykorzystać zebrane środki w trakcie trwania zbiórki, zawsze wypłacaj całe saldo, nie pozostawiając żadnej RESZTY.",
+    'edit_fundraiser_form_email' =>                      'E-mail',
+    'edit_fundraiser_form_email_placeholder' =>          'E-mail (opcjonalnie, jeśli zapomnisz hasło)',
+    'edit_fundraiser_form_password' =>                   'Hasło',
+    'edit_fundraiser_form_new_password_placeholder' =>   'Hasło',
+    'edit_fundraiser_form_edit_password_placeholder' =>  'Hasło (pozostaw puste, jeśli bez zmian)',
+    'edit_fundraiser_form_email_notifications' =>        'Powiadom mnie e-mailem, gdy zbiórka otrzyma nową darowiznę',
+    'edit_fundraiser_form_submit_edit' =>                'Zapisz zmiany',
+    'edit_fundraiser_form_submit_new' =>                 'Utwórz zbiórkę',
+    'edit_fundraiser_heading_supporters' =>              'Wspierający zbiórkę',
+    'edit_fundraiser_supporters_text' =>                 'Jeśli darczyńca podał swój adres e-mail, zobaczysz go tutaj (np. w przypadku nagród ze zbiórki).',
+    'edit_fundraiser_no_supporters' =>                   'Brak przesłanych e-maili',
+    'edit_fundraiser_supporters_email' =>                'E-mail',
+    'edit_fundraiser_supporters_comment' =>              'Komentarz',
+    'edit_fundraiser_supporters_amount' =>               'Kwota',
+    'edit_fundraiser_supporters_txid' =>                 'ID Transakcji',
+    'edit_fundraiser_supporters_tx_key' =>               'Klucz Transakcji',
+    'edit_fundraiser_supporters_date' =>                 'Data',
+    'edit_fundraiser_heading_manage_fundraiser' =>       'Zarządzaj zbiórką',
+    'edit_fundraiser_fix_view_key' =>                    'Aby ponownie aktywować zbiórkę, dodaj prawidłowy klucz wglądu.',
+    'edit_fundraiser_deactivate_fundraiser' =>           'Dezaktywuj zbiórkę',
+    'edit_fundraiser_reactivate_fundraiser' =>           'Reaktywuj zbiórkę',
+    'edit_fundraiser_delete_fundraiser' =>               'Usuń swoje dane',
+    'reset_password_heading' =>                          'Nie pamiętam hasła',
+    'reset_password_description' =>                      'Wprowadź kod zbiórki i e-maila, aby zresetować hasło.', 
+    'reset_password_note' =>                             '(Jeśli nie dodano e-maila, skontaktuj się z działem obsługi.)', 
+    'reset_password_form_fundraiser' =>                  'Zbiórka',
+    'reset_password_form_fundraiser_placeholder' =>      'Kod zbiórki (np. ae21)',
+    'reset_password_form_email' =>                       'E-mail',
+    'reset_password_form_email_placeholder' =>           'E-mail',
+    'reset_password_form_confirmation_code' =>           'Kod autoryzacji',
+    'reset_password_form_confirmation_code_placeholder' =>'Kod autoryzacji',
+    'reset_password_form_new_password' =>                 'Nowe hasło',
+    'reset_password_form_new_password_placeholder' =>     'Nowe hasło',
+    'reset_password_form_submit' =>                       'Resetuj hasło',
+    'success' =>                                          'Sukces',
+    'success_form_submitted' =>                           'Wysłano z powodzeniem',
+    'success_new_fundraiser' =>                           'Twoja zbiórka jest aktywna: <a href="https://kuno.anne.media/fundraiser/{GUID}/">Zobacz swoją zbiórkę</a><br>Dodaj link do zakładek aby szybko edytować zbiórkę: <a href="https://kuno.anne.media/edit-fundraiser/{GUID}/">Edytuj zbiórkę #{GUID}</a>',
+    'success_new_donation_page' =>                        'Twoja strona na darowizny jest aktywna: <a href="https://kuno.anne.media/donate/{GUID}/">Zobacz swoją stronę</a><br>Dodaj link do zakładek aby szybko edytować stronę: <a href="https://kuno.anne.media/edit-fundraiser/{GUID}/">Edytuj stronę #{GUID}</a>',
+    'success_fundraiser_updated' =>                       '<a href="https://kuno.anne.media/fundraiser/{GUID}/">Twoja zbiórka została zaktualizowana.</a>',
+    'success_valid_fundraiser_password' =>                '<a href="https://kuno.anne.media/edit-fundraiser/{GUID}/">Kliknij tutaj by edytować swoją zbiórkę</a>',
+    'success_donation_page_updated' =>                    '<a href="https://kuno.anne.media/donate/{GUID}/">Twoja strona darowizn została zaktualizowana.</a>',
+    'success_fundraiser_deactivated' =>                   'Zbiórka została zdezaktywowana',
+    'success_fundraiser_reactivated' =>                   'Zbiórka została wznowiona',
+    'success_fundraiser_deleted' =>                       'Zbiórka została usunięta',
+    'success_valid_invite_code' =>                        'Poprawny kod zaproszenia. Teraz możesz utworzyć zbiórkę.',
+    'success_valid_confirmation_code' =>                  'Poprawny kod zaproszenia',
+    'success_check_email_for_password_reset_code' =>      'Sprawdź swój adres e-mail, aby uzyskać kod do zresetowania hasła',
+    'success_password_reset' =>                           'Hasło zostało zmienione, teraz możesz <a href="https://kuno.anne.media/edit-fundraiser/{FUNDRAISER}">edytować swoją zbiórkę</a>',
+    'success_comment_sent' =>                             'Kometarz wysłany!',
+    'success_image_uploaded' =>                           'Obraz przesłany',
+    'error' =>                                            'Błąd',
+    'error_please_refresh' =>                             'Odśwież i spróbuj ponownie.',
+    'error_form_expired' =>                               'Formularz wygasł. Odśwież stronę',
+    'error_form_ratelimited' =>                           'Osiągnięto limit formularzy, poczekaj {RATELIMIT} sekund', 
+    'error_session_expired' =>                            'Sesja wygasła, zaloguj się ponownie',
+    'error_page_not_found' =>                             'Nie znaleziono strony',
+    'error_fundraiser_not_found' =>                       'Nie znaleziono zbiórki',
+    'error_email_not_found' =>                            'E-mail nie został ustawiony, skontaktuj się z działem obsługi',
+    'error_invalid_email' =>                              'Proszę wpisać aktualny adres e-mail',
+    'error_invalid_email_for_notifications' =>            'Proszę wpisać aktualny adres e-mail by włączyć powiadomienia',
+    'error_invalid_confirmation_code' =>                  'Kod autoryzacji jest niepoprawny lub wygasł.',
+    'error_invalid_monero_address' =>                     'Nieprawidłowy adres Monero (wprowadź swój podstawowy adres, który zaczyna się od cyfry 4)',
+    'error_invalid_view_key' =>                           'Nieprawidłowy klucz wglądu (wprowadź swój prywatny klucz wglądu)',
+    'error_invalid_address' =>                            'Nieprawidłowy adres Monero (wprowadź swój podstawowy adres, który zaczyna się od cyfry 4)',
+    'error_entered_public_view_key' =>                    'Nieprawidłowy klucz wglądu (wprowadź swój prywatny klucz wglądu, a nie publiczny klucz wglądu)',
+    'error_entered_public_spend_key' =>                   'Nieprawidłowy klucz wglądu (wprowadź swój prywatny klucz wglądu, a nie publiczny klucz wydawania)',
+    'error_entered_private_spend_key' =>                  'Nieprawidłowy klucz wglądu (wprowadź swój prywatny klucz wglądu, a nie prywatny klucz wydawania)',
+    'error_invalid_private_view_key' =>                   'Nieprawidłowy klucz wglądu (wprowadź swój prywatny klucz wglądu)',
+    'error_invalid_txid' =>                               'Nieprawidłowe ID transakcji',
+    'error_invalid_tx_key' =>                             'Wprowadź poprawny klucz transakcji (znany również jako dowód transakcji)',
+    'error_invalid_txid' =>                               'Wprowadź poprawny kod zaproszenia',
+    'error_incorrect_email' =>                            'Nieprawidłowy adres e-mail',
+    'error_incorrect_password' =>                         'Nieprawidłowe hasło',
+    'error_monero_address_already_used' =>                'Istnieje już zbiórka/strona darowizn z tym adresem Monero',
+    'error_missing_fundraiser_code_or_email' =>           'Wprowadź kod zbiórki lub adres e-mail',
+    'error_missing_password_reset_code_or_password' =>    'Wprowadź hasło kod resetowania i nowe hasło',
+    'error_missing_txid_or_tx_key' =>                     'Wprowadź ID transakcji i klucz transakcji (znany również jako dowód transakcji)',
+    'error_missing_password' =>                           'Wprowadź swoje hasło',
+    'error_missing_view_key' =>                           'Wprowadź poprawny klucz wglądu',
+    'error_title_too_long' =>                             'Tytuł musi zawierać 1-80 znaków',
+    'error_description_too_long' =>                       'Opis nie może być dłuższy niż 8000 znaków',
+    'error_tags_too_long' =>                              'Tagi muszą być krótsze niż 250 znaków',
+    'error_contact_details_too_long' =>                   'Dane kontaktowe nie mogą być dłuższe niż 250 znaków',
+    'error_goal_must_be_positive' =>                      'Kwota zbiórki musi być liczbą dodatnią',
+    'error_image_incorrect_file_type' =>                  'Obraz musi być w formacie PNG lub JPEG',
+    'error_image_maximum_image_size' =>                   'Maksymalny rozmiar obrazu 2 MB',
+    'error_image_invalid' =>                              'Nieprawidłowy obraz',
+    'error_image_storage_full' =>                         'Pamięć obrazu pełna',
+    'error_image_missing' =>                              'Prześlij obraz',
+    'translate_help' =>                                   'Byłoby świetnie, gdyby Kuno było dostępne w większej liczbie języków. Pomóż nam w tłumaczeniach na <a href="https://github.com/annemedia/kuno-translation">https://github.com/annemedia/kuno-translation</a>',
+    'wallets_header' =>                                   'Monero: <span class="text3">Wybór portfeli</span>',
+    'monero_gui_wallet' =>                                'Portfel z otwartym kodem źródłowym i graficznym interfejsem użytkownika opracowany przez społeczność Monero, całkowicie bezpłatny, odpowiedni zarówno dla początkujących, jak i zaawansowanych użytkowników.',
+    'cake_wallet' =>                                      'Przechowuj, wysyłaj i wymieniaj swoje kryptowaluty bezpiecznie i z łatwością. Kupuj karty podarunkowe kryptowalutami i płać nimi przy kasie, nic prostszego.',
+    'monerujo_wallet' =>                                  'Portfel na Androida. Dzięki Monero możesz bez problemu przełączać się między kilkoma portfelami. Utworzenie nowego to kwestia kilku kliknięć.',
+    'feather_wallet' =>                                   'Feather to bezpłatny portfel z otwartym kodem źródłowym dla systemów Linux, Tails, Windows i macOS. Łatwy w obsłudze, mały, szybki i przyjazny dla początkujących.'    
+  );
+  $translation = ($strings[$string]) ? $strings[$string] : $string;
+  return $translation;
+}
