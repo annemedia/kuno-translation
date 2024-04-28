@@ -3261,7 +3261,7 @@ function translate_pl($string) {
                 <p class="monero-info-p kuno">
                 Dostępność i prostota obsługi, czyni Monero idealnym narzędziem płatniczym dla sklepów internetowych, światowych przekazów finansowych, napiwków, zbiórek i tym podobnych.
                 </p>',
-    'homepage_link_download_mobile' =>          'Pobierz na smartphone',
+    'homepage_link_download_mobile' =>          'Pobierz na smartphona',
     'homepage_link_download_desktop' =>         'Pobierz na komputer',
     'homepage_info_heading2' =>                 'Niecenzurowalne datki',
     'homepage_info_description2' => '<p class="monero-info-p-bold kuno">
@@ -3290,7 +3290,7 @@ function translate_pl($string) {
                 Dodatkowo, <a href="https://cakepay.com">CakePay</a> oraz <a href="https://coincards.com">CoinCards</a> oferują przedpłacone karty Visa oraz karty podarunkowe do tysięcy firm. A strony takie jak <a href="https://proxysto.re">ProxyStore</a>, <a href="https://sovereignstack.tools/rerouter/">Sovereign Stack</a> oraz <a href="https://shopinbit.com">ShopInBit</a> oferują wygodny sposób opłacania faktur przy użyciu Monero.                </p>
                 <p class="monero-info-p kuno">
                 Monero jest elastyczną i wszechstronną walutą - pozyskiwanie środków na opłacenie rachunków, rozpoczęcie projektów lub wsparcie działań charytatywnych.                </p>',
-    'homepage_link_exchange_to_cash' =>           'Exchange to cash',
+    'homepage_link_exchange_to_cash' =>           'Wymień na gotówkę',
     'homepage_link_shop_online' =>                'Zakupy online',
     'homepage_link_marketplace' =>                'Targi',
     'homepage_use_case_heading1' =>               'Dla organizacji charytatywnych',
@@ -3355,12 +3355,12 @@ function translate_pl($string) {
     'fundraiser_heading_contact' =>                      'Kontakt',
     'fundraiser_heading_date' =>                         'Opublikowano:',
     'fundraiser_heading_supporters' =>                   'Darczyńcy',
-    'fundraiser_heading_new_comment' =>                  'Napisz komentarz',
+    'fundraiser_heading_new_comment' =>                  'Dodaj komentarz',
     'fundraiser_heading_new_fundraiser' =>               'Nowa zbiórka',
     'fundraiser_heading_edit_fundraiser' =>              'Edytuj zbiórkę',
     'fundraiser_heading_logout' =>                       'Wyloguj się',
     'fundraiser_support_text' =>                         'Wyślij dowolną ilość Monero na adres:',
-    'fundraiser_share_text' =>                           'Kopiuj link i podziel się zbiórką na mediach społecznościowych lub z przyjaciółmi:',
+    'fundraiser_share_text' =>                           'Skopiuj link i podziel się zbiórką na mediach społecznościowych lub z przyjaciółmi:',
     'fundraiser_open_in_wallet' =>                       'Otwórz w portfelu',
     'fundraiser_info_point1' =>                          'Przekazujesz darowiznę bezpośrednio do portfela odbiorcy',
     'fundraiser_info_point2' =>                          'Żadnych pośredników i opłat',
@@ -3371,7 +3371,7 @@ function translate_pl($string) {
     'fundraiser_button_support' =>                       'Wspieraj',
     'fundraiser_donate_with_monero' =>                   'Przekaż darowiznę za pomocą Monero:',
     'fundraiser_comment_form_placeholder_txid' =>        'ID transakcji',
-    'fundraiser_comment_form_placeholder_tx_key' =>      'Klucz transakcji (Przykładowo: 7d7a9370a746d219e5f66aaaec902ead0d1c1783817a10276c9accdacca6f10d)',
+    'fundraiser_comment_form_placeholder_tx_key' =>      'Klucz transakcji (np. 7d7a9370a746d219e5f66aaaec902ead0d1c1783817a10276c9accdacca6f10d)',
     'fundraiser_comment_form_placeholder_email' =>       'E-mail (opcjonalnie, w przypadku nagród ze zbiórki pieniędzy)',
     'fundraiser_comment_form_placeholder_comment' =>     'Napisz komentarz',
     'fundraiser_comment_form_submit' =>                  'Zatwierdź',
@@ -3426,9 +3426,9 @@ function translate_pl($string) {
     'edit_fundraiser_form_goal_placeholder' =>           'Cel (XMR)',
     'edit_fundraiser_form_donation_page' =>              'Brak kwoty docelowej – Chcę utworzyć stronę na darowizny', 
     'edit_fundraiser_form_monero_address' =>             'Monero adres',
-    'edit_fundraiser_form_monero_address_placeholder' => 'Przykładowo: 44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft3XjrpDtQGv7SqSsaBYBb98uNbr2VBBEt7f2wfn3RVGQBEP3A',
+    'edit_fundraiser_form_monero_address_placeholder' => 'np. 44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft3XjrpDtQGv7SqSsaBYBb98uNbr2VBBEt7f2wfn3RVGQBEP3A',
     'edit_fundraiser_form_view_key' =>                   'Prywatny klucz wglądu',
-    'edit_fundraiser_form_view_key_placeholder' =>       'Przykładowo: f359631075708155cc3d92a32b75a7d02a5dcf27756707b47a2b31b21c389501',
+    'edit_fundraiser_form_view_key_placeholder' =>       'np. f359631075708155cc3d92a32b75a7d02a5dcf27756707b47a2b31b21c389501',
     'edit_fundraiser_heading_password' =>                'Hasło',
     'edit_fundraiser_password_text' =>                   'Ustaw hasło, aby móc później edytować zbiórkę.', 
     'edit_fundraiser_widthdrawal_warning' =>             "Nie wysyłaj częściowego salda podczas trwania zbiórki! Monero wykorzystuje pełne saldo do płatności, oznacza to, że wysyłając Monero, oprogramowanie wysyła środki do wybranego przez Ciebie adresu, a RESZTĘ salda wysyła do siebie. Ta RESZTA zostałaby fałszywie obliczona jako darowizna, a postęp Twojej zbiórki będzie zawyżony o RESZTĘ. Jeśli musisz wykorzystać zebrane środki w trakcie trwania zbiórki, zawsze wypłacaj całe saldo, nie pozostawiając żadnej RESZTY.",
