@@ -1,6 +1,6 @@
 # Kuno - Translation help needed
 
-Since Kuno launched, the Monero community has been nothing short of amazing in their support of various community projects focused on raising Monero awareness. They've also been incredibly generous in supporting charity projects and assisting with immediate personal medical care needs, as well as helping with the purchase of technical devices or equipment. As of today, on the 11th of December 2023, Kuno has helped to raise over 193 XMR, and it has made a significant impact on many people's lives.
+Since Kuno launched, the Monero community has been nothing short of amazing in their support of various community projects focused on raising Monero awareness. They've also been incredibly generous in supporting charity projects and assisting with immediate personal medical care needs, as well as helping with the purchase of technical devices or equipment. As of today, on the 29th of April 2024, Kuno has helped to raise over 391 XMR, and it has made a significant impact on many people's lives.
 
 Would you like to make a difference? We think it would be fantastic if Kuno was accessible in more languages. Right now, the website is available in  Arabic, English, Esperanto, French, German, Italian, Polish, Portuguese, Spanish, Swahili, Swedish, and Yoruba. If you possess the necessary skills to translate the Kuno website into another language, please consider lending your expertise to the translation effort.
 
