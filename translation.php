@@ -4263,3 +4263,367 @@ function translate_en($string) {
     $translation = ($strings[$string]) ? $strings[$string] : $string;
     return $translation;
   }
+function translate_tr($string) {
+    static $strings = array(
+      'site_name'                       =>       'Kuno',
+      'page_title'                      =>       'Kuno – Monero ile bağış toplayın',
+      'page_title_error'                =>       'Hata | Kuno – Monero ile bağış toplayın',
+      'page_title_search'               =>       'Ara | Kuno – Monero ile bağış toplayın',
+      'page_title_fediverse'            =>       'Fediverse | Kuno – Monero ile bağış toplayın',
+      'page_title_reset_password'       =>       'Şifreyi Sıfırla | Kuno – Monero ile bağış toplayın',
+      'page_title_edit_fundraiser'      =>       'Bağış Toplama Kampanyasını Düzenle | Kuno – Monero ile bağış toplayın',
+      'page_title_new_fundraiser'       =>       'Yeni Toplama Kampanyası| Kuno – Monero ile bağış toplayın',
+      'pagination'                      =>       'Sayfa {NUM} {NUM_PAGES} sayfa içinden',
+      'pagination_fundraisers'          =>       '{TOTAL} Kuno içinden {START}-{END} ',
+      'pagination_donations'            =>       '{TOTAL} kuno içinden {START}-{END} ',
+      'pagination_submit'               =>       'Git',
+      'nav_manage_fundraiser'           =>       "Kuno'nu yönet",
+      'nav_search'                      =>       'Kuno bul...',
+      'nav_fundraiser_progress'         =>       'Kuno ilerlemesi:',
+      'nav_edit_fundraiser'             =>       "Kuno'yu düzenle:",
+      'nav_logout'                      =>       'Çıkış Yap',
+      'footer_description'              =>       'Monero ile bağış toplayın',
+      'footer_contact'                  =>       'İletişime geç: destek [at] anne.media',
+      'footer_language'                 =>       'Dil:',
+      'footer_light_mode'               =>       'Aydınlık Mod',
+      'footer_dark_mode'                =>       'Karanlık Mod',
+      'footer_manage_fundraiser'        =>       "Kuno'nu yönet:",
+      'footer_new_fundraiser'           =>       'Yeni Kuno',
+      'footer_edit_fundraiser'          =>       "Kuno'yu düzenle:",
+      'footer_reset_password'           =>       'Şifreyi Sıfırla',
+      'footer_quick_links'              =>       'Hızlı Linkler:',
+      'footer_search_fundraisers'       =>       'Kuno bul',
+      'footer_search_fediverse'         =>       'Fediverse ara',
+      'footer_marketplace'              =>       'Marketplace',
+      'footer_rss_feed'                 =>       'RSS Feed',
+      'footer_faq'                      =>       'SSS',
+      'email_new_donation_subject'      =>       '[Kuno] Yeni {DONATION} XMR bağışı #{GUID} için',
+      'email_new_donation_body'         =>       "Kuno'ya yeni bir bağış geldi!
+                             <br><br>Kuno            : {TITLE}
+                             <br>Donation            : {DONATION} XMR
+                             <br>Date                : {DATE}
+          <br><br>Total      donations               : {TOTAL} XMR
+          <br>Total          supporters              : {SUPPORTERS}
+          <br>Visit          your kuno               : https://kuno.anne.media/{TYPE}/{GUID}/
+          <br><br>Deactivate email notifications here: 
+                             <br>https//kuno.anne.media/edit-fundraiser/{GUID}/",
+      'email_reset_password_subject'             =>       '[Kuno] Şifreyi sıfırla',
+      'email_reset_password_body'                =>       'Şifrenizi sıfırlamak için bu bağlantıyı ziyaret edin: {URL} veya bu kodu girin: {CODE} (24 saat geçerli)',
+      'homepage_title'                           =>       'HERKES İÇİN <br> KOLAY BAĞIŞ TOPLAMA',
+      'homepage_subtitle'                        =>       'Monero ile para toplayın veya iyi bir amaç için bağışta bulunun',
+      'homepage_point1'                          =>       'Ücretsiz bir Kuno başlatın',
+      'homepage_point2'                          =>       'Monero alın (bunu nakite çevirebilirsiniz)',
+      'homepage_point3'                          =>       'Sıfır ücret, Dünya çapında çalışır, banka hesabı gerekmez',
+      'homepage_button_start_fundraiser'         =>       'Bir Kuno başlat',
+      'homepage_button_browse_fundraisers'       =>       'Kuno ara',
+      'homepage_bar'                             =>       "GoFundMe ve Kickstarter'a adil bir alternatif",
+      'homepage_heading_browse_fundraisers'      =>       '{AMOUNT} Kuno ara',
+      'homepage_heading_total_raised'            =>       "{AMOUNT} XMR'den fazla bağış toplandı!",
+      'homepage_top_categories'                  =>       'En İyi Kategoriler',
+      'homepage_recent_donations'                =>       'Son Bağışlar',
+      'homepage_all_categories'                  =>       'Tüm kategoriler',
+      'homepage_launch_in_one_click'             =>       "Kuno'nuzu 1 tıklamayla başlatın",
+      'homepage_get_started_free'                =>       'Ücretsiz başlayın',
+      'homepage_info_heading1'                   =>       'Monero internet için nakittir',
+      'homepage_info_description1'               =>       "<p class='monero-info-p-bold kuno'>
+      Monero, çevrimiçi para göndermenin ve almanın hızlı ve güvenli bir yoludur.
+  </p>
+                  <p class = 'monero-info-p kuno'>
+                  Hiçbir banka hesabı, uygulama veya hükümet kimliği gerektirmez. Tek bir tıklamayla dünya çapında para göndermek ve almak için telefonunuz veya bilgisayarınız için bir cüzdan indirmeniz yeterlidir.
+  </p>
+                  <p class = 'monero-info-p kuno'>
+                  Monero'nun basitliği ve erişilebilirliği, onu çevrimiçi mağazalar, uzaktan çalışma, para transferleri, bahşişler, bağış toplama etkinlikleri ve daha fazlası için ideal bir ödeme yöntemi haline getiriyor.
+  </p>",
+      'homepage_link_download_mobile'       =>       'Mobil için indir',
+      'homepage_link_download_desktop'      =>       'Desktop için indir',
+      'homepage_info_heading2'              =>       'Sansürsüz bağışlar',
+      'homepage_info_description2'          =>       "<p class='monero-info-p-bold kuno'>
+                  Monero ile paranız size aittir.
+  </p>
+                  <p class = 'monero-info-p kuno'>
+                  Monero, peer-to-peer bir yazılımdır ve üçüncü taraflara veya şirketlere güvenmez. İşlemler sansürlenemez, fonlar dondurulamaz ve kullanıcılar platformdan çıkarılamaz..
+  </p>
+                  <p class = 'monero-info-p kuno'>
+                  İster Monero ile para toplayın, ister iyi bir amaç için bağış yapın, bağışçının bağışın %100'ünü aldığından emin olabilirsiniz.
+  </p>",
+      'homepage_link_official_website'      =>       'Resmi web sitesi',
+      'homepage_link_overview'              =>       'Genel bakış',
+      'homepage_link_buy_monero'            =>       'Monero satın al',
+      'homepage_info_heading3'              =>       'İstediğiniz yerde harca',
+      'homepage_info_description3'          =>       "<p class='monero-info-p-bold kuno'>
+                  Monero'yu nakite çevirin, internetten alışveriş yapın veya faturalarınızı ödeyin.
+  </p>
+                  <p   class                                                 = 'monero-info-p kuno'>
+                  Monero'yu nakit paraya çevirmek <a href='https://localmonero.co'>LocalMonero</a>, <a href='https://bisq.network'>Bisq</a> veya bir <a href='https://coinatmradar.com'>Crypto ATM'si ile kolaydır.</a> (banka hesabı gerektirmez).
+  </p>
+                  <p           class        = 'monero-info-p kuno'>
+                  <a href='https://moneromarket.io'>MoneroMarket gibi marketplaceler</a> ve <a href='https://monerica.com'>Monerica</a> ve <a href='https://acceptedhere.io'>AcceptedHere</a> gibi websiteler Monero ile ihtiyacınız olanı satın almanıza yardımcı olur.
+  </p>
+                  <p class    = 'monero-info-p kuno'>
+                  Ayrıca, <a href='https://cakepay.com'>CakePay</a> ve <a href='https://coincards.com'>CoinCards</a> binlerce işletmeye ön ödemeli Visa kartları ve hediye kartları sunar. <a href='https://proxysto.re'>ProxyStore</a>, <a href='https://sovereignstack.tools/rerouter/'>Sovereign Stack</a> ve <a href='https://shopinbit.com'>ShopInBit</a> gibi kişisel alışveriş platformları Monero ile faturalarınızı ödemenin kolay bir yolunu sunar.
+  </p>
+                  <p class = 'monero-info-p kuno'>
+                  Monero'nun esnekliği, faturaları ödemek, projenizi başlatmak veya bir hayır kurumunu desteklemek için para toplamayı kolaylaştırır.
+  </p>",
+      'homepage_link_exchange_to_cash'      =>       'Nakite çevir',
+      'homepage_link_shop_online'           =>       'Online alışveriş yap',
+      'homepage_link_marketplace'           =>       'Marketplace',
+      'homepage_use_case_heading1'          =>       'Hayır kurumları için',
+      'homepage_use_case_description1'      =>       "<p class='use-case-p-bold kuno'>
+                   Yerel bir kedi barınağının kedi maması ve veteriner faturaları için bağışa ihtiyacı var.
+  </p>
+                  <p class = 'use-case-p kuno'>
+                  Bir Kuno başlatıyorlar, bağlantısını sosyal medyada paylaşıyorlar ve bağış topluyorlar.
+  </p>
+                  <p class = 'use-case-p kuno'>
+                  Barınak, toplanan Monero'yu CakePay ile Petsmart hediye kartları satın almak için kullanıyor ve kripto ATM'si ile veteriner faturasını ödemek için nakite çekiyor.
+  </p>
+                  <p class = 'use-case-p kuno'>
+                  Her bağışçıya kedilerin fotoğraflarının yer aldığı bir güncelleme gönderiliyor.
+  </p>",
+      'homepage_use_case_heading2'          =>       'Bireysel ihtiyaçlar için',
+      'homepage_use_case_description2'      =>       "<p class='use-case-p-bold kuno'>
+                    Alice'in tıbbi giderler için para toplaması gerekiyor.
+  </p>
+                  <p class = 'use-case-p kuno'>
+                  Kızı ona bir Kuno başlatmasında yardımcı oluyor ve bunu topluluğuyla paylaşıyor.
+  </p>
+                  <p class = 'use-case-p kuno'>
+                  Yeterli parayı toplayıp LocalMonero ile nakite çeviriyorlar.
+  </p>
+                  <p class = 'use-case-p kuno'>
+                  Alice, her bağışçıya takdirini ifade etmek için içten bir teşekkür mektubu yazıyor.
+  </p>",
+      'homepage_use_case_heading3'          =>       'Startuplar için',
+      'homepage_use_case_description3'      =>       "<p class='use-case-p-bold kuno'>
+                    Bağımsız bir oyun geliştiricisi yeni bir oyun yapmak istiyor.
+  </p>
+                  <p class = 'use-case-p kuno'>
+                  Bir Kuno başlatıyor ve bunu oyun topluluklarıyla paylaşıyor.
+  </p>
+                  <p class = 'use-case-p kuno'>
+                  Hedefe ulaşıyor ve parayı MoneroMarket'ten Monero dostu sanatçıları işe almak ve CakePay sanal banka kartıyla oyun varlıkları satın almak için kullanıyor.
+  </p>
+                  <p class = 'use-case-p kuno'>
+                  Her bağışçı oyunun ücretsiz bir kopyasını alıyor.
+  </p>",
+      'homepage_use_case_heading4'          =>       'İçerik oluşturucular için',
+      'homepage_use_case_description4'      =>       "<p class='use-case-p-bold kuno'>
+                    Bir grup, coverlarını ve orijinal müziklerini Youtube'a yüklüyor.
+  </p>
+                  <p class = 'use-case-p kuno'>
+                  Monero bağışları almak için bir Kuno Bağış Sayfası oluşturuyorlar.
+  </p>
+                  <p class = 'use-case-p kuno'>
+                  Hayranlar ayrıca bağış yaparak canlı yayınlar sırasında şarkı önerebilirler veya yorum yapabilirler.
+  </p>
+                  <p class = 'use-case-p kuno'>
+                  Bu, reklamlara kıyasla içeriklerinden sürdürülebilir bir şekilde para kazanmanın daha iyi bir yolunu sunuyor.
+  </p>",
+      'homepage_use_case_heading5'          =>       'Senin için',
+      'homepage_use_case_description5'      =>       '<p class="use-case-p-bold kuno">
+                    Kuno ile herkes projesi, amacı veya girişimi için para toplayabilir.
+  </p>
+                  <p class = "use-case-p kuno">
+                  İhtiyacınız olan tek şey bir Monero cüzdanı ve bir hedef.
+  </p>',
+      'fundraiser_heading_goal'                           =>       'Hedef',
+      'fundraiser_heading_raised'                         =>       'Toplandı',
+      'fundraiser_heading_percentage_funded'              =>       'bağışlandı',
+      'fundraiser_heading_donations'                      =>       'Bağışlar',
+      'fundraiser_heading_supporters'                     =>       'Sponsorlar',
+      'fundraiser_heading_comments'                       =>       'Yorumlar',
+      'fundraiser_heading_support'                        =>       'Destekle',
+      'fundraiser_heading_share'                          =>       'Paylaş',
+      'fundraiser_heading_promote'                        =>       'Öne çıkar',
+      'fundraiser_heading_about'                          =>       'Hakkında',
+      'fundraiser_heading_photos'                         =>       'Fotoğraflar',
+      'fundraiser_heading_contact'                        =>       'İletişime geç',
+      'fundraiser_heading_date'                           =>       'Yayınlanma tarihi:',
+      'fundraiser_heading_supporters'                     =>       'Sponsorlar',
+      'fundraiser_heading_new_comment'                    =>       'Yorum yaz',
+      'fundraiser_heading_new_fundraiser'                 =>       'Yeni Kuno',
+      'fundraiser_heading_edit_fundraiser'                =>       "Kuno'yu düzenle",
+      'fundraiser_heading_logout'                         =>       'Çıkış yap',
+      'fundraiser_support_text'                           =>       "İstediğiniz miktarda Monero'yu bu adrese gönderin:",
+      'fundraiser_share_text'                             =>       "Bu Kuno'yu arkadaşlarınızla veya sosyal medyada paylaşmak için bağlantıyı kopyalayın:",
+      'fundraiser_promote_text'                           =>       "Kendi Kuno'nuzu öne çıkarın veya bu Kuno'nun öne çıkarılmasında yardımcı olun.",
+      'fundraiser_open_in_wallet'                         =>       'Cüzdanda aç',
+      'fundraiser_info_point1'                            =>       'Doğrudan alıcının cüzdanına bağışta bulunursunuz',
+      'fundraiser_info_point2'                            =>       'Aracı veya ücretlendirme yoktur',
+      'fundraiser_info_point3'                            =>       'Bağışlar her 5 dakikada bir senkronize edilir',
+      'fundraiser_full_size_photo'                        =>       'Tam boyutlu fotoğraf',
+      'fundraiser_no_donations'                           =>       'Henüz bağış yok',
+      'fundraiser_supporters'                             =>       '{AMOUNT} sponsor',
+      'fundraiser_button_support'                         =>       'Destekle',
+      'fundraiser_donate_with_monero'                     =>       'Monero ile bağışla:',
+      'fundraiser_comment_form_placeholder_txid'          =>       'TXID',
+      'fundraiser_comment_form_placeholder_tx_key'        =>       'TX Anahtarı (Örnek: 7d7a9370a746d219e5f66aaaec902ead0d1c1783817a10276c9accdacca6f10d)',
+      'fundraiser_comment_form_placeholder_email'         =>       'Email (İsteğe bağlı, bağışçı ödülleri için)',
+      'fundraiser_comment_form_placeholder_comment'       =>       'Herkese açık bir yorum yazın',
+      'fundraiser_comment_form_submit'                    =>       'Yorum',
+      'search'                                            =>       'Ara',
+      'search_heading'                                    =>       'Kuno ara',
+      'search_text'                                       =>       'Kuno bul...',
+      'search_sort_by_new'                                =>       'Yeniye göre sırala',
+      'search_sort_by_recently_donated'                   =>       'Yakın zamanda bağışlananlara göre sırala',
+      'search_sort_by_percentage_funded'                  =>       'Bağışlanan yüzdeye göre sırala',
+      'search_sort_by_goal'                               =>       'Hedefe göre sırala',
+      'search_all_categories'                             =>       'Tüm kategoriler',
+      'search_no_fundraisers_found'                       =>       'Kuno bulunamadı',
+      'search_fediverse_heading'                          =>       'Fediverse ara',
+      'search_fediverse_text'                             =>       'Fediverse Kuno ara...',
+      'search_fediverse_no_fundraisers_found'             =>       'Fediverse Kuno bulunamadı',
+      'search_fediverse_peers_list'                       =>       'Birleştirilmiş örneklerin listesi:',
+      'login_invite_code_heading'                         =>       'Yeni Kuno',
+      'login_invite_code_text'                            =>       'Yeni bir Kuno başlatmak için davet kodu girin.',
+      'login_invite_code_note'                            =>       'Davet kodunuz yoksa lütfen destek ekibiyle iletişime geçin.',
+      'login_invite_code_form'                            =>       'Davet kodu',
+      'login_invite_code_form_placeholder'                =>       'Davet kodu',
+      'login_invite_code_submit'                          =>       'Devam et',
+      'login_fundraiser_form_fundraiser'                  =>       'Bağış kampanyası ',
+      'login_fundraiser_heading'                          =>       'Bağış kampanyasını düzenle',
+      'login_fundraiser_text'                             =>       "Kuno'nuzu düzenlemek için Kuno kodunu ve şifresini girin.",
+      'login_fundraiser_note'                             =>       "Kod URL'si:",
+      'login_fundraiser_forgot_password'                  =>       'Parolanızı mı unuttunuz?',
+      'login_fundraiser_form_fundraiser'                  =>       'Kuno',
+      'login_fundraiser_form_fundraiser_placeholder'      =>       'Kuno kodu (örnek ae21)',
+      'login_fundraiser_form_password'                    =>       'Şıfre',
+      'login_fundraiser_form_password_placeholder'        =>       'Şıfre',
+      'login_fundraiser_form_submit'                      =>       "Kuno'yu düzenle",
+      'edit_fundraiser_heading_fundraiser_details'        =>       'Kuno detayları',
+      'edit_fundraiser_fundraiser_details_text'           =>       "Kuno'nuzu tanımlayın ve fotoğraf ekleyin.",
+      'edit_fundraiser_form_optional'                     =>       '(İsteğe bağlı)',
+      'edit_fundraiser_form_more_info'                    =>       '(Daha fazla bilgi)',
+      'edit_fundraiser_form_title'                        =>       'Başlık',
+      'edit_fundraiser_form_title_placeholder'            =>       'Kuno başlığı',
+      'edit_fundraiser_form_photo'                        =>       'Fotoğraf',
+      'edit_fundraiser_form_additional_photos'            =>       'Ek fotoğraflar',
+      'edit_fundraiser_form_description'                  =>       'Tanım',
+      'edit_fundraiser_form_description_placeholder'      =>       "Kuno'nuzu tanımlayın. Ödülleri, dönüm noktalarını veya ek iletişim ayrıntılarını ekleyin.",
+      'edit_fundraiser_form_tags'                         =>       'Etiketler',
+      'edit_fundraiser_form_tags_placeholder'             =>       'Kategoriler/etiketler',
+      'edit_fundraiser_form_contact'                      =>       'Ana İletişim',
+      'edit_fundraiser_form_contact_placeholder'          =>       'X (Twitter) hesabınızı bağlayın',
+      'edit_fundraiser_form_altcontact'                   =>       'X hesabım yok',
+            //  'edit_fundraiser_form_contact_placeholder'      =>       'Email, website, Twitter, Matrix, vb.',
+      'edit_fundraiser_form_visibility'                        =>       "Kuno'yu gizli yap(arama sonuçlarında görüntülenemez; bağışçıların doğrudan bağlantıya ihtiyacı olur)",
+      'edit_fundraiser_heading_goal'                           =>       'Hedef',
+      'edit_fundraiser_goal_text'                              =>       'Hedefinizi ve Monero adresinizi belirleyin.',
+      'edit_fundraiser_get_wallet'                             =>       'Monero cüzdanınız yok mu? Buradan bir tane alın.',
+      'edit_fundraiser_form_goal'                              =>       'Hedef',
+      'edit_fundraiser_form_goal_placeholder'                  =>       'Hedef (XMR)',
+      'edit_fundraiser_form_donation_page'                     =>       'Hedef yok – Bağış Sayfası oluşturmak istiyorum',
+      'edit_fundraiser_form_monero_address'                    =>       'Monero adresi',
+      'edit_fundraiser_form_monero_address_placeholder'        =>       'Örnek: 44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft3XjrpDtQGv7SqSsaBYBb98uNbr2VBBEt7f2wfn3RVGQBEP3A',
+      'edit_fundraiser_form_view_key'                          =>       'Gizli görüntüleme anahtarı',
+      'edit_fundraiser_form_view_key_placeholder'              =>       'Örnek: f359631075708155cc3d92a32b75a7d02a5dcf27756707b47a2b31b21c389501',
+      'edit_fundraiser_heading_password'                       =>       'Şıfre',
+      'edit_fundraiser_password_text'                          =>       "Kuno'nuzu daha sonra düzenlemek için bir şifre belirleyin.",
+      'edit_fundraiser_widthdrawal_warning'                    =>       "Devam eden Kuno sırasında lütfen kısmi bakiye çekmekten kaçının. Monero, ödemeler için daha büyük bakiyeler kullanıyor ve kalan tutarları yeni işlemler olarak bırakıyor. Bu, yanlışlıkla bağış olarak hesaplanır ve Kuno ilerlemeniz hatalı olur. Hareket halindeyken para kullanmanız gerekiyorsa, her zaman bakiyenizin tamamını çekin, hiçbir bozukluk bırakmayın'.",
+      'edit_fundraiser_terms'                                  =>       "Kuno başlatarak <a onclick='ann.makeTerms()'>Terms</a> kabul etmiş olursunuz ",
+      'edit_fundraiser_form_email'                             =>       'Email',
+      'edit_fundraiser_form_email_placeholder'                 =>       'Email (isteğe bağlı, şifre sıfırlama için)',
+      'edit_fundraiser_form_password'                          =>       'Şifre',
+      'edit_fundraiser_form_new_password_placeholder'          =>       'Şifre',
+      'edit_fundraiser_form_edit_password_placeholder'         =>       'Şifre (değişiklik yoksa boş bırakın)',
+      'edit_fundraiser_form_email_notifications'               =>       'Kuno yeni bir bağış aldığında bana e-posta gönder',
+      'edit_fundraiser_form_submit_edit'                       =>       "Kuno'yu güncelle",
+      'edit_fundraiser_form_submit_new'                        =>       "Kuno'yu başlat",
+      'edit_fundraiser_heading_supporters'                     =>       'Kuno Sponsorları',
+      'edit_fundraiser_supporters_text'                        =>       'Bir sponsor e-posta adresini girdiyse burada göreceksiniz (örnek: bağış toplama ödülleri için).',
+      'edit_fundraiser_no_supporters'                          =>       'Henüz e-posta gönderimi yok',
+      'edit_fundraiser_supporters_email'                       =>       'Email',
+      'edit_fundraiser_supporters_comment'                     =>       'Yorum',
+      'edit_fundraiser_supporters_amount'                      =>       'Miktar',
+      'edit_fundraiser_supporters_txid'                        =>       'TXID',
+      'edit_fundraiser_supporters_tx_key'                      =>       'TX Anahtarı',
+      'edit_fundraiser_supporters_date'                        =>       'Tarih',
+      'edit_fundraiser_heading_manage_fundraiser'              =>       "Kuno'yu yönet",
+      'edit_fundraiser_fix_view_key'                           =>       "Kuno'nuzu yeniden etkinleştirmek için lütfen geçerli bir görüntüleme anahtarı ekleyin.",
+      'edit_fundraiser_deactivate_fundraiser'                  =>       "Kuno'yu devre dışı bırak",
+      'edit_fundraiser_reactivate_fundraiser'                  =>       "Kuno'yu yeniden etkinleştir",
+      'edit_fundraiser_delete_fundraiser'                      =>       'Verilerinizi Silin',
+      'reset_password_heading'                                 =>       'Şifreyi Sıfırla',
+      'reset_password_description'                             =>       'Şifrenizi sıfırlamak için Kuno kodunu ve e-posta adresinizi girin.',
+      'reset_password_note'                                    =>       '(E-posta adresi eklemediyseniz lütfen destek ekibiyle iletişime geçin.)',
+      'reset_password_form_fundraiser'                         =>       'Kuno',
+      'reset_password_form_fundraiser_placeholder'             =>       'Kuno kodu (örnek: ae21)',
+      'reset_password_form_email'                              =>       'Email',
+      'reset_password_form_email_placeholder'                  =>       'Email',
+      'reset_password_form_confirmation_code'                  =>       'Onay kodu',
+      'reset_password_form_confirmation_code_placeholder'      =>       'Onay kodu',
+      'reset_password_form_new_password'                       =>       'Yeni şifre',
+      'reset_password_form_new_password_placeholder'           =>       'Yeni şifre',
+      'reset_password_form_submit'                             =>       'Şifreyi Sıfırla',
+      'success'                                                =>       'İşlem tamamlandı',
+      'success_form_submitted'                                 =>       'Form başarıyla gönderildi',
+      'success_new_fundraiser'                                 =>       "Kuno'nuz aktif: <a href='https://kuno.anne.media/fundraiser/{GUID}/'>Bağış kampanyanızı burada görüntüleyin</a><br>Bağış kampanyanızı düzenlemek için bu bağlantıyı yer imlerine ekleyin: <a href='https://kuno.anne.media/edit-fundraiser/{GUID}/'>Bağış kampanyasını düzenle #{GUID}</a>",
+      'success_new_donation_page'                              =>       'Bağış sayfanız aktif: <a href="https://kuno.anne.media/donate/{GUID}/">Bağış sayfanızı burada görüntüleyin</a><br>Bağış sayfanızı düzenlemek için bu bağlantıyı yer imlerine ekleyin: <a href="https://kuno.anne.media/edit-fundraiser/{GUID}/">Bağış sayfasını düzenle #{GUID}</a>',
+      'success_fundraiser_updated'                             =>       '<a href="https://kuno.anne.media/fundraiser/{GUID}/">Bağış kampanyanız güncellendi.</a>',
+      'success_valid_fundraiser_password'                      =>       '<a href="https://kuno.anne.media/edit-fundraiser/{GUID}/">Bağış kampanyanızı düzenlemek için burayı tıklayın</a>',
+      'success_donation_page_updated'                          =>       '<a href="https://kuno.anne.media/donate/{GUID}/">Bağış sayfanız güncellendi.</a>',
+      'success_fundraiser_deactivated'                         =>       'Kuno devre dışı bırakıldı',
+      'success_fundraiser_reactivated'                         =>       'Kuno yeniden etkinleştirildi',
+      'success_fundraiser_deleted'                             =>       'Kuno verileri silindi',
+      'success_valid_invite_code'                              =>       'Geçerli davet kodu. Artık bir Kuno başlatabilirsiniz.',
+      'success_valid_confirmation_code'                        =>       'Geçerli onay kodu',
+      'success_check_email_for_password_reset_code'            =>       'Şifre sıfırlama kodu için e-posta adresinizi kontrol edin',
+      'success_password_reset'                                 =>       "Şifre değiştirildi, şimdi <a href='https://kuno.anne.media/edit-fundraiser/{FUNDRAISER}' >Kuno'nu düzenleyebilirsin.</a>",
+      'success_comment_sent'                                   =>       'Yorum gönderildi!',
+      'success_image_uploaded'                                 =>       'Resim yüklendi',
+      'error'                                                  =>       'Hata',
+      'error_please_refresh'                                   =>       'Lütfen yenileyip tekrar deneyin.',
+      'error_form_expired'                                     =>       'Formun süresi doldu, lütfen yenileyin',
+      'error_form_ratelimited'                                 =>       'Ratelimited, lütfen bekleyin{RATELIMIT} saniye',
+      'error_session_expired'                                  =>       'Oturumun süresi doldu, lütfen tekrar giriş yapın',
+      'error_page_not_found'                                   =>       'Sayfa bulunamadı',
+      'error_fundraiser_not_found'                             =>       'Kuno bulunamadı',
+      'error_email_not_found'                                  =>       'E-posta adresi girilmedi, lütfen destek ekibiyle iletişime geçin',
+      'error_invalid_email'                                    =>       'Lütfen geçerli bir e-posta adresi girin',
+      'error_invalid_email_for_notifications'                  =>       'Bildirimleri etkinleştirmek için lütfen geçerli bir e-posta adresi girin',
+      'error_invalid_confirmation_code'                        =>       'Onay kodu geçersiz veya süresi dolmuş',
+      'error_invalid_monero_address'                           =>       'Geçersiz Monero adresi (Lütfen 4 ile başlayan birincil adresinizi girin)',
+      'error_invalid_view_key'                                 =>       'Geçersiz görüntüleme anahtarı (Lütfen özel/gizli görüntüleme anahtarınızı girin)',
+      'error_invalid_address'                                  =>       'Geçersiz Monero adresi (Lütfen 4 ile başlayan birincil adresinizi girin)',
+      'error_entered_public_view_key'                          =>       'Geçersiz görüntüleme anahtarı (Lütfen özel/gizli görüntüleme anahtarınızı girin, açıĸ görüntüleme anahtarınızı değil)',
+      'error_entered_public_spend_key'                         =>       'Geçersiz görüntüleme anahtarı (Lütfen özel/gizli görüntüleme anahtarınızı girin, genel harcama anahtarınızı değil)',
+      'error_entered_private_spend_key'                        =>       'Geçersiz görüntüleme anahtarı (Lütfen özel harcama anahtarınızı değil, özel/gizli görüntüleme anahtarınızı girin)',
+      'error_invalid_private_view_key'                         =>       'Geçersiz görüntüleme anahtarı (Lütfen özel/gizli görüntüleme anahtarınızı girin)',
+      'error_invalid_txid'                                     =>       'Geçersiz TXID',
+      'error_invalid_tx_key'                                   =>       'Lütfen geçerli bir TX anahtarı girin (TX kanıtı(finansal işlem kanıtı) olarak da bilinir)',
+      'error_invalid_txid'                                     =>       'Lütfen geçerli bir davet kodu girin',
+      'error_incorrect_email'                                  =>       'Yanlış e-posta adresi',
+      'error_incorrect_password'                               =>       'Yanlış şifre',
+      'error_monero_address_already_used'                      =>       'Bu Monero adresiyle zaten bir bağış kampanyası/bağış sayfası var',
+      'error_missing_fundraiser_code_or_email'                 =>       'Lütfen Kuno kodunuzu ve e-posta adresinizi girin',
+      'error_missing_password_reset_code_or_password'          =>       'Lütfen şifre sıfırlama kodunuzu ve yeni şifrenizi girin',
+      'error_missing_txid_or_tx_key'                           =>       "Lütfen hem TXID'yi hem de TX anahtarını (TX kanıtı(finansal işlem kanıtı) olarak da bilinir) girin",
+      'error_missing_password'                                 =>       'Lütfen şifrenizi giriniz',
+      'error_missing_view_key'                                 =>       'Lütfen geçerli bir gizli görüntüleme anahtarı girin',
+      'error_title_too_long'                                   =>       'Başlık 4-80 karakter arasında olmalıdır',
+      'error_description_too_long'                             =>       'Açıklama 500-8000 karakter arasında olmalıdır',
+      'error_photo_missing'                                    =>       'Lütfen bir resim ekleyin',
+      'error_tags_too_long'                                    =>       'Etiketler 250 karakterden kısa olmalıdır',
+      'error_contact_details_too_long'                         =>       'İletişim bilgileri 50 karakterden kısa olmalıdır',
+      'error_contact_details_twitter'                          =>       'Lütfen X (Twitter) hesabınızın linkini ekleyin',
+      'error_contact_details_missing'                          =>       'Lütfen ana iletişim tercihinizi ekleyin',
+      'error_goal_must_be_positive'                            =>       'Kuno hedefiniz pozitif bir sayı olmalıdır',
+      'error_image_incorrect_file_type'                        =>       'Fotoğraf PNG veya JPEG olmalıdır',
+      'error_image_maximum_image_size'                         =>       'Maksimum fotoğraf boyutu 2 MB',
+      'error_image_invalid'                                    =>       'Geçersiz fotoğraf',
+      'error_image_storage_full'                               =>       'Depolama dolu',
+      'error_image_missing'                                    =>       'Lütfen bir fotoğraf yükleyin',
+      'error_prevent_edit'                                     =>       'Düzenleme devre dışı bırakıldı. Kuno admin ile iletişime geçin.',
+      'translate_help'                                         =>       "Kuno'nun daha fazla dilde erişilebilir olması muhteşem olurdu. Çevirilerde bize <a href='https://github.com/annemedia/kuno-translation'>https://github.com/annemedia/kuno-translation</a>'dan yardımcı olabilirsiniz.",
+      'wallets_header'                                         =>       'Monero: <span class="text3">Cüzdan Seçimleri</span>',
+      'monero_gui_wallet'                                      =>       'Monero topluluğu tarafından geliştirilen, hem yeni başlayanlar hem de ileri düzey kullanıcılar için uygun, tamamen ücretsiz kullanılabilen, açık kaynaklı bir grafiksel kullanıcı arayüzü (GUI) cüzdanı.',
+      'cake_wallet'                                            =>       'Kripto paranızı güvenli bir şekilde saklayın, gönderin ve kolaylıkla diğer birimlere çevirin. Çok basit bir şekilde, gizlice hediye kartları satın alın ve gişede kripto parayla ödeme yapın.',
+      'monerujo_wallet'                                        =>       'Monero için Android Cüzdan. Monerujo ile, birçok cüzdan arasında sorunsuz bir şekilde hareket edebilirsiniz. Yeni bir cüzdan oluşturmak birkaç dokunuş kadar basittir.',
+      'feather_wallet'                                         =>       'Feather; Linux, Tails, Windows ve macOS için ücretsiz, açık kaynaklı bir Monero cüzdanıdır. Kullanımı kolaydır, küçüktür, hızlıdır ve yeni başlayanlar için uygundur.'
+      
+    );
+    $translation = ($strings[$string]) ? $strings[$string] : $string;
+    return $translation;
+  }
+
