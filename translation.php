@@ -4626,4 +4626,368 @@ function translate_tr($string) {
     $translation = ($strings[$string]) ? $strings[$string] : $string;
     return $translation;
   }
+  function translate_ru($string) {
+    static $strings = array(
+      'site_name'                       =>       'Куно',
+      'page_title'                      =>       "Куно – сбор средств с Монеро",
+      'page_title_error'                =>       "Ошибка | Куно – сбор средств с Монеро",
+      'page_title_search'               =>       "Поиск | Куно – сбор средств с Монеро",
+      'page_title_fediverse'            =>       "Федивёрс | Куно – сбор средств с Монеро",
+      'page_title_reset_password'       =>       "Сбросить пароль | Куно – сбор средств с Монеро",
+      'page_title_edit_fundraiser'      =>       "Редактировать сборщика средств | Куно – сбор средств с Монеро",
+      'page_title_new_fundraiser'       =>       "Новый сборщик средств | Куно – сбор средств с Монеро",
+      'pagination'                      =>       "Страница {NUM} из {NUM_PAGES}",
+      'pagination_fundraisers'          =>       "Просмотр {START}-{END} из {TOTAL} куно",
+      'pagination_donations'            =>       "Просмотр {START}-{END} из {TOTAL} куно",
+      'pagination_submit'               =>       "Вперед",
+      'nav_manage_fundraiser'           =>       "Управление куно",
+      'nav_search'                      =>       "Найти куно...",
+      'nav_fundraiser_progress'         =>       "Куно развитие:",
+      'nav_edit_fundraiser'             =>       "Редактировать куно:",
+      'nav_logout'                      =>       "Выйти",
+      'footer_description'              =>       "Сбор средств с Монеро",
+      'footer_contact'                  =>       "Связь: поддержка[at] anne.media",
+      'footer_language'                 =>       "Язык:",
+      'footer_light_mode'               =>       "Светлая тема",
+      'footer_dark_mode'                =>       "Темная тема",
+      'footer_manage_fundraiser'        =>       "Управление вашим куно:",
+      'footer_new_fundraiser'           =>       "Новый куно",
+      'footer_edit_fundraiser'          =>       "Редактировать куно",
+      'footer_reset_password'           =>       "Сбросить пароль",
+      'footer_quick_links'              =>       "Быстрые ссылки:",
+      'footer_search_fundraisers'       =>       "Найти куно",
+      'footer_search_fediverse'         =>       "Найти Федивёрс",
+      'footer_marketplace'              =>       "Магазин",
+      'footer_rss_feed'                 =>       "RSS Feed",
+      'footer_faq'                      =>       "FAQ",
+      'email_new_donation_subject'      =>       "[Kuno] Новое {DONATION} XMR пожертвование #{GUID}",
+      'email_new_donation_body'         =>       "Ваш куно получил новое пожертвование!
+                             <br><br>Куно            : {TITLE}
+                             <br>Пожертвование            : {DONATION} XMR
+                             <br>Дата                : {DATE}
+          <br><br>Все пожертвования               : {TOTAL} XMR
+          <br>Все          последователи              : {SUPPORTERS}
+          <br>Посетить ваш куно               : https:          //kuno.anne.media/{TYPE}/{GUID}/
+          <br><br>Деактивировать Email уведомления здесь: 
+                             <br>https               :                 //kuno.anne.media/edit-fundraiser/{GUID}/',
+      'email_reset_password_subject'             =>       "[Kuno] Сбросить пароль",
+      'email_reset_password_body'                =>       "Откройте эту ссылку чтобы сбросить ваш пароль: {URL} или введите данный код: {CODE} (Действителен 24 часа)",
+      'homepage_title'                           =>       "Легкий сбор средств <br> для каждого",
+      'homepage_subtitle'                        =>       "Собирайте деньги или произведите пожертвование на хорошее дело с Монеро",
+      'homepage_point1'                          =>       "Создать куно бесплатно", 
+      'homepage_point2'                          =>       "Получить Монеро (которые вы можете обменять на деньги)",
+      'homepage_point3'                          =>       "Ноль вложений, работает по всему миру, не требует банковского аккаунта",
+      'homepage_button_start_fundraiser'         =>       "Создать куно",
+      'homepage_button_browse_fundraisers'       =>       "Просмотр куно",
+      'homepage_bar'                             =>       "Стоящая альтернатива GoFundMe и Kickstarter",
+      'homepage_heading_browse_fundraisers'      =>       "Просмотр {AMOUNT} куно",
+      'homepage_heading_total_raised'            =>       "Более {AMOUNT} XMR получено!",
+      'homepage_top_categories'                  =>       "Основные Категории",
+      'homepage_recent_donations'                =>       "Недавние Пожертвования",
+      'homepage_all_categories'                  =>       "Все категории",
+      'homepage_launch_in_one_click'             =>       "Запусти своё куно за 1 клик",
+      'homepage_get_started_free'                =>       "Начать бесплатно",
+      'homepage_info_heading1'                   =>      "Монеро - интернет валюта",
+      'homepage_info_description1'               =>       '<p class="monero-info-p-bold kuno">
+                  Монеро - это быстрый и безопасный способ отправлять и получать деньги онлайн
+  </p>
+                  <p class = "monero-info-p kuno">
+                  Банковский аккаунт, заявление или паспорт не требуются. Просто скачайте кошелек на свой телефон или компьютер, чтобы отправлять и получать деньги по всему миру за один клик.
+  </p>
+                  <p class = "monero-info-p kuno">
+                  Доступность и простота Монеро делают её идеальным способом оплаты для онлайн-магазинов, удаленной работы, межвалютных переводов, чаевых, сборов донатов и так далее.
+  </p>',
+      'homepage_link_download_mobile'       =>       "Установить на смартфон",
+      'homepage_link_download_desktop'      =>       "Установить на рабочий стол",
+      'homepage_info_heading2'              =>       "Нескрываемые пожертвования",
+      'homepage_info_description2'          =>       '<p class="monero-info-p-bold kuno">
+                  С Монеро ваши деньги принадлежат вам.
+  </p>
+                  <p class = "monero-info-p kuno">
+                  Монеро - это Р2Р программа, которая не полагается на третьи лица или компании. Операции не могут быть скрыты, денежные средства не могут быть заморожены и пользователи не могут быть удалены.
+  </p>
+                  <p class = "monero-info-p kuno">
+                  Если вы собираете средства с Монеро или делаете пожертвование на доброе дело, вы можете быть спокойны что получатель получит 100% пожертвования.
+  </p>',
+      'homepage_link_official_website'      =>       "Официальный сайт",
+      'homepage_link_overview'              =>       "Oбзор",
+      'homepage_link_buy_monero'            =>       "Купить Монеро",
+      'homepage_info_heading3'              =>       "Потратить их где угодно",
+      'homepage_info_description3'          =>       '<p class="monero-info-p-bold kuno">
+                  Обменяйте Монеро на деньги, делайте покупки в интернете или оплачивайте счета.
+  </p>
+                  <p   class                                                 = "monero-info-p kuno">
+                  Можно легко обменять Монеро на наличные деньги с <a href = "https://localmonero.co">LocalMonero</a>, <a href = "https://bisq.network">Bisq</a> или <a href = "https://coinatmradar.com">Crypto ATM</a> (Банковский аккаунт не требуется).
+  </p>
+                  <p           class        = "monero-info-p kuno">
+                  Торговая площадка как <a href = "https://moneromarket.io">MoneroMarket</a> и каталоги такие как <a href = "https://monerica.com">Monerica</a> а также <a href = "https://acceptedhere.io">AcceptedHere</a> помогут вам купить то, что вы хотите с Монеро.
+  </p>
+                  <p class    = "monero-info-p kuno">
+                  Кроме того, <a href = "https://cakepay.com">CakePay</a> and <a href = "https://coincards.com">CoinCards</a> предлагают предоплаченные карты Visa и подарочные карты для тысячи предприятий. Такие персональные покупатели как <a href = "https://proxysto.re">ProxyStore</a>, <a href = "https://sovereignstack.tools/rerouter/">Sovereign Stack</a> and <a href = "https://shopinbit.com">ShopInBit</a> предлагают удобный способ для оплаты счетов с Монеро.
+  </p>
+                  <p class = "monero-info-p kuno">
+                  Гибкость Монеро позволяет легко собирать средства для оплаты счетов, запустить свой проект или поддержать благотворительные организации.
+  </p>',
+      'homepage_link_exchange_to_cash'      =>       "Обменять на деньги",
+      'homepage_link_shop_online'           =>       "Покупки онлайн",
+      'homepage_link_marketplace'           =>       "Торговая площадка",
+      'homepage_use_case_heading1'          =>       "На благотворительность",
+      'homepage_use_case_description1'      =>       '<p class="use-case-p-bold kuno">
+                    Местный кошачий приют нуждается в пожертвованиях на кошачий корм и оплату счетов в ветеринарной клинике.
+  </p>
+                  <p class = "use-case-p kuno">
+                    Они создают куно, делятся ссылкой в социальных сетях и получают пожертвования.
+  </p>
+                  <p class = "use-case-p kuno">
+                    Для сбора средств приют использует Монеро, чтобы купить подарочные карты Petsmart с CakePay для того чтобы выводить средства и оплачивать счета за ветеринарную клинику с помощью Crypto ATM.
+  </p>
+                  <p class = "use-case-p kuno">
+                     Каждый спонсор получает последние свежие новости с фотографиями котов.
+  </p>',
+      'homepage_use_case_heading2'          =>       "Для частных лиц",
+      'homepage_use_case_description2'      =>       '<p class="use-case-p-bold kuno">
+                    Элис нуждается в сборе средств на лечение.
+  </p>
+                  <p class = "use-case-p kuno">
+                    Еë дочь помогает ей создать куно и делится им со своей аудиторией.
+  </p>
+                  <p class = "use-case-p kuno">
+                    Они собирают достаточно средств и обменивают их на деньги с помощью LocalMonero.
+  </p>
+                  <p class = "use-case-p kuno">
+                     Элис пишет письмо с искренней благодарностью каждому пожертвователю в знак признательности.
+  </p>',
+      'homepage_use_case_heading3'          =>       "Для стартапов",
+      'homepage_use_case_description3'      =>       '<p class="use-case-p-bold kuno">
+                    Инди-разработчик хочет создать новую игру.
+  </p>
+                  <p class = "use-case-p kuno">
+                    Он создает куно и делится им с игровым сообществом.
+  </p>
+                  <p class = "use-case-p kuno">
+                    Он достигает цели и с оставшейся выручки на MoneroMarket нанимает художников использующих Монеро и покупает игровые ресурсы с дебетовой картой CakePay.
+  </p>
+                  <p class = "use-case-p kuno">
+                    Каждый спонсор получает бесплатную копию игры.
+  </p>',
+      'homepage_use_case_heading4'          =>       "Для создателей",
+      'homepage_use_case_description4'      =>       '<p class="use-case-p-bold kuno">
+                    Группа выкладывает каверы и свои оригинальные композиции на Ютуб.
+  </p>
+                  <p class = "use-case-p kuno">
+                    Они создают страницу пожертвований на куно чтобы получить Монеро.
+  </p>
+                  <p class = "use-case-p kuno">
+                    Совершая пожертвования фанаты также могут предложить песню или добавить комментарий во время трансляций в реальном времени.
+  </p>
+                  <p class = "use-case-p kuno">
+                    В отличие от выручки с рекламных объявлений, это хороший способ для устойчивой монетизации их контента.
+  </p>',
+      'homepage_use_case_heading5'          =>       "Для вас",
+      'homepage_use_case_description5'      =>       '<p class="use-case-p-bold kuno">
+                    С Куно каждый может собрать денег для своего проекта, дела или стартапа.
+  </p>
+                  <p class = "use-case-p kuno">
+                    Все, что от вас требуется - Монеро кошелек и цель.
+  </p>',
+      'fundraiser_heading_goal'                           =>       "Цель",
+      'fundraiser_heading_raised'                         =>       " Собрано",
+      'fundraiser_heading_percentage_funded'              =>       "Финансируемое",
+      'fundraiser_heading_donations'                      =>       "Пожертвования",
+      'fundraiser_heading_supporters'                     =>       "Сторонники",
+      'fundraiser_heading_comments'                       =>       "Комментарии",
+      'fundraiser_heading_support'                        =>       "Поддержка",
+      'fundraiser_heading_share'                          =>       "Поделиться",
+      'fundraiser_heading_promote'                        =>       "Продвинуть",
+      'fundraiser_heading_about'                          =>       "Подробнее",
+      'fundraiser_heading_photos'                         =>       "Фото",
+      'fundraiser_heading_contact'                        =>       "Связаться",
+      'fundraiser_heading_date'                           =>       "Опубликовано:",
+      'fundraiser_heading_supporters'                     =>       "Сторонники",
+      'fundraiser_heading_new_comment'                    =>       "Написать комментарий",
+      'fundraiser_heading_new_fundraiser'                 =>       "Новый куно",
+      'fundraiser_heading_edit_fundraiser'                =>       "Редактировать куно",
+      'fundraiser_heading_logout'                         =>       "Выйти",
+      'fundraiser_support_text'                           =>       "Отправить любое количество Монеро:",
+      'fundraiser_share_text'                             =>       "Скопировать ссылку чтобы поделиться этим куно с друзьями или в социальных сетях:",
+      'fundraiser_promote_text'                           =>       "Продвинуть ваш собственный куно или помочь продвинуться этому куно.",
+      'fundraiser_open_in_wallet'                         =>       "Открыть в кошельке",
+      'fundraiser_info_point1'                            =>       "Вы отправляете пожертвование непосредственно в кошелек получателя",
+      'fundraiser_info_point2'                            =>       "Без посредников и комиссии",
+      'fundraiser_info_point3'                            =>       "Пожертвования синхронизируются каждые 5 минут",
+      'fundraiser_full_size_photo'                        =>       "Полное фото",
+      'fundraiser_no_donations'                           =>       "Пока нет пожертвований",
+      'fundraiser_supporters'                             =>       "{AMOUNT} последователей",
+      'fundraiser_button_support'                         =>       "Поддержка",
+      'fundraiser_donate_with_monero'                     =>       "Пожертвовать Монеро:",
+      'fundraiser_comment_form_placeholder_txid'          =>       'TXID',
+      'fundraiser_comment_form_placeholder_tx_key'        =>       'TX Ключ (Пример: 7d7a9370a746d219e5f66aaaec902ead0d1c1783817a10276c9accdacca6f10d)',
+      'fundraiser_comment_form_placeholder_email'         =>       "Email (На усмотрение, для фандрайзинговых наград)",
+      'fundraiser_comment_form_placeholder_comment'       =>       "Написать публичный комментарий",
+      'fundraiser_comment_form_submit'                    =>       "Комментировать",
+      'search'                                            =>       "Поиск",
+      'search_heading'                                    =>       "Поиск Куно",
+      'search_text'                                       =>       "Найти куно...",
+      'search_sort_by_new'                                =>       " Сортировать по новизне",
+      'search_sort_by_recently_donated'                   =>      "Сортировать по недавним пожертвованиям",
+      'search_sort_by_percentage_funded'                  =>       "Сортировать по собранным процентам",
+      'search_sort_by_goal'                               =>       "Сортировать по цели",
+      'search_all_categories'                             =>       "Все категории",
+      'search_no_fundraisers_found'                       =>       "Куно не найдено",
+      'search_fediverse_heading'                          =>       "Поиск Федивëрс",
+      'search_fediverse_text'                             =>       "Поиск Федивëрс куно...",
+      'search_fediverse_no_fundraisers_found'             =>       "Ни одного Федивëрс куно не найдено",
+      'search_fediverse_peers_list'                       =>       "Список управляемых образцов:",
+      'login_invite_code_heading'                         =>       "Новый куно",
+      'login_invite_code_text'                            =>       "Введите пригласительный кол чтобы создать новый куно.",
+      'login_invite_code_note'                            =>       "Если у вас нет пригласительного кода, пожалуйста свяжитесь с поддержкой.",
+      'login_invite_code_form'                            =>       "Пригласительный код",
+      'login_invite_code_form_placeholder'                =>       "Пригласительный код",
+      'login_invite_code_submit'                          =>       "Продолжить",
+      'login_fundraiser_form_fundraiser'                  =>       "Сбор средств",
+      'login_fundraiser_heading'                          =>       "Редактировать сбор средств",
+      'login_fundraiser_text'                             =>       "Введите код куно и пароль чтобы редактировать ваш куно.",
+      'login_fundraiser_note'                             =>       "Код в URL-ссылке:",
+      'login_fundraiser_forgot_password'                  =>       "Забыли пароль?",
+      'login_fundraiser_form_fundraiser'                  =>       "Куно",
+      'login_fundraiser_form_fundraiser_placeholder'      =>       "Код куно (e.g. ae21)",
+      'login_fundraiser_form_password'                    =>       "Пароль", 
+      'login_fundraiser_form_password_placeholder'        =>       "Пароль",
+      'login_fundraiser_form_submit'                      =>       "Редактировать куно",
+      'edit_fundraiser_heading_fundraiser_details'        =>       "Подробнее о куно",
+      'edit_fundraiser_fundraiser_details_text'           =>       "Опишите ваш куно и добавьте фото.",
+      'edit_fundraiser_form_optional'                     =>       "(Дополнительно)", 
+      'edit_fundraiser_form_more_info'                    =>       "(Более)",
+      'edit_fundraiser_form_title'                        =>       "Заголовок",
+      'edit_fundraiser_form_title_placeholder'            =>       "Название куно",
+      'edit_fundraiser_form_photo'                        =>       "Фото",
+      'edit_fundraiser_form_additional_photos'            =>       "Дополнительные фото",
+      'edit_fundraiser_form_description'                  =>       "Описание",
+      'edit_fundraiser_form_description_placeholder'      =>       "Опишите ваше куно.  Включая вознаграждения, этапы или дополнительную контактную информацию.",
+      'edit_fundraiser_form_tags'                         =>       "Теги", 
+      'edit_fundraiser_form_tags_placeholder'             =>       "Категории/теги",
+      'edit_fundraiser_form_contact'                      =>       "Основные контакты",
+      'edit_fundraiser_form_contact_placeholder'          =>       "Привяжите ваш X (Twitter) аккаунт",
+      'edit_fundraiser_form_altcontact'                   =>       "Non-X связь",
+            //  'edit_fundraiser_form_contact_placeholder'      =>       "Email, сайт, Twitter, Matrix, и так далее.",
+      'edit_fundraiser_form_visibility'                        =>       "Установить куно в частный доступ (он не будет отображаться в результах поиска, спонсорам понадобиться прямая ссылка)",
+      'edit_fundraiser_heading_goal'                           =>       "Цель",
+      'edit_fundraiser_goal_text'                              =>       "Установить цель и Монеро адрес.",
+      'edit_fundraiser_get_wallet'                             =>       "Нет Монеро кошелька? Получите его здесь.", 
+      'edit_fundraiser_form_goal'                              =>       "Цель",
+      'edit_fundraiser_form_goal_placeholder'                  =>       "Цель (XMR)",
+      'edit_fundraiser_form_donation_page'                     =>       "Нет цели – я хочу создать страницу для пожертвований",
+      'edit_fundraiser_form_monero_address'                    =>       "Монеро адрес",
+      'edit_fundraiser_form_monero_address_placeholder'        =>       "Пример: 44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft3XjrpDtQGv7SqSsaBYBb98uNbr2VBBEt7f2wfn3RVGQBEP3A",
+      'edit_fundraiser_form_view_key'                          =>       "Ключ секретного доступа",
+      'edit_fundraiser_form_view_key_placeholder'              =>       "Пример: f359631075708155cc3d92a32b75a7d02a5dcf27756707b47a2b31b21c389501",
+      'edit_fundraiser_heading_password'                       =>       "Пароль",
+      'edit_fundraiser_password_text'                          =>       "Установить пароль чтобы редактировать ваш куно позже.",
+      'edit_fundraiser_widthdrawal_warning'                    =>       "Пожалуйста избегайте выводов неполных сумм с баланса во время использования куно. Монеро использует  большие суммы баланса для платежей, оставляя оставшееся для новых транзакций. Данный вывод может быть ошибочно принят за пожертвование и ваш куно прогресс станет неточным. Если в процессе вам понадобится использовать накопления, всегда выводите ваш баланс полностью, не оставляя "сдачи".",
+      'edit_fundraiser_terms'                                  =>       "Создавая куно вы даете согласие <a onclick='ann.makeTerms()'>Terms</a>",
+      'edit_fundraiser_form_email'                             =>       "Email",
+      'edit_fundraiser_form_email_placeholder'                 =>       "Email (на усмотрение, для сброса пароля)",
+      'edit_fundraiser_form_password'                          =>       "Пароль",
+      'edit_fundraiser_form_new_password_placeholder'          =>       "Пароль",
+      'edit_fundraiser_form_edit_password_placeholder'         =>       "Пароль (оставьте пустым, если нет изменений)",
+      'edit_fundraiser_form_email_notifications'               =>       "Получать оповещение на Email когда мой куно получает новое пожертвование",
+      'edit_fundraiser_form_submit_edit'                       =>       "Обновить куно",
+      'edit_fundraiser_form_submit_new'                        =>       "Создать куно",
+      'edit_fundraiser_heading_supporters'                     =>       "Kuno Последователи",
+      'edit_fundraiser_supporters_text'                        =>       "Если последователь ввёл свой почтовый адрес, вы увидите это здесь (например для наград от фандрайзера).',
+      'edit_fundraiser_no_supporters'                          =>       "Email подтверждений пока нет",
+      'edit_fundraiser_supporters_email'                       =>       "Email",
+      'edit_fundraiser_supporters_comment'                     =>       "Комментировать",
+      'edit_fundraiser_supporters_amount'                      =>       "Количество",
+      'edit_fundraiser_supporters_txid'                        =>       "TXID",
+      'edit_fundraiser_supporters_tx_key'                      =>       "TX Ключ",
+      'edit_fundraiser_supporters_date'                        =>       "Дата",
+      'edit_fundraiser_heading_manage_fundraiser'              =>       "Управление Куно",
+      'edit_fundraiser_fix_view_key'                           =>       "Пожалуйста, добавьте действительный ключ просмотра в случае восстановления доступа к вашему куно.",
+      'edit_fundraiser_deactivate_fundraiser'                  =>       "Деактивировать куно",
+      'edit_fundraiser_reactivate_fundraiser'                  =>       "Восстановление куно",
+      'edit_fundraiser_delete_fundraiser'                      =>       "Очистить данные",
+      'reset_password_heading'                                 =>       "Сбросить пароль",
+      'reset_password_description'                             =>       "Введите код куно и ваш почтовый адрес для того чтобы сбросить пароль.",
+      'reset_password_note'                                    =>       "(Если вы не добавляли почтовый адрес, пожалуйста, свяжитесь с поддержкой.)",
+      'reset_password_form_fundraiser'                         =>       " Куно",
+      'reset_password_form_fundraiser_placeholder'             =>       "Код куно (e.g. ae21)",
+      'reset_password_form_email'                              =>       "Email",
+      'reset_password_form_email_placeholder'                  =>       "Email",
+      'reset_password_form_confirmation_code'                  =>       "Код подтверждения",
+      'reset_password_form_confirmation_code_placeholder'      =>       "Код подтверждения",
+      'reset_password_form_new_password'                       =>       "Новый пароль",
+      'reset_password_form_new_password_placeholder'           =>       " Новый пароль",
+      'reset_password_form_submit'                             =>       "Сбросить пароль",
+      'success'                                                =>       "Успешно",
+      'success_form_submitted'                                 =>       "Обращение успешно отправлено",
+      'success_new_fundraiser'                                 =>      "Ваш куно активен: <a href="https://kuno.anne.media/fundraiser/{GUID}/">Посмотрите ваш сбор средств здесь</a><br>Сохраните эту ссылку чтобы редактировать ваш сбор средств: <a href="https://kuno.anne.media/edit-fundraiser/{GUID}/">Редактировать сбор средств #{GUID}</a>',
+      'success_new_donation_page'                              =>       "Ваша страница для сбора пожертвований активна: <a href="https://kuno.anne.media/donate/{GUID}/">Посмотрите вашу страницу для сбора пожертвований здесь</a><br>Сохраните эту ссылку чтобы редактировать вашу страницу для сбора пожертвований: <a href="https://kuno.anne.media/edit-fundraiser/{GUID}/">Редактировать страницу для сбора пожертвований #{GUID}</a>',
+      'success_fundraiser_updated'                             =>       '<a href="https://kuno.anne.media/fundraiser/{GUID}/">Ваш сбор средств был обновлен.</a>',
+      'success_valid_fundraiser_password'                      =>       '<a href="https://kuno.anne.media/edit-fundraiser/{GUID}/">Нажмите здесь чтобы редактировать ваш сбор средств</a>',
+      'success_donation_page_updated'                          =>       '<a href="https://kuno.anne.media/donate/{GUID}/">Ваша страница для сбора пожертвований была обновлена.</a>',
+      'success_fundraiser_deactivated'                         =>       "Куно деактивировано",
+      'success_fundraiser_reactivated'                         =>       "Куно восстановлено",
+      'success_fundraiser_deleted'                             =>       "Данные куно удалены",
+      'success_valid_invite_code'                              =>       " Действительный пригласительный код. Вы можете создать куно.",
+      'success_valid_confirmation_code'                        =>       "Действительный код подтверждения", 
+      'success_check_email_for_password_reset_code'            =>       "Проверьте ваш почтовый адрес на наличие кода для сброса пароля",
+      'success_password_reset'                                 =>       "Пароль был изменен, теперь вы можете <a href="https://kuno.anne.media/edit-fundraiser/{FUNDRAISER}">редактировать ваш куно</a>',
+      'success_comment_sent'                                   =>       "Комментарий отправлен!",
+      'success_image_uploaded'                                 =>       "Изображение опубликовано!",
+      'error'                                                  =>       "Ошибка",
+      'error_please_refresh'                                   =>       " Пожалуйста, перезагрузите и попробуйте снова.",
+      'error_form_expired'                                     =>       "Обращение истекло, пожалуйста обновите страницу",
+      'error_form_ratelimited'                                 =>       "Лимит запросов, пожалуйста, подождите {RATELIMIT} секунд",
+      'error_session_expired'                                  =>       "Сеанс истек, пожалуйста войдите заново",
+      'error_page_not_found'                                   =>       "Страница не найдена",
+      'error_fundraiser_not_found'                             =>       "Куно не найден",
+      'error_email_not_found'                                  =>       "Почтовый адрес не установлен, пожалуйста, свяжитесь с поддержкой",
+      'error_invalid_email'                                    =>       "Пожалуйста, введите действительный почтовый адрес",
+      'error_invalid_email_for_notifications'                  =>       "Пожалуйста, введите действительный почтовый адрес чтобы получать уведомления",
+      'error_invalid_confirmation_code'                        =>       "Код подтверждения недействителен или истек",
+      'error_invalid_monero_address'                           =>       "Недействительный Монеро адрес (Пожалуйста, введите ваш основной адрес, который начинается с 4)",
+      'error_invalid_view_key'                                 =>       "Недействительный ключ просмотра (Пожалуйста, введите ваш приватный/секрктный ключ просмотра)",
+      'error_invalid_address'                                  =>       "Недействительный Монеро адрес (Пожалуйста, введите ваш основной адрес, который начинается с 4)",
+      'error_entered_public_view_key'                          =>       "Недействительный ключ просмотра (Пожалуйста, введите ваш приватный/секретный ключ просмотра, не общедоступный)",
+      'error_entered_public_spend_key'                         =>       "Недействительный ключ просмотра (Пожалуйста, введите ваш приватный/секретный ключ просмотра, не общедоступный ключ расходов)",
+      'error_entered_private_spend_key'                        =>       "Недействительный ключ просмотра (Пожалуйста, введите ваш приватный/секретный ключ просмотра, не приватный ключ расходов)",
+      'error_invalid_private_view_key'                         =>       "Недействительный ключ просмотра (Пожалуйста, введите ваш приватный/секретный ключ просмотра)",
+      'error_invalid_txid'                                     =>       "Недействительный TXID", 
+      'error_invalid_tx_key'                                   =>       "Пожалуйста, введите действительный TX ключ (также известный как TX доказательство)", 
+      'error_invalid_txid'                                     =>       "Пожалуйста введите действительный пригласительный код",
+      'error_incorrect_email'                                  =>       "Неверный почтовый адрес",
+      'error_incorrect_password'                               =>       "Неверный пароль",
+      'error_monero_address_already_used'                      =>       "Сбор средств/страница пожертвований с такой Монеро уже есть",
+      'error_missing_fundraiser_code_or_email'                 =>       "Пожалуйста, введите ваш код куно и почтовый адрес",
+      'error_missing_password_reset_code_or_password'          =>       "Пожалуста, введите ваш код для сброса пароля и новый пароль",
+      'error_missing_txid_or_tx_key'                           =>       "Пожалуйста, введите TXID и TX ключ (также известный как TX доказательство)", 
+      'error_missing_password'                                 =>       "Пожалуйста, введите ваш пароль",
+      'error_missing_view_key'                                 =>       "Пожалуйста, введите действительный приватный ключ просмотра", 
+      'error_title_too_long'                                   =>       "Заголовок должен содержать в себе около 4-80 символов",
+      'error_description_too_long'                             =>       "Описание должно содержать в себе около 500-8000 символов",
+      'error_photo_missing'                                    =>       " Пожалуйста, прикрепите изображение",
+      'error_tags_too_long'                                    =>       "Теги должны быть короче 250 символов",
+      'error_contact_details_too_long'                         =>       "Контактные данные должны быть короче 50 символов",
+      'error_contact_details_twitter'                          =>       "Пожалуйста, прикрепите ссылку на ваш X (Twitter) профиль",
+      'error_contact_details_missing'                          =>       "Пожалуйста, прикрепите ваши основные контактные данные",
+      'error_goal_must_be_positive'                            =>       "Ваша куно цель должна быть положительным числом",
+      'error_image_incorrect_file_type'                        =>       "Изображение должно являться PNG или JPEG",
+      'error_image_maximum_image_size'                         =>       "Максимальный размер изображения 2 MB",
+      'error_image_invalid'                                    =>       "Изображение не поддерживается",
+      'error_image_storage_full'                               =>       "Хранилище заполнено",
+      'error_image_missing'                                    =>       "Пожалуйста, опубликуйте изображение",
+      'error_prevent_edit'                                     =>       "Редактирование было отключено. Свяжитесь с администрацией Куно.',
+      'translate_help'                                         =>       "Было бы замечательно, если Куно было бы доступно на больших языках. Помогите там с переводами <a href="https://github.com/annemedia/kuno-translation">https://github.com/annemedia/kuno-translation</a>',
+      'wallets_header'                                         =>       'Monero: <span class="text3">Wallet Choices</span>',
+      'monero_gui_wallet'                                      =>       "Графический пользовательский интерфейс с открытым исходным кодом (GUI), разработанный сообществом Монеро, абсолютно бесплатный для использования, подходит как для начинающих так и продвинутых полтзователей.",
+      'cake_wallet'                                            =>       "Надежное хранилище, отправляйте и обменивайте криптовалюту с легкостью.  Частно покупайте подарочные карты и расплачивайтесь на кассе криптовалютой, легче легкого.",
+      'monerujo_wallet'                                        =>       "Андроид кошелек для Монеро. С Monerujo, вы можете без проблем перемещаться между несколькими кошельками. Создание нового так же легко как и несколько нажатий по экрану.",
+      'feather_wallet'                                         =>       "Feather это бесплатный, открытый Монеро кошелек для Linux, Tails, Windows и macOS. Легок в использовании, маленький, быстрый и подходящий для новичков."
+      
+    );
+    $translation = ($strings[$string]) ? $strings[$string] : $string;
+    return $translation;
+  }
+
 
