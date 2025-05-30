@@ -4661,25 +4661,25 @@ function translate_tr($string) {
       'footer_rss_feed'                 =>       "RSS Feed",
       'footer_faq'                      =>       "FAQ",
       'email_new_donation_subject'      =>       "[Kuno] Новое {DONATION} XMR пожертвование #{GUID}",
-      'email_new_donation_body'         =>       "Ваш куно получил новое пожертвование!
-                             <br><br>Куно            : {TITLE}
-                             <br>Пожертвование            : {DONATION} XMR
-                             <br>Дата                : {DATE}
-          <br><br>Все пожертвования               : {TOTAL} XMR
-          <br>Все          последователи              : {SUPPORTERS}
-          <br>Посетить ваш куно               : https:          //kuno.anne.media/{TYPE}/{GUID}/
-          <br><br>Деактивировать Email уведомления здесь: 
-                             <br>https               :                 //kuno.anne.media/edit-fundraiser/{GUID}/',
-      'email_reset_password_subject'             =>       "[Kuno] Сбросить пароль",
-      'email_reset_password_body'                =>       "Откройте эту ссылку чтобы сбросить ваш пароль: {URL} или введите данный код: {CODE} (Действителен 24 часа)",
-      'homepage_title'                           =>       "Легкий сбор средств <br> для каждого",
-      'homepage_subtitle'                        =>       "Собирайте деньги или произведите пожертвование на хорошее дело с Монеро",
-      'homepage_point1'                          =>       "Создать куно бесплатно", 
-      'homepage_point2'                          =>       "Получить Монеро (которые вы можете обменять на деньги)",
-      'homepage_point3'                          =>       "Ноль вложений, работает по всему миру, не требует банковского аккаунта",
-      'homepage_button_start_fundraiser'         =>       "Создать куно",
-      'homepage_button_browse_fundraisers'       =>       "Просмотр куно",
-      'homepage_bar'                             =>       "Стоящая альтернатива GoFundMe и Kickstarter",
+      'email_new_donation_body'         =>       'Ваш куно получил новое пожертвование!
+                             <br><br>Куно: {TITLE}
+                             <br>Пожертвование: {DONATION} XMR
+                             <br>Дата: {DATE}
+          <br><br>Все пожертвования {TOTAL} XMR
+          <br>Все последователи: {SUPPORTERS}
+          <br>Посетить ваш куно: https://kuno.anne.media/{TYPE}/{GUID}/
+          <br><br>Деактивировать Email уведомления здесь:
+                             <br>https://kuno.anne.media/edit-fundraiser/{GUID}/',
+      'email_reset_password_subject'             =>       '[Kuno] Сбросить пароль',
+      'email_reset_password_body'                =>       'Откройте эту ссылку чтобы сбросить ваш пароль: {URL} или введите данный код: {CODE} (Действителен 24 часа)',
+      'homepage_title'                           =>       'Легкий сбор средств <br> для каждого',
+      'homepage_subtitle'                        =>       'Собирайте деньги или произведите пожертвование на хорошее дело с Монеро',
+      'homepage_point1'                          =>       'Создать куно бесплатно', 
+      'homepage_point2'                          =>       'Получить Монеро (которые вы можете обменять на деньги)',
+      'homepage_point3'                          =>       'Ноль вложений, работает по всему миру, не требует банковского аккаунта',
+      'homepage_button_start_fundraiser'         =>       'Создать куно',
+      'homepage_button_browse_fundraisers'       =>       'Просмотр куно',
+      'homepage_bar'                             =>       'Стоящая альтернатива GoFundMe и Kickstarter',
       'homepage_heading_browse_fundraisers'      =>       "Просмотр {AMOUNT} куно",
       'homepage_heading_total_raised'            =>       "Более {AMOUNT} XMR получено!",
       'homepage_top_categories'                  =>       "Основные Категории",
@@ -4869,7 +4869,6 @@ function translate_tr($string) {
       'edit_fundraiser_form_contact'                      =>       "Основные контакты",
       'edit_fundraiser_form_contact_placeholder'          =>       "Привяжите ваш X (Twitter) аккаунт",
       'edit_fundraiser_form_altcontact'                   =>       "Non-X связь",
-            //  'edit_fundraiser_form_contact_placeholder'      =>       "Email, сайт, Twitter, Matrix, и так далее.",
       'edit_fundraiser_form_visibility'                        =>       "Установить куно в частный доступ (он не будет отображаться в результах поиска, спонсорам понадобиться прямая ссылка)",
       'edit_fundraiser_heading_goal'                           =>       "Цель",
       'edit_fundraiser_goal_text'                              =>       "Установить цель и Монеро адрес.",
@@ -4883,7 +4882,7 @@ function translate_tr($string) {
       'edit_fundraiser_form_view_key_placeholder'              =>       "Пример: f359631075708155cc3d92a32b75a7d02a5dcf27756707b47a2b31b21c389501",
       'edit_fundraiser_heading_password'                       =>       "Пароль",
       'edit_fundraiser_password_text'                          =>       "Установить пароль чтобы редактировать ваш куно позже.",
-      'edit_fundraiser_widthdrawal_warning'                    =>       "Пожалуйста избегайте выводов неполных сумм с баланса во время использования куно. Монеро использует  большие суммы баланса для платежей, оставляя оставшееся для новых транзакций. Данный вывод может быть ошибочно принят за пожертвование и ваш куно прогресс станет неточным. Если в процессе вам понадобится использовать накопления, всегда выводите ваш баланс полностью, не оставляя "сдачи".",
+      'edit_fundraiser_widthdrawal_warning'                    =>       'Пожалуйста избегайте выводов неполных сумм с баланса во время использования куно. Монеро использует  большие суммы баланса для платежей, оставляя оставшееся для новых транзакций. Данный вывод может быть ошибочно принят за пожертвование и ваш куно прогресс станет неточным. Если в процессе вам понадобится использовать накопления, всегда выводите ваш баланс полностью, не оставляя "сдачи".',
       'edit_fundraiser_terms'                                  =>       "Создавая куно вы даете согласие <a onclick='ann.makeTerms()'>Terms</a>",
       'edit_fundraiser_form_email'                             =>       "Email",
       'edit_fundraiser_form_email_placeholder'                 =>       "Email (на усмотрение, для сброса пароля)",
@@ -4894,7 +4893,7 @@ function translate_tr($string) {
       'edit_fundraiser_form_submit_edit'                       =>       "Обновить куно",
       'edit_fundraiser_form_submit_new'                        =>       "Создать куно",
       'edit_fundraiser_heading_supporters'                     =>       "Kuno Последователи",
-      'edit_fundraiser_supporters_text'                        =>       "Если последователь ввёл свой почтовый адрес, вы увидите это здесь (например для наград от фандрайзера).',
+      'edit_fundraiser_supporters_text'                        =>       'Если последователь ввёл свой почтовый адрес, вы увидите это здесь (например для наград от фандрайзера).',
       'edit_fundraiser_no_supporters'                          =>       "Email подтверждений пока нет",
       'edit_fundraiser_supporters_email'                       =>       "Email",
       'edit_fundraiser_supporters_comment'                     =>       "Комментировать",
@@ -4921,8 +4920,8 @@ function translate_tr($string) {
       'reset_password_form_submit'                             =>       "Сбросить пароль",
       'success'                                                =>       "Успешно",
       'success_form_submitted'                                 =>       "Обращение успешно отправлено",
-      'success_new_fundraiser'                                 =>      "Ваш куно активен: <a href="https://kuno.anne.media/fundraiser/{GUID}/">Посмотрите ваш сбор средств здесь</a><br>Сохраните эту ссылку чтобы редактировать ваш сбор средств: <a href="https://kuno.anne.media/edit-fundraiser/{GUID}/">Редактировать сбор средств #{GUID}</a>',
-      'success_new_donation_page'                              =>       "Ваша страница для сбора пожертвований активна: <a href="https://kuno.anne.media/donate/{GUID}/">Посмотрите вашу страницу для сбора пожертвований здесь</a><br>Сохраните эту ссылку чтобы редактировать вашу страницу для сбора пожертвований: <a href="https://kuno.anne.media/edit-fundraiser/{GUID}/">Редактировать страницу для сбора пожертвований #{GUID}</a>',
+      'success_new_fundraiser'                                 =>      'Ваш куно активен: <a href="https://kuno.anne.media/fundraiser/{GUID}/">Посмотрите ваш сбор средств здесь</a><br>Сохраните эту ссылку чтобы редактировать ваш сбор средств: <a href="https://kuno.anne.media/edit-fundraiser/{GUID}/">Редактировать сбор средств #{GUID}</a>',
+      'success_new_donation_page'                              =>       'Ваша страница для сбора пожертвований активна: <a href="https://kuno.anne.media/donate/{GUID}/">Посмотрите вашу страницу для сбора пожертвований здесь</a><br>Сохраните эту ссылку чтобы редактировать вашу страницу для сбора пожертвований: <a href="https://kuno.anne.media/edit-fundraiser/{GUID}/">Редактировать страницу для сбора пожертвований #{GUID}</a>',
       'success_fundraiser_updated'                             =>       '<a href="https://kuno.anne.media/fundraiser/{GUID}/">Ваш сбор средств был обновлен.</a>',
       'success_valid_fundraiser_password'                      =>       '<a href="https://kuno.anne.media/edit-fundraiser/{GUID}/">Нажмите здесь чтобы редактировать ваш сбор средств</a>',
       'success_donation_page_updated'                          =>       '<a href="https://kuno.anne.media/donate/{GUID}/">Ваша страница для сбора пожертвований была обновлена.</a>',
@@ -4932,7 +4931,7 @@ function translate_tr($string) {
       'success_valid_invite_code'                              =>       " Действительный пригласительный код. Вы можете создать куно.",
       'success_valid_confirmation_code'                        =>       "Действительный код подтверждения", 
       'success_check_email_for_password_reset_code'            =>       "Проверьте ваш почтовый адрес на наличие кода для сброса пароля",
-      'success_password_reset'                                 =>       "Пароль был изменен, теперь вы можете <a href="https://kuno.anne.media/edit-fundraiser/{FUNDRAISER}">редактировать ваш куно</a>',
+      'success_password_reset'                                 =>       'Пароль был изменен, теперь вы можете <a href="https://kuno.anne.media/edit-fundraiser/{FUNDRAISER}">редактировать ваш куно</a>',
       'success_comment_sent'                                   =>       "Комментарий отправлен!",
       'success_image_uploaded'                                 =>       "Изображение опубликовано!",
       'error'                                                  =>       "Ошибка",
@@ -4977,9 +4976,9 @@ function translate_tr($string) {
       'error_image_invalid'                                    =>       "Изображение не поддерживается",
       'error_image_storage_full'                               =>       "Хранилище заполнено",
       'error_image_missing'                                    =>       "Пожалуйста, опубликуйте изображение",
-      'error_prevent_edit'                                     =>       "Редактирование было отключено. Свяжитесь с администрацией Куно.',
-      'translate_help'                                         =>       "Было бы замечательно, если Куно было бы доступно на больших языках. Помогите там с переводами <a href="https://github.com/annemedia/kuno-translation">https://github.com/annemedia/kuno-translation</a>',
-      'wallets_header'                                         =>       'Monero: <span class="text3">Wallet Choices</span>',
+      'error_prevent_edit'                                     =>       'Редактирование было отключено. Свяжитесь с администрацией Куно.',
+      'translate_help'                                         =>       'Было бы замечательно, если Куно было бы доступно на больших языках. Помогите там с переводами <a href="https://github.com/annemedia/kuno-translation">https://github.com/annemedia/kuno-translation</a>',
+      'wallets_header'                                         =>       'Монеро: <span class="text3">Выбор кошелька</span>',
       'monero_gui_wallet'                                      =>       "Графический пользовательский интерфейс с открытым исходным кодом (GUI), разработанный сообществом Монеро, абсолютно бесплатный для использования, подходит как для начинающих так и продвинутых полтзователей.",
       'cake_wallet'                                            =>       "Надежное хранилище, отправляйте и обменивайте криптовалюту с легкостью.  Частно покупайте подарочные карты и расплачивайтесь на кассе криптовалютой, легче легкого.",
       'monerujo_wallet'                                        =>       "Андроид кошелек для Монеро. С Monerujo, вы можете без проблем перемещаться между несколькими кошельками. Создание нового так же легко как и несколько нажатий по экрану.",
