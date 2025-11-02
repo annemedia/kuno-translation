@@ -4989,4 +4989,366 @@ function translate_tr($string) {
     return $translation;
   }
 
-
+function translate_cs($string) {
+    static $strings = array(
+      'site_name' => 'Kuno',
+      'page_title' => 'Kuno – Vybírejte peníze s Monerem',
+      'page_title_error' => 'Chyba | Kuno – Vybírejte peníze s Monerem',
+      'page_title_search' => 'Vyhledávání | Kuno – Vybírejte peníze s Monerem',
+      'page_title_fediverse' => 'Fediverse | Kuno – Vybírejte peníze s Monerem',
+      'page_title_reset_password' => 'Obnova hesla | Kuno – Vybírejte peníze s Monerem',
+      'page_title_edit_fundraiser' => 'Úprava sbírky | Kuno – Vybírejte peníze s Monerem',
+      'page_title_new_fundraiser' => 'Nová sbírka | Kuno – Vybírejte peníze s Monerem',
+      'pagination' => 'Strana {NUM} z {NUM_PAGES}',
+      'pagination_fundraisers' => 'Zobrazeno {START}-{END} z {TOTAL} sbírek',
+      'pagination_donations' => 'Zobrazeno {START}-{END} z {TOTAL} příspěvků',
+      'pagination_submit' => 'Přejít',
+      'nav_manage_fundraiser' => 'Spravovat sbírky',
+      'nav_search' => 'Vyhledat sbírku...',
+      'nav_fundraiser_progress' => 'Progres sbírky:',
+      'nav_edit_fundraiser' => 'Upravit sbírku:',
+      'nav_logout' => 'Odhlásit se',
+      'footer_description' => 'Vybírejte peníze s Monerem',
+      'footer_contact' => 'Kontakt: support [zavináč] anne.media',
+      'footer_language' => 'Jazyk:',
+      'footer_light_mode' => 'Světlý režim',
+      'footer_dark_mode' => 'Tmavý režim',
+      'footer_manage_fundraiser' => 'Spravovat svou sbírku:',
+      'footer_new_fundraiser' => 'Nová sbírka',
+      'footer_edit_fundraiser' => 'Upravit sbírku',
+      'footer_reset_password' => 'Obnovit heslo',
+      'footer_quick_links' => 'Užitečné odkazy:',
+      'footer_search_fundraisers' => 'Prohledat sbírky',
+      'footer_search_fediverse' => 'Prohledat fediverse',
+      'footer_marketplace' => 'Online tržiště',
+      'footer_rss_feed' => 'RSS kanál',
+      'footer_faq' => 'Časté dotazy',
+      'email_new_donation_subject' => '[Kuno] Nových {DONATION} XMR darováno na #{GUID}',
+      'email_new_donation_body' => 'Vaše sbírka obdržela nový příspěvek!
+          <br><br>Sbírka: {TITLE}
+          <br>Přispěno: {DONATION} XMR
+          <br>Datum: {DATE}
+          <br><br>Celkem vybráno: {TOTAL} XMR
+          <br>Celkem podporovatelů: {SUPPORTERS}
+          <br>Navštivte svou sbírku: https://kuno.anne.media/{TYPE}/{GUID}/
+          <br><br>Zrušit e-mailová oznámení:
+          <br>https://kuno.anne.media/edit-fundraiser/{GUID}/',
+      'email_reset_password_subject' => '[Kuno] Obnova hesla',
+      'email_reset_password_body' => 'Otevřete tento odkaz pro obnovení svého hesla: {URL} nebo zadejte tento kód: {CODE} (Platný 24 hodin)',
+      'homepage_title' => 'Vybírat peníze <br> zvládne každý',
+      'homepage_subtitle' => 'Vybírejte peníze nebo přispějte na dobrou věc s Monerem',
+      'homepage_point1' => 'Spusťte zdarma svou sbírku',
+      'homepage_point2' => 'Vyberte Monero (které můžete směnit za hotovost)',
+      'homepage_point3' => 'Bez poplatků, funguje celosvětově, nevyžaduje bankovní účet',
+      'homepage_button_start_fundraiser' => 'Spustit sbírku',
+      'homepage_button_browse_fundraisers' => 'Prohledat sbírky',
+      'homepage_bar' => 'Férová alternativa GoFundMe a Kickstarteru',
+      'homepage_heading_browse_fundraisers' => 'Prohledat {AMOUNT} sbírek',
+      'homepage_heading_total_raised' => 'Vybráno již {AMOUNT} XMR!',
+      'homepage_top_categories' => 'Hlavní kategorie',
+      'homepage_recent_donations' => 'Nedávné příspěvky',
+      'homepage_all_categories' => 'Všechny kategorie',
+      'homepage_launch_in_one_click' => 'Spusťte svou sbírku jedním klikem',
+      'homepage_get_started_free' => 'Začít zdarma',
+      'homepage_info_heading1' => 'Monero je hotovost internetu',
+      'homepage_info_description1' => '<p class="monero-info-p-bold kuno">
+                  Monero je rychlá a bezpečná cesta jak příjmat a odesílat peníze online.
+  </p>
+                  <p class="monero-info-p kuno">
+                  Nepotřebujete bankovní účet, aplikaci nebo občanský průkaz. Jednoduše si stáhněte peněženku na svůj mobil nebo počítač a přímejte a posílejte peníze po celém světě jedním klikem.
+  </p>
+                  <p class="monero-info-p kuno">
+                  Jednoduchost a přístupnost dělá z Monera ideálni platební metodu pro e-commerce, práci na dálku, remitence, spropitné, sbírky a mnoho dalšího.
+  </p>',
+      'homepage_link_download_mobile' => 'Stáhnout na mobil',
+      'homepage_link_download_desktop' => 'Stáhnout na počítač',
+      'homepage_info_heading2' => 'Necenzurovatelné příspěvky',
+      'homepage_info_description2' => '<p class="monero-info-p-bold kuno">
+                  S Monerem vaše peníze patří vám.
+  </p>
+                  <p class="monero-info-p kuno">
+                  Monero je peer-to-peer software, který není závislý na třetích stranách nebo korporacích. Transakce nemohou být cenzurovány, účty nemohou být zmrazeny a uživatelé nemůžou být deplatformováni.
+  </p>
+                  <p class="monero-info-p kuno">
+                  Ať už vybíráte peníze nebo přispíváte Monerem na dobrou věc, můžete mít jistotu, že příjemce obdrží 100 % z vybrané částky.
+  </p>',
+      'homepage_link_official_website' => 'Oficiální web',
+      'homepage_link_overview' => 'Přehled',
+      'homepage_link_buy_monero' => 'Koupit Monero',
+      'homepage_info_heading3' => 'Zaplatíte kdekoliv',
+      'homepage_info_description3' => '<p class="monero-info-p-bold kuno">
+                  Směňte Monero za hotovost, nakupujte online nebo plaťte účty.
+  </p>
+                  <p class="monero-info-p kuno">
+                  Je jednoduché směnit Monero za hotovost pomocí <a href="https://localmonero.co">LocalMonero</a>, <a href="https://bisq.network">Bisq</a> nebo <a href="https://coinatmradar.com">Crypto ATM</a> (nevyžaduje bankovní účet).
+  </p>
+                  <p class="monero-info-p kuno">
+                  Online tržiště jako <a href="https://moneromarket.io">MoneroMarket</a> a databáze jako <a href="https://monerica.com">Monerica</a> a <a href="https://acceptedhere.io">AcceptedHere</a> vám pomůžou koupit si s Monerem to, co potřebujete.
+  </p>
+                  <p class="monero-info-p kuno">
+                  Navíc <a href="https://cakepay.com">CakePay</a> a <a href="https://coincards.com">CoinCards</a> nabízí předplacené Visa karty a dárkové kupóny pro tisíce podniků. Osobní obchodní asistenti jako <a href="https://proxysto.re">ProxyStore</a>, <a href="https://sovereignstack.tools/rerouter/">Sovereign Stack</a> a <a href="https://shopinbit.com">ShopInBit</a> nabízí přesvědčivý způsob jak platit faktury s Monerem.
+  </p>
+                  <p class="monero-info-p kuno">
+                  Flexibilita Monera vám usnadní vybrat peníze na zaplacení svých účtů, nakopnutí vašeho projektu nebo podpoření charity.
+  </p>',
+      'homepage_link_exchange_to_cash' => 'Směnit za hotovost',
+      'homepage_link_shop_online' => 'Nakupovat online',
+      'homepage_link_marketplace' => 'Online tržiště',
+      'homepage_use_case_heading1' => 'Pro charity',
+      'homepage_use_case_description1' => '<p class="use-case-p-bold kuno">
+                    Místní kočičí útulek potřebuje peníze na jídlo pro kočky a účty za veterináře.
+  </p>
+                  <p class="use-case-p kuno">
+                    Rozhodnou se založit si Kuno sbírku, sdílí svůj odkaz na sociálních sítích a začnou vybírat peníze.
+  </p>
+                  <p class="use-case-p kuno">
+                    Útulek použije vybrané Monero na nákup Petsmart kupónů přes CakePay a výběr hotovosti pomocí kryptomatu na zaplacení účtů za veterináře.
+  </p>
+                  <p class="use-case-p kuno">
+                    Každému přispěvateli příjde aktualita s fotkami koček.
+  </p>',
+      'homepage_use_case_heading2' => 'Pro jednotlivce',
+      'homepage_use_case_description2' => '<p class="use-case-p-bold kuno">
+                    Alice potřebuje vybrat peníze na zaplacení nákladů za léčbu.
+  </p>
+                  <p class="use-case-p kuno">
+                    Její dcera jí pomůže založit Kuno sbírku a sdílí ji se svojí komunitou.
+  </p>
+                  <p class="use-case-p kuno">
+                    Vyberou dostatek peněz a pomocí LocalMonero je smění za hotovost.
+  </p>
+                  <p class="use-case-p kuno">
+                    Alice na důkaz vděku napíše děkovný dopis pro každého přispěvatele.
+  </p>',
+      'homepage_use_case_heading3' => 'Pro startupy',
+      'homepage_use_case_description3' => '<p class="use-case-p-bold kuno">
+                    Nezávislý vývojář chce vytvořit novou hru.
+  </p>
+                  <p class="use-case-p kuno">
+                    Založí si Kuno sbírku a sdílí ji v herních komunitách.
+  </p>
+                  <p class="use-case-p kuno">
+                    Dosáhne cílové čásky a použije vybrané finance na najmutí umělců příjmajích Monero a nákup programátorský nástrojů pomocí virtuální debetní karty CakePay.
+  </p>
+                  <p class="use-case-p kuno">
+                    Každý přispěvatel dostane kopii hry zdarma.
+  </p>',
+      'homepage_use_case_heading4' => 'Pro tvůrce',
+      'homepage_use_case_description4' => '<p class="use-case-p-bold kuno">
+                    Kapela nahrává vlastní hudbu a covery na Youtube.
+  </p>
+                  <p class="use-case-p kuno">
+                    Nastaví si darovací Kuno stránku na obdržení Monero příspěvků.
+  </p>
+                  <p class="use-case-p kuno">
+                    Fanoušci také mohou navrhovat písničky nebo posíláním příspěvků komentovat během živých přenosů.
+  </p>
+                  <p class="use-case-p kuno">
+                    Tímto způsobem můžou lépe a udržitelněji monetizovat svůj obsah v porovnání s reklamami.
+  </p>',
+      'homepage_use_case_heading5' => 'Pro vás',
+      'homepage_use_case_description5' => '<p class="use-case-p-bold kuno">
+                    S Kunem každý může vybrat peníze na svůj projekt, újmu nebo startup.
+  </p>
+                  <p class="use-case-p kuno">
+                    Jediné co potřebujete je mít cíl a Monero peněženku.
+  </p>',
+      'fundraiser_heading_goal' => 'Cílová částka',
+      'fundraiser_heading_raised' => 'Vybráno',
+      'fundraiser_heading_percentage_funded' => 'splněno',
+      'fundraiser_heading_donations' => 'Příspěvky',
+      'fundraiser_heading_supporters' => 'Podporovatelé',
+      'fundraiser_heading_comments' => 'Komentáře',
+      'fundraiser_heading_support' => 'Podpořit',
+      'fundraiser_heading_share' => 'Sdílet',
+      'fundraiser_heading_promote' => 'Zviditelnit',
+      'fundraiser_heading_about' => 'O projektu',
+      'fundraiser_heading_photos' => 'Fotky',
+      'fundraiser_heading_contact' => 'Kontakt',
+      'fundraiser_heading_date' => 'Zveřejněno:',
+      'fundraiser_heading_supporters' => 'Podporovatelé',
+      'fundraiser_heading_new_comment' => 'Napsat komentář',
+      'fundraiser_heading_new_fundraiser' => 'Nová sbírka',
+      'fundraiser_heading_edit_fundraiser' => 'Upravit sbírku',
+      'fundraiser_heading_logout' => 'Odhlásit se',
+      'fundraiser_support_text' => 'Pošlete libovolnou částku Monera na:',
+      'fundraiser_share_text' => 'Zkopírujte odkaz a sdílejte tuto sbírku s přáteli nebo na sociálních sítích:',
+      'fundraiser_promote_text' => 'Zviditelnite svou sbírku nebo pomozte zviditelnit tuto sbírku.',
+      'fundraiser_open_in_wallet' => 'Otevřít v peněžence',
+      'fundraiser_info_point1' => 'Peníze putují přímo do příjemcovy peněženky',
+      'fundraiser_info_point2' => 'Bez prostředníků nebo poplatků',
+      'fundraiser_info_point3' => 'Příspěvky jsou synchronizovány každých 5 minut',
+      'fundraiser_full_size_photo' => 'Fotka v plné velikosti',
+      'fundraiser_no_donations' => 'Zatím nikdo nepřispěl',
+      'fundraiser_supporters' => '{AMOUNT} podporovatelů',
+      'fundraiser_button_support' => 'Podpořit',
+      'fundraiser_donate_with_monero' => 'Přispět Monerem:',
+      'fundraiser_comment_form_placeholder_txid' => 'TXID',
+      'fundraiser_comment_form_placeholder_tx_key' => 'TX Klíč (Např.: 7d7a9370a746d219e5f66aaaec902ead0d1c1783817a10276c9accdacca6f10d)',
+      'fundraiser_comment_form_placeholder_email' => 'E-mail (nepovinný, pro odměny podporovatelů)',
+      'fundraiser_comment_form_placeholder_comment' => 'Napsat veřejný komentář',
+      'fundraiser_comment_form_submit' => 'Okomentovat',
+      'search' => 'Hledat',
+      'search_heading' => 'Hledat sbírky',
+      'search_text' => 'Hledat sbírky...',
+      'search_sort_by_new' => 'Seřadit od nejnovějších',
+      'search_sort_by_recently_donated' => 'Seřadit podle nedávno podpořených',
+      'search_sort_by_percentage_funded' => 'Seřadit podle procenta vybrané částky',
+      'search_sort_by_goal' => 'Seřadit podle cílové částky',
+      'search_all_categories' => 'Všechny kategorie',
+      'search_no_fundraisers_found' => 'Nenalezeny žádné sbírky',
+      'search_fediverse_heading' => 'Hledat Fediverse',
+      'search_fediverse_text' => 'Hledat Fediverse sbírky...',
+      'search_fediverse_no_fundraisers_found' => 'Nenalezeny žádné fediverse sbírky',
+      'search_fediverse_peers_list' => 'Seznam fediverse instancí:',
+      'login_invite_code_heading' => 'Nová sbírka',
+      'login_invite_code_text' => 'Zadejte pozvánky kód pro spuštění nové sbírky.',
+      'login_invite_code_note' => 'Pokud nemáte pozvánkový kód, kontaktujte prosím podporu.',
+      'login_invite_code_form' => 'Pozvánkový kód',
+      'login_invite_code_form_placeholder' => 'Pozvánkový kód',
+      'login_invite_code_submit' => 'Pokračovat',
+      'login_fundraiser_form_fundraiser' => 'Sbírka',
+      'login_fundraiser_heading' => 'Upravit sbírku',
+      'login_fundraiser_text' => 'K úpravě sbírky zadejte kód sbírky a heslo.',
+      'login_fundraiser_note' => 'Kód se nachází v URL:',
+      'login_fundraiser_forgot_password' => 'Zapomenuté heslo?',
+      'login_fundraiser_form_fundraiser' => 'Sbírka',
+      'login_fundraiser_form_fundraiser_placeholder' => 'Kód sbírky (např. ae21)',
+      'login_fundraiser_form_password' => 'Heslo',
+      'login_fundraiser_form_password_placeholder' => 'Heslo',
+      'login_fundraiser_form_submit' => 'Upravit sbírku',
+      'edit_fundraiser_heading_fundraiser_details' => 'Detaily sbírky',
+      'edit_fundraiser_fundraiser_details_text' => 'Popište svou sbírku a přidejte fotky.',
+      'edit_fundraiser_form_optional' => '(Nepovinné)',
+      'edit_fundraiser_form_more_info' => '(Více informací)',
+      'edit_fundraiser_form_title' => 'Název',
+      'edit_fundraiser_form_title_placeholder' => 'Název sbírky',
+      'edit_fundraiser_form_photo' => 'Fotka',
+      'edit_fundraiser_form_additional_photos' => 'Dodatečné fotky',
+      'edit_fundraiser_form_description' => 'Popis',
+      'edit_fundraiser_form_description_placeholder' => 'Popište svou sbírku. Pokud je to nutné, přidejte odměny pro podporovatele, milníky a kontaktní informace.',
+      'edit_fundraiser_form_tags' => 'Značky',
+      'edit_fundraiser_form_tags_placeholder' => 'Kategorie/značky',
+      'edit_fundraiser_form_contact' => 'Hlavní kontakt',
+      'edit_fundraiser_form_contact_placeholder' => 'Připojte svůj účet na síti X (Twitteru)',
+      'edit_fundraiser_form_altcontact' => 'Kontakt mimo X',
+      //  'edit_fundraiser_form_contact_placeholder' => 'E-mail, web, Twitter, Matrix, atd.',
+      'edit_fundraiser_form_visibility' => 'Nastavit jako soukromou sbírku (nebude se zobrazovat ve výsledcích vyhledávání, podporovatelé budou potřebovat přímý odkaz)',
+      'edit_fundraiser_heading_goal' => 'Cílová částka',
+      'edit_fundraiser_goal_text' => 'Nastavte cílovou částku a Monero adresu.',
+      'edit_fundraiser_get_wallet' => 'Nemáte Monero peněženku? Vyberte si jednu tady.',
+      'edit_fundraiser_form_goal' => 'Cílová částka',
+      'edit_fundraiser_form_goal_placeholder' => 'Cílová částka (XMR)',
+      'edit_fundraiser_form_donation_page' => 'Bez cílové částky – Chci vytvořit Darovací stránku',
+      'edit_fundraiser_form_monero_address' => 'Monero adresa',
+      'edit_fundraiser_form_monero_address_placeholder' => 'Například: 44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft3XjrpDtQGv7SqSsaBYBb98uNbr2VBBEt7f2wfn3RVGQBEP3A',
+      'edit_fundraiser_form_view_key' => 'Soukromý prohlížecí klíč',
+      'edit_fundraiser_form_view_key_placeholder' => 'Například: f359631075708155cc3d92a32b75a7d02a5dcf27756707b47a2b31b21c389501',
+      'edit_fundraiser_heading_password' => 'Heslo',
+      'edit_fundraiser_password_text' => 'Nastavte si heslo pro pozdější úpravu sbírky.',
+      'edit_fundraiser_widthdrawal_warning' => "Vyhněte se vybírání neúplných zůstatků během probíhajících sbírek. Monero používá na vyplácení celou dostupnou částku a zbytek posílá zpět jako novou transakci. Ta by byla nesprávně vypočtena jako dar a průběh vaší sbírky by byl nepřesný. Pokud potřebujete své prostředky použít okamžitě, vždy vyberte celou dostupnou částku a nenechávejte žádné „drobné“.",
+      'edit_fundraiser_terms' => "Spuštěním sbírky vyjadřujete souhlas s našimi <a onclick='ann.makeTerms()'>Podmínkami</a>",
+      'edit_fundraiser_form_email' => 'E-mail',
+      'edit_fundraiser_form_email_placeholder' => 'E-mail (nepovinný, pro obnovení hesla)',
+      'edit_fundraiser_form_password' => 'Heslo',
+      'edit_fundraiser_form_new_password_placeholder' => 'Heslo',
+      'edit_fundraiser_form_edit_password_placeholder' => 'Heslo (nevyplňujte, pokud se nezměnilo)',
+      'edit_fundraiser_form_email_notifications' => 'Když moje sbírka obdrží nový příspěvek, zašlete mi e-mail',
+      'edit_fundraiser_form_submit_edit' => 'Aktualizovat sbírku',
+      'edit_fundraiser_form_submit_new' => 'Spustit sbírku',
+      'edit_fundraiser_heading_supporters' => 'Podporovatelé sbírky',
+      'edit_fundraiser_supporters_text' => 'Pokud podporovatel zadal svoji e-mailovou addresu, uvidíte jí tady (např. kvůli odměnám pro podporovatele).',
+      'edit_fundraiser_no_supporters' => 'Zatím nebyly zaslány žádné e-maily',
+      'edit_fundraiser_supporters_email' => 'E-mail',
+      'edit_fundraiser_supporters_comment' => 'Komentář',
+      'edit_fundraiser_supporters_amount' => 'Částka',
+      'edit_fundraiser_supporters_txid' => 'TXID',
+      'edit_fundraiser_supporters_tx_key' => 'TX Klíč',
+      'edit_fundraiser_supporters_date' => 'Datum',
+      'edit_fundraiser_heading_manage_fundraiser' => 'Spravovat sbírku',
+      'edit_fundraiser_fix_view_key' => 'Přidejte prosím platný prohlížecí klíč, abyste obnovily svou sbírku.',
+      'edit_fundraiser_deactivate_fundraiser' => 'Zrušit sbírku',
+      'edit_fundraiser_reactivate_fundraiser' => 'Obnovit sbírku',
+      'edit_fundraiser_delete_fundraiser' => 'Smazat vaše data',
+      'reset_password_heading' => 'Obnovit heslo',
+      'reset_password_description' => 'Pro obnovení svého hesla zadejte kód sbírky a svou e-mailovou adresu.',
+      'reset_password_note' => '(Pokud jste nepřidali e-mailovou adresu, kontaktujte prosím podporu.)',
+      'reset_password_form_fundraiser' => 'Sbírka',
+      'reset_password_form_fundraiser_placeholder' => 'Kód sbírky (např. ae21)',
+      'reset_password_form_email' => 'E-mail',
+      'reset_password_form_email_placeholder' => 'E-mail',
+      'reset_password_form_confirmation_code' => 'Potvrzovací kód',
+      'reset_password_form_confirmation_code_placeholder' => 'Potvrzovací kód',
+      'reset_password_form_new_password' => 'Nové heslo',
+      'reset_password_form_new_password_placeholder' => 'Nové heslo',
+      'reset_password_form_submit' => 'Obnovit heslo',
+      'success' => 'Povedlo se',
+      'success_form_submitted' => 'Formulář byl úspěšně odeslán',
+      'success_new_fundraiser' => 'Vaše sbírka je aktivní: <a href="https://kuno.anne.media/fundraiser/{GUID}/">Prohlédněte si svou sbírku zde</a><br>Uložte si tento odkaz pro upravení své sbírky: <a href="https://kuno.anne.media/edit-fundraiser/{GUID}/">Upravit sbírku #{GUID}</a>',
+      'success_new_donation_page' => 'Vaše darovací stránka je aktivní: <a href="https://kuno.anne.media/donate/{GUID}/">Prohlédněte si svou darovací stránku zde</a><br>Uložte si tento odkaz pro upravení své darovací stránky: <a href="https://kuno.anne.media/edit-fundraiser/{GUID}/">Upravit darovací stránku #{GUID}</a>',
+      'success_fundraiser_updated' => '<a href="https://kuno.anne.media/fundraiser/{GUID}/">Vaše sbírka byla upravena.</a>',
+      'success_valid_fundraiser_password' => '<a href="https://kuno.anne.media/edit-fundraiser/{GUID}/">Kliknite zde pro upravení své sbírky</a>',
+      'success_donation_page_updated' => '<a href="https://kuno.anne.media/donate/{GUID}/">Vaše darovací stránka byla upravena.</a>',
+      'success_fundraiser_deactivated' => 'Sbírka byla zrušena',
+      'success_fundraiser_reactivated' => 'Sbírka byla obnovena',
+      'success_fundraiser_deleted' => 'Sbírka byla smazána',
+      'success_valid_invite_code' => 'Pozvánkový kód je platný. Nyní můžete spustit sbírku.',
+      'success_valid_confirmation_code' => 'Potvrzovací kód je platný',
+      'success_check_email_for_password_reset_code' => 'Na váš e-mail byl zaslán kód pro obnovení hesla',
+      'success_password_reset' => 'Heslo změněno, nyní můžete <a href="https://kuno.anne.media/edit-fundraiser/{FUNDRAISER}">upravit svou sbírku</a>',
+      'success_comment_sent' => 'Komentář odeslán!',
+      'success_image_uploaded' => 'Obrázek nahrán',
+      'error' => 'Chyba',
+      'error_please_refresh' => 'Obnovte prosím stránku a zkuste to znovu.',
+      'error_form_expired' => 'Platnost formuláře vypršela, obnovte prosím stránku',
+      'error_form_ratelimited' => 'Dovršili jste limitu, počkejte prosím {RATELIMIT} sekund',
+      'error_session_expired' => 'Relace vypršela, přihlašte se prosím znovu',
+      'error_page_not_found' => 'Stránka nenalezena',
+      'error_fundraiser_not_found' => 'Sbírka nenalezena',
+      'error_email_not_found' => 'Není nastavena žádná e-mailová adresa, kontaktujte prosím podporu',
+      'error_invalid_email' => 'Zadejte prosím platnou e-mailovou adresu',
+      'error_invalid_email_for_notifications' => 'Zadejte prosím platnou e-mailovou adresu pro povolení oznámení',
+      'error_invalid_confirmation_code' => 'Potvrzovací kód je neplatný nebo vypršel',
+      'error_invalid_monero_address' => 'Neplatná Monero adresa (Zadejte prosím svou hlavní adresu, která začíná číslem 4)',
+      'error_invalid_view_key' => 'Neplatný prohlížecí klíč (Zadejte prosím svůj privátní/soukromý prohlížecí klíč)',
+      'error_invalid_address' => 'Neplatná Monero adresa (Zadejte prosím svou hlavní adresu, která začíná číslem 4)',
+      'error_entered_public_view_key' => 'Neplatný prohlížecí klíč (Zadejte prosím svůj privátní/soukromý prohlížecí klíč, ne veřejný prohlížecí klíč)',
+      'error_entered_public_spend_key' => 'Neplatný prohlížecí klíč (Zadejte prosím svůj privátní/soukromý prohlížecí klíč, ne veřejný výdajový klíč)',
+      'error_entered_private_spend_key' => 'Neplatný prohlížecí klíč (Zadejte prosím svůj privátní/soukromý prohlížecí klíč, ne soukromý výdajový klíč)',
+      'error_invalid_private_view_key' => 'Neplatný prohlížecí klíč (Zadejte prosím svůj privátní/soukromý prohlížecí klíč)',
+      'error_invalid_txid' => 'Neplatné TXID',
+      'error_invalid_tx_key' => 'Zadejte prosím platný TX klíč (také známý jako TX proof)',
+      'error_invalid_txid' => 'Zadejte platný pozvánkový kód',
+      'error_incorrect_email' => 'Nesprávná e-mailová adresa',
+      'error_incorrect_password' => 'Nesprávné heslo',
+      'error_monero_address_already_used' => 'Sbírka/Darovací stránka s touto Monero adresou již existuje',
+      'error_missing_fundraiser_code_or_email' => 'Zadejte prosím svůj kód sbírky a e-mailovou adresu',
+      'error_missing_password_reset_code_or_password' => 'Zadejte prosím svůj obnovovací kód a nové heslo',
+      'error_missing_txid_or_tx_key' => 'Zadejte prosím jak TXID, tak i TX klíč (také známý jako TX proof)',
+      'error_missing_password' => 'Zadejte prosím své heslo',
+      'error_missing_view_key' => 'Zadejte prosím platný soukromý prohlížecí klíč',
+      'error_title_too_long' => 'Název může mít pouze 4–80 znaků',
+      'error_description_too_long' => 'Popis může mít pouze 500–8000 znaků',
+      'error_photo_missing' => 'Přidejte prosím obrázek',
+      'error_tags_too_long' => 'Značky musí mít méně než 250 znaků',
+      'error_contact_details_too_long' => 'Kontaktní informace musí mít méně než 50 znaků',
+      'error_contact_details_twitter' => 'Přidejte prosím odkaz na svůj profil na síti X (Twitteru)',
+      'error_contact_details_missing' => 'Přidejte prosím svůj hlavní kontakt',
+      'error_goal_must_be_positive' => 'Cílová častka sbírky musí být kladné číslo',
+      'error_image_incorrect_file_type' => 'Obrázek musí být ve formátu PNG nebo JPEG',
+      'error_image_maximum_image_size' => 'Obrázek může mít maximálně 2 MB',
+      'error_image_invalid' => 'Neplatný obrázek',
+      'error_image_storage_full' => 'Nedostatek místa',
+      'error_image_missing' => 'Nahrajte prosím obrázek',
+      'error_prevent_edit' => 'Editování bylo zakázáno. Kontraktujte Kuno administrátora.',
+      'translate_help' => 'Bylo by fantastické, kdyby Kuno bylo dostupné ve více jazycích. Pomozte nám s překladem na <a href="https://github.com/annemedia/kuno-translation">https://github.com/annemedia/kuno-translation</a>',
+      'wallets_header' => 'Monero: <span class="text3">Vybrané peněženky</span>',
+      'monero_gui_wallet' => 'Open source peněženka s grafickým uživatelským rozhraním (GUI) vyvinuta Monero komunitou, zcela zdarma k použití, vhodná pro začátečníky i pokročilé uživatele.',
+      'cake_wallet' => 'Bezpečně uložte, posílejte a snáze směňujte své krypto. Anonymně nakupte dárkové poukazy a zaplaťte na pokladně s kryptem, je to hračka.',
+      'monerujo_wallet' => 'Monero peněženka pro Android. S Monerujo můžete pohodově přepínat mezi několikatery peněženkami. K vytvoření nové vám stačí jen pár kliknutí.',
+      'feather_wallet' => 'Feather je svobodná a otevřená Monero peněženka pro Linux, Tails, Windows a macOS. Nenáročná, minimalistická, rychlá a vhodná pro začátečníky.'
+    
+    );
+    $translation = ($strings[$string]) ? $strings[$string] : $string;
+    return $translation;
+  }
