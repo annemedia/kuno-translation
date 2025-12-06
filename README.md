@@ -1,3 +1,6 @@
+![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) `As we develop a new Kuno version that will see significant narrative changes, we don't accept translation fundraisers. If you still wish to translate the existing version, you're welcome to do so at your own initiative without public funding. We could contact you later to assist us in translating the new narrative.`
+
+
 # Kuno - Translation help needed
 
 Since Kuno launched, the Monero community has been nothing short of amazing in their support of various community projects focused on raising Monero awareness. They've also been incredibly generous in supporting charity projects and assisting with immediate personal medical care needs, as well as helping with the purchase of technical devices or equipment. As of today, on the 25th of October 2024, Kuno has helped to raise over 647 XMR, and it has made a significant impact on many people's lives.
